@@ -2,7 +2,7 @@
 layout: post
 title:  "Introduction to Numpy"
 categories: ml data-science numpy
-img: image-1.png
+img: numpy.jpg
 categories: [ds, ml]
 ---
 

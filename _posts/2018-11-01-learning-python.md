@@ -2,7 +2,7 @@
 layout: post
 title:  "Introduction to Python"
 categories: ml data-science python
-img: image-2.png
+img: python.jpg
 categories: [ds, ml]
 ---
 
