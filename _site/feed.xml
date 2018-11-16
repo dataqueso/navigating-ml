@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Navigating ML</title>
+    <description>Webjeda Cards is a Bootstrap based jekyll theme for portfolio, photography or any kind of blog.
+</description>
+    <link>http://localhost:4000/navigating-ml/</link>
+    <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 15 Nov 2018 22:02:39 -0800</pubDate>
+    <lastBuildDate>Thu, 15 Nov 2018 22:02:39 -0800</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>1. Level 1 Setup</title>
+        <description>&lt;h1 id=&quot;setup&quot;&gt;Setup&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Anaconda3 Python (Recommended versions:  Anaconda3 4.1.1 for Python 3.5.2 recommended, Anaconda3 4.3.1 for Python 3.6 ok, too)
+    &lt;ul&gt;
+      &lt;li&gt;This will allow you to create &lt;code class=&quot;highlighter-rouge&quot;&gt;conda&lt;/code&gt; environments to “contain” your projects and Python versions.  In fact you can use your current Anaconda or Miniconda Python to install other Python versions from the command line &lt;a href=&quot;https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Jupyter notebook with Python and ML ecosystem (local, service or cloud)&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;For the first part of the Beginner Challenge, you can use &lt;a href=&quot;https://notebooks.azure.com&quot;&gt;Azure Notebooks&lt;/a&gt; service as your Python environment as it’s a Jupyter notebook system and free.  Or you can set up Jupyter notebooks locally with the ML ecosystem (&lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;scikit-learn&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;opencv-python&lt;/code&gt; etc.).&lt;/li&gt;
+      &lt;li&gt;More on Jupyter from their &lt;a href=&quot;https://jupyter.readthedocs.io/en/latest/index.html&quot;&gt;Docs&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a good chance to build up some Data Science tools locally - nice (from experience) when you have spotty wifi.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Docker for Mac or Docker for Windows (avoid Toolbox)
+    &lt;ul&gt;
+      &lt;li&gt;This is to aid in creating reproducible setups so you can share with others so they can do it, too!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;good-idea&quot;&gt;Good Idea:&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;StackOverflow account&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;additional-resources&quot;&gt;Additional Resources&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The Stats/ML StackExchange is a useful place to pose questions about ML and stats &lt;a href=&quot;https://stats.stackexchange.com/&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Sat, 10 Nov 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/navigating-ml/level1_setup/</link>
+        <guid isPermaLink="true">http://localhost:4000/navigating-ml/level1_setup/</guid>
+        
+        
+        <category>ds</category>
+        
+        <category>ml</category>
+        
+      </item>
+    
+      <item>
+        <title>2. Level 1 Preparation</title>
+        <description>&lt;p&gt;To begin at this level you should have:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Familiarity with Python 3 for general purpose programming.  See the &lt;a href=&quot;../python&quot;&gt;Python&lt;/a&gt; section for more.&lt;/li&gt;
+  &lt;li&gt;Working knowledge of traditional ML (when to use what)&lt;/li&gt;
+  &lt;li&gt;Basic data mining skills&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;concepts&quot;&gt;Concepts&lt;/h2&gt;
+
+&lt;h3 id=&quot;dealing-with-image-data&quot;&gt;Dealing with Image Data&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Read through this excellent first taste of Image Classification from this Stanford CS231n course &lt;a href=&quot;http://cs231n.github.io/classification/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;neural-networks&quot;&gt;Neural Networks&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Read through &lt;a href=&quot;http://sebastianraschka.com/Articles/2015_singlelayer_neurons.html&quot;&gt;this&lt;/a&gt; excellent explanation of a single-layer neural network.  This information will lay the foundation for these sets of challenges and help you get started from the ground-up, quickly with key concepts and Python code snippets.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Git and GitHub for version control.&lt;/li&gt;
+  &lt;li&gt;Jupyter notebook skills. &lt;a href=&quot;https://jakevdp.github.io/PythonDataScienceHandbook/&quot;&gt;Chapter 1 Python Data Science Handbook&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Get a good grasp of Python for data tasks:
+    &lt;ol&gt;
+      &lt;li&gt;How to read data (matplotlib, Pillow/PIL, opencv)&lt;/li&gt;
+      &lt;li&gt;How to manipulate data (numpy, pandas, scikit-learn)&lt;/li&gt;
+      &lt;li&gt;How to plot data (matplotlib, plotly)&lt;/li&gt;
+      &lt;li&gt;Traditional ML (scikit-learn)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;A Learning Path is under dev to cover the above topics in linear fashion&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;additional-resources&quot;&gt;Additional Resources&lt;/h2&gt;
+
+&lt;h3 id=&quot;scikit-learn&quot;&gt;Scikit-Learn&lt;/h3&gt;
+
+&lt;p&gt;Excellent 3-hr scikit-learn tutorials from PyCon 2015:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Watch &lt;a href=&quot;https://www.youtube.com/watch?v=L7R4HUQ-eQ0&quot;&gt;this&lt;/a&gt; scikit-learn tutorial by Jake VanderPlas (Part 1) and &lt;a href=&quot;https://www.youtube.com/watch?v=oGqGxvqA9-k&quot;&gt;the next&lt;/a&gt; tutorial by Olivier Grisel (Part 2).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Learn about ML and Python scikit-learn in this &lt;a href=&quot;https://www.youtube.com/playlist?list=PL5-da3qGB5ICeMbQuqbbCOQWcS6OYBr5A&quot;&gt;video series&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 09 Nov 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/navigating-ml/level1_prep/</link>
+        <guid isPermaLink="true">http://localhost:4000/navigating-ml/level1_prep/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>3. Level 1 Practice</title>
+        <description>&lt;p&gt;It is recommended that you have completed the &lt;a href=&quot;level1_prep&quot;&gt;Leve 1 Preparation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In this Beginner Challenge you’ll learn about basic ML and neural networks hands-on with Jupyter notebooks and Python.  You’ll be introduced to scikit-learn, CNTK, and TensorFlow as Python packages commonly used in data manipulation and data science.&lt;/p&gt;
+
+&lt;p&gt;Here and throughout these practice exercises you’ll work with the following image datasets: the fruit FIDS30 dataset, the Kaggle Fashion MNIST dataset and the CIFAR-10 (tiny images) dataset.&lt;/p&gt;
+
+&lt;h2 id=&quot;custom-vision-microsoft&quot;&gt;Custom Vision (Microsoft)&lt;/h2&gt;
+
+&lt;p&gt;Download the &lt;a href=&quot;http://www.vicos.si/Downloads/FIDS30&quot;&gt;fruit dataset&lt;/a&gt; and build a fruit image classifier with two fruit classes using &lt;a href=&quot;https://customvision.ai/&quot;&gt;https://customvision.ai/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;After you have done some training above, create a Python script to “pixel-normalize” the images prior to training the model and retrain to see your new Precision and Recall.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://nlpforhackers.io/wp-content/uploads/2017/01/Precision-Recall.png&quot; alt=&quot;Precision and recall&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Some defintions.  &lt;strong&gt;Precision&lt;/strong&gt;:  if a tag is precicted by your classifier, how likely is it that it is right?  &lt;strong&gt;Recall&lt;/strong&gt;:  out of the tags that should be classified as right, what percentage did your classifier correctly find?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;first-custom-ml-open-source-tools&quot;&gt;First Custom ML (Open Source Tools)&lt;/h2&gt;
+
+&lt;p&gt;For these two problems, it is recommended to go through the code from the original source line by line in whatever fashion you see fit so that you really understand what is happening.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;TIPS:  Place all imports at the top of the notebook.  Call the training data something consistent thoughout all of your work (X_train -&amp;gt; training data, y_train -&amp;gt; labels, X_test -&amp;gt; test data…).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;image-classification&quot;&gt;Image Classification&lt;/h3&gt;
+
+&lt;p&gt;Create a Python program to classify images from Fashion MNIST Dataset (get &lt;a href=&quot;https://www.kaggle.com/zalando-research/fashionmnist/data&quot;&gt;here&lt;/a&gt;) leveraging code samples from the Python Data Science Handbook - &lt;a href=&quot;https://jakevdp.github.io/PythonDataScienceHandbook/05.02-introducing-scikit-learn.html#Application:-Exploring-Hand-written-Digits&quot;&gt;Ref&lt;/a&gt;.  Refer to Chapter 2 and 3 of this Handbook for information on data manipulation in Python if not already familiar.&lt;/p&gt;
+
+&lt;p&gt;Do this in a Jupyter notebook (any service or locally) - recall you learned about this tool the &lt;a href=&quot;level1_setup&quot;&gt;Setup Section&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It might help to examine the existing data format for &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn.datasets.load_digits&lt;/code&gt; so that you can convert into that format to utilize the algorithms in &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt; (scikit-learn).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What did you find?  Which fashion item has the best accuracy, which the worst?  Why do you think that is?  Is there a way you could imagine improving this model?&lt;/li&gt;
+  &lt;li&gt;Try a different model&lt;/li&gt;
+  &lt;li&gt;Scale the images (in &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt;) and check the accuracy of the model again.  Did it improve or worsen?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;object-detection&quot;&gt;Object Detection&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;In the real world, data is rarely so uniform and simple pixels will not be suitable: this has led to a large literature on feature extraction methods for image data.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Create a Python program to detect cats in 2D images by leveraging code samples from the Python Data Science Handbook - &lt;a href=&quot;https://jakevdp.github.io/PythonDataScienceHandbook/05.14-image-features.html&quot;&gt;Ref&lt;/a&gt;.  Refer to Chapter 2 and 3 of this Handbook for information on data manipulation in Python if not already familiar.&lt;/p&gt;
+
+&lt;p&gt;Do this in a Jupyter notebook (any service or locally) - recall you learned about this tool the &lt;a href=&quot;level1_setup&quot;&gt;Setup Section&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It might help to examine the existing data format for &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn.datasets.fetch_lfw_people&lt;/code&gt; so that you can convert into that format to utilize the algorithms in &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt; (scikit-learn) to create this detector.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What other confounding factors are there for images other than illumination, you think?&lt;/li&gt;
+  &lt;li&gt;Plot the original image along with the &lt;code class=&quot;highlighter-rouge&quot;&gt;skimage.rgb2gray&lt;/code&gt; version and the HOG representation.  See how this works in &lt;code class=&quot;highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt;.  What does &lt;code class=&quot;highlighter-rouge&quot;&gt;skimage.rgb2gray&lt;/code&gt; actually do?&lt;/li&gt;
+  &lt;li&gt;Can you scale the new image of the astronaut with the &lt;code class=&quot;highlighter-rouge&quot;&gt;PIL&lt;/code&gt; module instead?  This module is very powerful and good to know about (as well as &lt;code class=&quot;highlighter-rouge&quot;&gt;opencv&lt;/code&gt;)?&lt;/li&gt;
+  &lt;li&gt;Try out the model on the entire test image instead.  What do you find out?&lt;/li&gt;
+  &lt;li&gt;Try using sliding windows with a variety of sizes (aspect ratios).  What do you find out?&lt;/li&gt;
+  &lt;li&gt;Read in a new image that contains a face and on one that does not and try your model on that.&lt;/li&gt;
+  &lt;li&gt;Augment the data to expand the training and test datasets (e.g. use a library like &lt;code class=&quot;highlighter-rouge&quot;&gt;imgaug&lt;/code&gt;) and retrain and test.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Extra credit&lt;/strong&gt;:  Implement Non-Maximum Suppression in Python to find the single best bounding box of a group of bounding boxes as are found above.  Apply this to the astronaut image.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;basic-neural-nets&quot;&gt;Basic Neural Nets&lt;/h2&gt;
+
+&lt;p&gt;The purpose of the Basic Neural Nets exercises are to familiarize you with how a simple artificial neuron works and then set of a few neurons to form a network (artificial neural network) - all from the ground-up - this knowledge will serve you well.  It will really get to the core of neural nets and give you a perfect “from scratch” introduction (the code template already exists around the infamous iris dataset, you’ll just make it work with some fashionable images).  If we want to get to know deep neural nets, why not dive in deep to start!&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Use &lt;a href=&quot;https://notebooks.azure.com&quot;&gt;Azure Notebooks&lt;/a&gt; for this tutorial.  Fire up a blank Python 3.5 Jupyter notebook for this.&lt;/li&gt;
+  &lt;li&gt;Get the following sample image dataset loaded in your Jupyter notebook: &lt;a href=&quot;https://www.kaggle.com/zalando-research/fashionmnist/data&quot;&gt;train and test Fashion MNIST Dataset (Source: Kaggle)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Adapt a from-scratch Perceptron as in this &lt;a href=&quot;https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch02/ch02.ipynb&quot;&gt;Jupyter notebook&lt;/a&gt; to train and test on the image dataset.
+    &lt;ul&gt;
+      &lt;li&gt;Use the URL option when opening up a new notebook in Azure Notebooks&lt;/li&gt;
+      &lt;li&gt;Or, download by right clicking on “Raw” and “Save link as…”&lt;/li&gt;
+      &lt;li&gt;Re-implement the Perceptron with &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt; (scikit-learn)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Adapt a from-scratch Multilayer Perceptron (MLP) as in this &lt;a href=&quot;https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch12/ch12.ipynb&quot;&gt;Jupyter notebook&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Use the URL option when opening up a new notebook in Azure Notebooks&lt;/li&gt;
+      &lt;li&gt;Or, download by right clicking on “Raw” and “Save link as…”&lt;/li&gt;
+      &lt;li&gt;Re-implement the MLP with &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;moving-on&quot;&gt;Moving On&lt;/h2&gt;
+
+&lt;p&gt;Now it is time to move on to Level 2 Preparation.&lt;/p&gt;
+
+&lt;h2 id=&quot;additional-help&quot;&gt;Additional Help&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;StackOverflow with &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;jupyter&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;For Custom Vision you can email customvisionteam@microsoft.com.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 08 Nov 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/navigating-ml/level1_practice/</link>
+        <guid isPermaLink="true">http://localhost:4000/navigating-ml/level1_practice/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>2. Level 2 Setup</title>
+        <description>&lt;h1 id=&quot;setup&quot;&gt;Setup&lt;/h1&gt;
+
+&lt;h2 id=&quot;cloud&quot;&gt;Cloud&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;(Deploy when ready if you don’t have it yet) &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm&quot;&gt;Linux (Ubuntu) Deep Learning Virtual Machine&lt;/a&gt; Standard NC6&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Tip: place everything for this set of challenges in the same resource group to tear down together at the end.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;TensorFlow and PyTorch can be found on all Linux and Windows Data Science Virtual Machines and Deep Learning Virtual Machines along with a long list of common data science tools - see &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/overview&quot;&gt;Docs&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ensure Jupyter notebooks are working.
+    &lt;ul&gt;
+      &lt;li&gt;“access the Jupyter notebook server from any host. Just navigate in the browser to &lt;code class=&quot;highlighter-rouge&quot;&gt;https://&amp;lt;VM DNS name or IP Address&amp;gt;:8000/&lt;/code&gt;” (&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/dsvm-ubuntu-intro#tools-installed-on-the-data-science-virtual-machine-for-linux&quot;&gt;Doc&lt;/a&gt; - check out “Jupyter notebook” for more)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;local-via-docker&quot;&gt;Local via Docker&lt;/h2&gt;
+
+&lt;p&gt;Here are the instructions for a generic scientific and deep learning custom Linux VM with Jupyterhub (Running Locally):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GitHub project - &lt;a href=&quot;https://github.com/michhar/custom-jupyterhub-linux-vm&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;local-non-docker&quot;&gt;Local Non-Docker&lt;/h2&gt;
+
+&lt;p&gt;Here, it’s assumed you know what you are doing and can set up the scientific stack.&lt;/p&gt;
+
+&lt;p&gt;Important additional libraries:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jupyter - &lt;a href=&quot;https://jupyter-notebook.readthedocs.io/en/stable/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;PyTorch - &lt;a href=&quot;https://pytorch.org/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 07 Nov 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/navigating-ml/level2_setup/</link>
+        <guid isPermaLink="true">http://localhost:4000/navigating-ml/level2_setup/</guid>
+        
+        
+        <category>ds</category>
+        
+        <category>ml</category>
+        
+      </item>
+    
+      <item>
+        <title>2. Level 2 Preparation</title>
+        <description>&lt;h1 id=&quot;preparation&quot;&gt;Preparation&lt;/h1&gt;
+
+&lt;p&gt;Now it’s time to really learn about PyTorch and classifiers such as logistic regression, multilayer perceptron, and convolutional network (CNN/ConvNet) classifiers.  The MNIST hand-written digits dataset is used in the following course to classify grey-scale images of digits.  We’ll use this code in our Challenge section so go ahead and get familiar with it now by taking this course.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Learn concepts around neural networks for image applications and be able to answer these questions.
+    &lt;ol&gt;
+      &lt;li&gt;List the differences between a Convolutional (ConvNet/CNN) and regular Dense Neural Network (e.g Multilayer Perceptron) - two good resources:  &lt;a href=&quot;https://towardsdatascience.com/multi-layer-neural-networks-with-sigmoid-function-deep-learning-for-rookies-2-bf464f09eb7f&quot;&gt;MLP&lt;/a&gt; and &lt;a href=&quot;http://colah.github.io/posts/2014-07-Understanding-Convolutions/&quot;&gt;Convolutions - what are they&lt;/a&gt; and &lt;a href=&quot;http://colah.github.io/posts/2014-07-Conv-Nets-Modular/&quot;&gt;CNNs&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;List and give examples of the tunable hyperparameters one can find in a ConvNet.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Gain familiarity with PyTorch
+    &lt;ol&gt;
+      &lt;li&gt;PyTorch tensor vs. numpy array (see the PyTorch &lt;a href=&quot;https://pytorch.org/tutorials/beginner/pytorch_with_examples.html&quot;&gt;Docs&lt;/a&gt;)&lt;/li&gt;
+      &lt;li&gt;Transfer Learning with a CNN (how it often happens as CNNs can be big and take time and power to train from scratch)
+  Understand what is going on in this code snippet (from &lt;a href=&quot;https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html&quot;&gt;Docs&lt;/a&gt;)
+        &lt;pre&gt;&lt;code class=&quot;language-pythonn&quot;&gt;  model_ft = models.resnet18(pretrained=True)
+  num_ftrs = model_ft.fc.in_features
+  model_ft.fc = nn.Linear(num_ftrs, 2)
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Tue, 06 Nov 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/navigating-ml/level2_prep/</link>
+        <guid isPermaLink="true">http://localhost:4000/navigating-ml/level2_prep/</guid>
+        
+        
+        <category>ds</category>
+        
+        <category>ml</category>
+        
+      </item>
+    
+      <item>
+        <title>3. Level 2 Practice</title>
+        <description>&lt;h1 id=&quot;practice&quot;&gt;Practice&lt;/h1&gt;
+
+&lt;p&gt;In this intermediate Challenge, you’ll apply what you’ve learned in the Level 2 Preparation section.  You’ll start exploring the CIFAR-10 dataset along with other datsets in PyTorch and TensorFlow as extra credit.&lt;/p&gt;
+
+&lt;h2 id=&quot;adapt-deep-learning-code&quot;&gt;Adapt Deep Learning Code&lt;/h2&gt;
+
+&lt;h3 id=&quot;image-classification&quot;&gt;Image Classification&lt;/h3&gt;
+
+&lt;p&gt;Instructions to practice image classification with PyTorch&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Let’s dive into some code.  Open a Jupyter session or log into the Jupyter system (on your DSVM or locally)
+    &lt;ul&gt;
+      &lt;li&gt;In a code cell &lt;code class=&quot;highlighter-rouge&quot;&gt;! git clone https://github.com/rasbt/deep-learning-book.git&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Open this notebook:  &lt;code class=&quot;highlighter-rouge&quot;&gt;/code/model_zoo/pytorch_ipynb/multilayer-perceptron.ipynb&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Modify the notebook to work with the CIFAR-10 dataset&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Remember you’re working with RGB images instead of grayscale
+      - What is the resulting average test error?  Why is this value so different from the MNIST result?  What hyperparameters can you modify to fix this?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;extra-credit&quot;&gt;Extra Credit&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Go online and find 5 png’s of cats and dogs.  Reshape them and pad them to be 32x32 pixels using the Python Pillow library (see &lt;a href=&quot;http://pillow.readthedocs.io/en/3.1.x/reference/ImageOps.html&quot;&gt;ImageOps&lt;/a&gt;). Test the network with these, following the guidelines and lessons you learned thus far.  Now find an image of a coconut or lime and test the network with this.  What is wrong with using a food image?&lt;/li&gt;
+  &lt;li&gt;Create a new label called “food” and add this &lt;a href=&quot;http://www.vicos.si/Downloads/FIDS30&quot;&gt;fruit dataset&lt;/a&gt;, leaving some out of training for testing.  Try your coconut image again.  What if now you tested with a hot dog image?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;transfer-learning-with-pytorch&quot;&gt;Transfer Learning with PyTorch&lt;/h2&gt;
+
+&lt;p&gt;Here, for ease of use and speed we’ll use Transfer Learning as well.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Take &lt;a href=&quot;https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html&quot;&gt;this&lt;/a&gt; tutorial to work with Inception v3 as the base model (model &lt;a href=&quot;https://pytorch.org/docs/stable/torchvision/models.html&quot;&gt;choices&lt;/a&gt;) - write code to load the model, count the features going in to a fully connected layer (last layer of the CNN) and reset it to a Linear layer to thus unfreeze the layer for transfer learning)&lt;/li&gt;
+  &lt;li&gt;Using the CIFAR-10 dataset from PyTorch &lt;code class=&quot;highlighter-rouge&quot;&gt;datasets&lt;/code&gt;, train an Inception v3 model to classify trucks and automobiles (just a two-class classifier from the 10 classes in CIFAR).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;tensorflow-extra-credit&quot;&gt;TensorFlow (Extra Credit)&lt;/h2&gt;
+
+&lt;p&gt;Easy:  Run this TensorFlow script to classify a new image (this uses a pretrained Inception V3 model):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.tensorflow.org/tutorials/image_recognition&quot;&gt;https://www.tensorflow.org/tutorials/image_recognition&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Intermediate: Perform this TensorFlow CNN Tutorial from Google:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.tensorflow.org/tutorials/deep_cnn&quot;&gt;https://www.tensorflow.org/tutorials/deep_cnn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Advanced:  Modify this MNIST CNN TensorFlow tutorial for use with the CIFAR-10 dataset:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://adventuresinmachinelearning.com/convolutional-neural-networks-tutorial-tensorflow/&quot;&gt;http://adventuresinmachinelearning.com/convolutional-neural-networks-tutorial-tensorflow/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;want-more&quot;&gt;Want More?&lt;/h2&gt;
+
+&lt;p&gt;Check out Rodrigo Benenson’s &lt;a href=&quot;http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html#43494641522d3130&quot;&gt;blog&lt;/a&gt; to find out the best algorithm for classifying with CIFAR-10 and implement it.  May the force be with you.&lt;/p&gt;
+
+&lt;h2 id=&quot;additional-help&quot;&gt;Additional Help&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;PyTorch forums - &lt;a href=&quot;https://discuss.pytorch.org/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;StackOverflow with &lt;code class=&quot;highlighter-rouge&quot;&gt;pytorch&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;tensorflow&lt;/code&gt; tag&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 05 Nov 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/navigating-ml/level2_practice/</link>
+        <guid isPermaLink="true">http://localhost:4000/navigating-ml/level2_practice/</guid>
+        
+        
+        <category>ds</category>
+        
+        <category>ml</category>
+        
+      </item>
+    
+      <item>
+        <title>1. Level 3 Setup</title>
+        <description>&lt;h1 id=&quot;setup&quot;&gt;Setup&lt;/h1&gt;
+
+&lt;p&gt;You’ll be doing most things locally in this Advanced Challenge.&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-your-environment-set-up&quot;&gt;Getting your Environment Set Up&lt;/h2&gt;
+
+&lt;h3 id=&quot;hardware&quot;&gt;Hardware&lt;/h3&gt;
+
+&lt;p&gt;These are some highly rated suggestions.  You may of course try out the Practice section on a CPU machine.  There’s a cloud option below as well.&lt;/p&gt;
+
+&lt;h4 id=&quot;computer-laptop&quot;&gt;Computer-Laptop&lt;/h4&gt;
+
+&lt;p&gt;Anything with a NVIDIA GTX 1060 (GPU) is good if you travel a lot or cannot necessarily depend on wifi.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;E.g.:  https://www.razerzone.com/gaming-systems/razer-blade-pro - plan to get a 1060 w/ 256ssd + 2tb spinner&lt;/li&gt;
+  &lt;li&gt;GTX 1080 (extra $2k; only get if this is your primary machine and you travel a lot/have spotty wifi).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;computer-desktop&quot;&gt;Computer-Desktop&lt;/h4&gt;
+
+&lt;p&gt;Any gaming desktop with a min GTX 1080. &lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Alt 1: Custom built.  If you go this route -&amp;gt; Add up your GPU ram, multiply by 2 for your min RAM.  Get a CPU w/ 48 lanes (so you can go 2 GPUs later).&lt;/li&gt;
+  &lt;li&gt;Alt 2: &lt;a href=&quot;https://lambdal.com/products/quad&quot;&gt;https://lambdal.com/products/quad&lt;/a&gt; (this is probably over kill honestly, and your electricity bill might double.  Will make a great space heater)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;computer-remote&quot;&gt;Computer-Remote&lt;/h4&gt;
+
+&lt;p&gt;Use Azure and set up a jupyter notebook.  This takes more learning and understanding but is the cheapest getting started option.&lt;/p&gt;
+
+&lt;p&gt;It’s suggested to provision a new NC-6 (or NC12) DSVM on Ubuntu, updating everything, installing the packages, adding a 1TB data disk and kicking off a password protected Jupyter Notebook in a tmux session.  DO NOT put sensitive data on this.  It has open ports, admin rights to the system, is password protected only and it’s not believed to use SSL unless you set up a certificate.  There are other more secure options, though they are more advanced and not covered in this getting started.&lt;/p&gt;
+
+&lt;h4 id=&quot;iot-test_device&quot;&gt;IoT-Test_Device&lt;/h4&gt;
+
+&lt;p&gt;Raspberry Pi v3, Nvidia TX-1 or Nvidia TX-2.  If you are feeling adventurous get a few arduinos as well.&lt;/p&gt;
+
+&lt;h3 id=&quot;software&quot;&gt;Software&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Docker for Mac or Docker for Windows (avoid Toolbox)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.anaconda.com/download/&quot;&gt;Anaconda&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;If you have a GPU
+    &lt;ol&gt;
+      &lt;li&gt;Go to &lt;a href=&quot;https://developer.nvidia.com/cuda-downloads&quot;&gt;Cuda Downloads&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Join Nvidia Developer program&lt;/li&gt;
+      &lt;li&gt;Update your GPU drivers&lt;/li&gt;
+      &lt;li&gt;Install Cuda &amp;amp; Cudnn&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Install your packages&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Good Idea:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;StackOverflow account&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Sun, 04 Nov 2018 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/navigating-ml/level3_setup/</link>
+        <guid isPermaLink="true">http://localhost:4000/navigating-ml/level3_setup/</guid>
+        
+        
+        <category>ds</category>
+        
+        <category>ml</category>
+        
+      </item>
+    
+      <item>
+        <title>2. Level 3 Preparation</title>
+        <description>&lt;h1 id=&quot;level-3-preparation&quot;&gt;Level 3 Preparation&lt;/h1&gt;
+
+&lt;p&gt;You might find &lt;a href=&quot;https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&quot;&gt;these videos&lt;/a&gt; from &lt;a href=&quot;http://cs231n.stanford.edu/&quot;&gt;this&lt;/a&gt; CNN course out of Stanford useful.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Data loading in PyTorch:  &lt;a href=&quot;https://pytorch.org/tutorials/beginner/data_loading_tutorial.html&quot;&gt;Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Sat, 03 Nov 2018 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/navigating-ml/level3_prep/</link>
+        <guid isPermaLink="true">http://localhost:4000/navigating-ml/level3_prep/</guid>
+        
+        
+        <category>ds</category>
+        
+        <category>ml</category>
+        
+      </item>
+    
+      <item>
+        <title>3. Level 3 Practice</title>
+        <description>&lt;p&gt;In this advanced Challenge, the instructions will be a little more vague and you’ll need to go figure find out much on your own, part of the learning and challenge.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This problem set is adapted from a Custom ML Resources document written by a colleague.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Why do this task&lt;/em&gt;:  Usually, beginner tutorials around ML and neural networks begin with classifying hand-written digits from the MNIST dataset or CIFAR-10.  We are going to begin with something more challenging and much of it will be dealing with data and data formats.  This is to simulate how life will likely be in real life and it’s hoped you will learn how to create machine learning models more effectively and quickly in the real world. The reason to work through the following is:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It will force you to read and learn from scratch.  You will learn the different label file formats, deserializers and how things compute. &lt;/li&gt;
+  &lt;li&gt;For for example, in energy/manufacturing you will get .png or .jpg or .tiff files and not stuff already in the perfect format. &lt;/li&gt;
+  &lt;li&gt;Learning this will hopefully help you understand the concept of “Data Packing”. &lt;/li&gt;
+  &lt;li&gt;This is not the simplest way, but it forces greater learning.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;working-with-pytorch-locally-or-on-a-dsvmvm&quot;&gt;Working with PyTorch (locally or on a DSVM/VM)&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Image Classification&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Start with the Hymenoptera insect raw data
+        &lt;ol&gt;
+          &lt;li&gt;Get Data from here: &lt;a href=&quot;https://download.pytorch.org/tutorial/hymenoptera_data.zip&quot;&gt;click to download&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;Use transforms modules and other libraries to:
+            &lt;ul&gt;
+              &lt;li&gt;Try out some data augmentation - (random vertical flip and blur the images)&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;Make sure you also create an example for &lt;a href=&quot;https://en.wikipedia.org/wiki/Statistical_inference&quot;&gt;inference&lt;/a&gt;.&lt;/li&gt;
+          &lt;li&gt;Use Scikit-learns’s confusion matrix and classification_report to generate metrics.
+            &lt;ol&gt;
+              &lt;li&gt;&lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html&quot;&gt;Scikit-learn’s confusion matrix&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html&quot;&gt;Scikit-learn’s classification report&lt;/a&gt;&lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;want-more&quot;&gt;Want More?&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Do the same exact exercise with CoCo: http://cocodataset.org/#home
+    &lt;ol&gt;
+      &lt;li&gt;Why do you think you get bad results?&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Use the Out of Box Faster-RCNN solution&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;tensorflow&quot;&gt;TensorFlow&lt;/h2&gt;
+
+&lt;p&gt;Train a CNN on the CIFAR-10 dataset as in this &lt;a href=&quot;https://www.tensorflow.org/tutorials/deep_cnn&quot;&gt;Tutorial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;key-learnings&quot;&gt;Key Learnings&lt;/h2&gt;
+
+&lt;h2 id=&quot;additional-help&quot;&gt;Additional Help&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;PyTorch forums - &lt;a href=&quot;https://discuss.pytorch.org/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;StackOverflow with &lt;code class=&quot;highlighter-rouge&quot;&gt;pytorch&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;tensorflow&lt;/code&gt; tag&lt;/li&gt;
+  &lt;li&gt;If using CNTK, you may send your questions to cntkhelp@microsoft.com&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 02 Nov 2018 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/navigating-ml/level3_practice/</link>
+        <guid isPermaLink="true">http://localhost:4000/navigating-ml/level3_practice/</guid>
+        
+        
+        <category>ds</category>
+        
+        <category>ml</category>
+        
+      </item>
+    
+  </channel>
+</rss>
