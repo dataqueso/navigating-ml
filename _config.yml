@@ -33,11 +33,11 @@ paginate: 9
 paginate_path: /page:num/
 
 # Tracker
-#analytics: UA-83979019-1
+analytics: UA-129282757-1
 
 # Comments
 disqus: yes
-disqus-shortname: webjeda-demo
+disqus-shortname: navigating-ml
 
 #social
 twitter: http://twitter.com/@rheartpython
