@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Navigating ML</title>
-    <description>Webjeda Cards is a Bootstrap based jekyll theme for portfolio, photography or any kind of blog.
+    <description>Navigating ML - a take by Micheleen
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Nov 2018 07:23:26 -0800</pubDate>
-    <lastBuildDate>Fri, 16 Nov 2018 07:23:26 -0800</lastBuildDate>
+    <pubDate>Fri, 16 Nov 2018 08:18:26 -0800</pubDate>
+    <lastBuildDate>Fri, 16 Nov 2018 08:18:26 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -516,10 +516,6 @@
 
 &lt;p&gt;In this advanced Challenge, the instructions will be a little more vague and you’ll need to go figure find out much on your own, part of the learning and challenge.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;This problem set is adapted from a Custom ML Resources document written by a colleague.&lt;/p&gt;
-&lt;/blockquote&gt;
-
 &lt;p&gt;&lt;em&gt;Why do this task&lt;/em&gt;:  Usually, beginner tutorials around ML and neural networks begin with classifying hand-written digits from the MNIST dataset or CIFAR-10.  We are going to begin with something more challenging and much of it will be dealing with data and data formats.  This is to simulate how life will likely be in real life and it’s hoped you will learn how to create machine learning models more effectively and quickly in the real world. The reason to work through the following is:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -530,6 +526,8 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;working-with-pytorch-locally-or-on-a-dsvmvm&quot;&gt;Working with PyTorch (locally or on a DSVM/VM)&lt;/h2&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/navigating-ml/level2_setup&quot;&gt;Level 2 Setup&lt;/a&gt; for more instructions on how to set up an environment for this problem set.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -562,10 +560,15 @@
 &lt;ol&gt;
   &lt;li&gt;Do the same exact exercise with CoCo: http://cocodataset.org/#home
     &lt;ol&gt;
-      &lt;li&gt;Why do you think you get bad results?&lt;/li&gt;
+      &lt;li&gt;Why do you think you get bad results?
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
-  &lt;li&gt;Use the Out of Box Faster-RCNN solution&lt;/li&gt;
+  &lt;li&gt;Object Detection
+    &lt;ol&gt;
+      &lt;li&gt;Use the Out of Box Faster-RCNN or YOLOv3 solution to identify new objects in images based on a model trained on CoCo&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;tensorflow&quot;&gt;TensorFlow&lt;/h2&gt;

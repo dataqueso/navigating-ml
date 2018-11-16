@@ -10,8 +10,6 @@ categories: [ds, ml]
 
 In this advanced Challenge, the instructions will be a little more vague and you'll need to go figure find out much on your own, part of the learning and challenge.
 
-> This problem set is adapted from a Custom ML Resources document written by a colleague.
-
 _Why do this task_:  Usually, beginner tutorials around ML and neural networks begin with classifying hand-written digits from the MNIST dataset or CIFAR-10.  We are going to begin with something more challenging and much of it will be dealing with data and data formats.  This is to simulate how life will likely be in real life and it's hoped you will learn how to create machine learning models more effectively and quickly in the real world. The reason to work through the following is:
 
   * It will force you to read and learn from scratch.  You will learn the different label file formats, deserializers and how things compute. 
@@ -20,6 +18,8 @@ _Why do this task_:  Usually, beginner tutorials around ML and neural networks 
   * This is not the simplest way, but it forces greater learning.
 
 ## Working with PyTorch (locally or on a DSVM/VM)
+
+See [Level 2 Setup](/navigating-ml/level2_setup) for more instructions on how to set up an environment for this problem set.
 
 1. Image Classification
 
@@ -36,7 +36,9 @@ _Why do this task_:  Usually, beginner tutorials around ML and neural networks 
 
 4. Do the same exact exercise with CoCo: http://cocodataset.org/#home
     1. Why do you think you get bad results?
-5. Use the Out of Box Faster-RCNN solution
+<br><br>
+1.  Object Detection
+    1. Use the Out of Box Faster-RCNN or YOLOv3 solution to identify new objects in images based on a model trained on CoCo
 
 ## TensorFlow
 
