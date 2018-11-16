@@ -4,6 +4,7 @@ title: 3. Level 1 Practice
 img: third.jpg
 ---
 
+# Going from Prebuilt ML Tools to First Custom ML
 
 It is recommended that you have completed the [Leve 1 Preparation](level1_prep).
 
@@ -11,7 +12,7 @@ In this Beginner Challenge you'll learn about basic ML and neural networks hands
 
 Here and throughout these practice exercises you'll work with the following image datasets: the fruit FIDS30 dataset, the Kaggle Fashion MNIST dataset and the CIFAR-10 (tiny images) dataset.
 
-## Custom Vision (Microsoft)
+## Custom Vision (free from Microsoft)
 
 Download the [fruit dataset](http://www.vicos.si/Downloads/FIDS30) and build a fruit image classifier with two fruit classes using [https://customvision.ai/](https://customvision.ai/).
 

@@ -6,7 +6,7 @@ img: seventh.jpg
 categories: [ds, ml]
 ---
 
-# Setup
+# Setup with GPU
 
 You'll be doing most things locally in this Advanced Challenge.
 

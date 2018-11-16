@@ -6,7 +6,7 @@ img: sixth.jpg
 categories: [ds, ml]
 ---
 
-# Practice
+# Intermediate Practice with Deep Learning
 
 In this intermediate Challenge, you'll apply what you've learned in the Level 2 Preparation section.  You'll start exploring the CIFAR-10 dataset along with other datsets in PyTorch and TensorFlow as extra credit.
 

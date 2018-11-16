@@ -6,7 +6,7 @@ img: fourth.jpg
 categories: [ds, ml]
 ---
 
-# Setup
+# Basic Setup for Deep Learning
 
 ## Cloud
 

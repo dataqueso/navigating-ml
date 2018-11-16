@@ -6,7 +6,7 @@ img: first.jpg
 categories: [ds, ml]
 ---
 
-# Setup
+# Basic Setup for Getting Started
 
 1.  Anaconda3 Python (Recommended versions:  Anaconda3 4.1.1 for Python 3.5.2 recommended, Anaconda3 4.3.1 for Python 3.6 ok, too)
     *  This will allow you to create `conda` environments to "contain" your projects and Python versions.  In fact you can use your current Anaconda or Miniconda Python to install other Python versions from the command line [Ref](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)

@@ -6,13 +6,13 @@
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Nov 2018 22:02:39 -0800</pubDate>
-    <lastBuildDate>Thu, 15 Nov 2018 22:02:39 -0800</lastBuildDate>
+    <pubDate>Fri, 16 Nov 2018 07:23:26 -0800</pubDate>
+    <lastBuildDate>Fri, 16 Nov 2018 07:23:26 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>1. Level 1 Setup</title>
-        <description>&lt;h1 id=&quot;setup&quot;&gt;Setup&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;basic-setup-for-getting-started&quot;&gt;Basic Setup for Getting Started&lt;/h1&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Anaconda3 Python (Recommended versions:  Anaconda3 4.1.1 for Python 3.5.2 recommended, Anaconda3 4.3.1 for Python 3.6 ok, too)
@@ -68,7 +68,9 @@
     
       <item>
         <title>2. Level 1 Preparation</title>
-        <description>&lt;p&gt;To begin at this level you should have:&lt;/p&gt;
+        <description>&lt;h1 id=&quot;introductory-data-and-neural-network-concepts&quot;&gt;Introductory Data and Neural Network Concepts&lt;/h1&gt;
+
+&lt;p&gt;To begin at this level you should have:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Familiarity with Python 3 for general purpose programming.  See the &lt;a href=&quot;../python&quot;&gt;Python&lt;/a&gt; section for more.&lt;/li&gt;
@@ -129,13 +131,15 @@
     
       <item>
         <title>3. Level 1 Practice</title>
-        <description>&lt;p&gt;It is recommended that you have completed the &lt;a href=&quot;level1_prep&quot;&gt;Leve 1 Preparation&lt;/a&gt;.&lt;/p&gt;
+        <description>&lt;h1 id=&quot;going-from-prebuilt-ml-tools-to-first-custom-ml&quot;&gt;Going from Prebuilt ML Tools to First Custom ML&lt;/h1&gt;
+
+&lt;p&gt;It is recommended that you have completed the &lt;a href=&quot;level1_prep&quot;&gt;Leve 1 Preparation&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;In this Beginner Challenge you’ll learn about basic ML and neural networks hands-on with Jupyter notebooks and Python.  You’ll be introduced to scikit-learn, CNTK, and TensorFlow as Python packages commonly used in data manipulation and data science.&lt;/p&gt;
 
 &lt;p&gt;Here and throughout these practice exercises you’ll work with the following image datasets: the fruit FIDS30 dataset, the Kaggle Fashion MNIST dataset and the CIFAR-10 (tiny images) dataset.&lt;/p&gt;
 
-&lt;h2 id=&quot;custom-vision-microsoft&quot;&gt;Custom Vision (Microsoft)&lt;/h2&gt;
+&lt;h2 id=&quot;custom-vision-free-from-microsoft&quot;&gt;Custom Vision (free from Microsoft)&lt;/h2&gt;
 
 &lt;p&gt;Download the &lt;a href=&quot;http://www.vicos.si/Downloads/FIDS30&quot;&gt;fruit dataset&lt;/a&gt; and build a fruit image classifier with two fruit classes using &lt;a href=&quot;https://customvision.ai/&quot;&gt;https://customvision.ai/&lt;/a&gt;.&lt;/p&gt;
 
@@ -235,7 +239,7 @@
     
       <item>
         <title>2. Level 2 Setup</title>
-        <description>&lt;h1 id=&quot;setup&quot;&gt;Setup&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;basic-setup-for-deep-learning&quot;&gt;Basic Setup for Deep Learning&lt;/h1&gt;
 
 &lt;h2 id=&quot;cloud&quot;&gt;Cloud&lt;/h2&gt;
 
@@ -292,7 +296,7 @@
     
       <item>
         <title>2. Level 2 Preparation</title>
-        <description>&lt;h1 id=&quot;preparation&quot;&gt;Preparation&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;neural-network-concepts-and-classification&quot;&gt;Neural Network Concepts and Classification&lt;/h1&gt;
 
 &lt;p&gt;Now it’s time to really learn about PyTorch and classifiers such as logistic regression, multilayer perceptron, and convolutional network (CNN/ConvNet) classifiers.  The MNIST hand-written digits dataset is used in the following course to classify grey-scale images of digits.  We’ll use this code in our Challenge section so go ahead and get familiar with it now by taking this course.&lt;/p&gt;
 
@@ -330,7 +334,7 @@
     
       <item>
         <title>3. Level 2 Practice</title>
-        <description>&lt;h1 id=&quot;practice&quot;&gt;Practice&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;intermediate-practice-with-deep-learning&quot;&gt;Intermediate Practice with Deep Learning&lt;/h1&gt;
 
 &lt;p&gt;In this intermediate Challenge, you’ll apply what you’ve learned in the Level 2 Preparation section.  You’ll start exploring the CIFAR-10 dataset along with other datsets in PyTorch and TensorFlow as extra credit.&lt;/p&gt;
 
@@ -414,7 +418,7 @@
     
       <item>
         <title>1. Level 3 Setup</title>
-        <description>&lt;h1 id=&quot;setup&quot;&gt;Setup&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;setup-with-gpu&quot;&gt;Setup with GPU&lt;/h1&gt;
 
 &lt;p&gt;You’ll be doing most things locally in this Advanced Challenge.&lt;/p&gt;
 
@@ -487,7 +491,7 @@
     
       <item>
         <title>2. Level 3 Preparation</title>
-        <description>&lt;h1 id=&quot;level-3-preparation&quot;&gt;Level 3 Preparation&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;advanced-preparation&quot;&gt;Advanced Preparation&lt;/h1&gt;
 
 &lt;p&gt;You might find &lt;a href=&quot;https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&quot;&gt;these videos&lt;/a&gt; from &lt;a href=&quot;http://cs231n.stanford.edu/&quot;&gt;this&lt;/a&gt; CNN course out of Stanford useful.&lt;/p&gt;
 
@@ -508,7 +512,9 @@
     
       <item>
         <title>3. Level 3 Practice</title>
-        <description>&lt;p&gt;In this advanced Challenge, the instructions will be a little more vague and you’ll need to go figure find out much on your own, part of the learning and challenge.&lt;/p&gt;
+        <description>&lt;h1 id=&quot;advanced-deep-learning-with-pytorch&quot;&gt;Advanced Deep Learning with PyTorch&lt;/h1&gt;
+
+&lt;p&gt;In this advanced Challenge, the instructions will be a little more vague and you’ll need to go figure find out much on your own, part of the learning and challenge.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;This problem set is adapted from a Custom ML Resources document written by a colleague.&lt;/p&gt;
@@ -533,7 +539,7 @@
       &lt;li&gt;Start with the Hymenoptera insect raw data
         &lt;ol&gt;
           &lt;li&gt;Get Data from here: &lt;a href=&quot;https://download.pytorch.org/tutorial/hymenoptera_data.zip&quot;&gt;click to download&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;Use transforms modules and other libraries to:
+          &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;transforms&lt;/code&gt; modules from &lt;code class=&quot;highlighter-rouge&quot;&gt;torchvision&lt;/code&gt; and other libraries to:
             &lt;ul&gt;
               &lt;li&gt;Try out some data augmentation - (random vertical flip and blur the images)&lt;/li&gt;
             &lt;/ul&gt;
@@ -579,6 +585,153 @@
         <pubDate>Fri, 02 Nov 2018 00:00:00 -0700</pubDate>
         <link>http://localhost:4000/navigating-ml/level3_practice/</link>
         <guid isPermaLink="true">http://localhost:4000/navigating-ml/level3_practice/</guid>
+        
+        
+        <category>ds</category>
+        
+        <category>ml</category>
+        
+      </item>
+    
+      <item>
+        <title>Introduction to Python</title>
+        <description>&lt;h1 id=&quot;learning-python-for-data-science&quot;&gt;Learning Python for Data Science&lt;/h1&gt;
+
+&lt;h2 id=&quot;just-starting-out&quot;&gt;Just Starting Out&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Your First Python Video Course&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Intro to Python for Data Science from DataCamp (Time:  ~4 hours; Format - videos and exercises)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.datacamp.com/courses/intro-to-python-for-data-science&quot;&gt;Course&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Python basics&lt;/li&gt;
+  &lt;li&gt;Lists&lt;/li&gt;
+  &lt;li&gt;Functions and packages&lt;/li&gt;
+  &lt;li&gt;Numpy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;An Introductory Written Tutorial&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A nice course from Software Carpentry on basics of Python programming with a data analysis twist.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://swcarpentry.github.io/python-novice-inflammation/&quot;&gt;Course&lt;/a&gt; (Time:  ~8 hours; Format:  written tutorial and exercises)&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Analyzing Patient Data&lt;/li&gt;
+  &lt;li&gt;Repeating Actions with Loops&lt;/li&gt;
+  &lt;li&gt;Storing Multiple Values in Lists&lt;/li&gt;
+  &lt;li&gt;Analyzing Data from Multiple Files&lt;/li&gt;
+  &lt;li&gt;Making Choices&lt;/li&gt;
+  &lt;li&gt;Creating Functions&lt;/li&gt;
+  &lt;li&gt;Errors and Exceptions&lt;/li&gt;
+  &lt;li&gt;Defensive Programming&lt;/li&gt;
+  &lt;li&gt;Debugging&lt;/li&gt;
+  &lt;li&gt;Command-Line Programs&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Your Second Python Video Course&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;An entertaining set of videos for the new Python dev with live coding with which to follow along (Time:  ~7hrs; Format - Video/live coding)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLwyVx3OgslBW6nIh-g62ZxD5LwmAsG4e5&quot;&gt;Videos&lt;/a&gt; for Python Programming Tutorial for the Absolute Beginner (6 Videos)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;All New Data Scientists Should Learn about Jupyter&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Nice, short video tour of Jupyter Notebooks (Format:  Video)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=jZ952vChhuI&quot;&gt;Course&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;EXERCISE: Go to &lt;a href=&quot;https://notebooks.azure.com&quot;&gt;Azure Notebooks&lt;/a&gt; to check out Jupyter notebooks live and try to follow along with the video.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Programming and Plotting with Python&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Basics with plotting theme throughout and nice exercies from Software Carpentry.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://swcarpentry.github.io/python-novice-gapminder/&quot;&gt;Course&lt;/a&gt; (Time: ~8 hours; Format:  written tutorial and exercises)&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Running and Quitting&lt;/li&gt;
+  &lt;li&gt;Variables and Assignment&lt;/li&gt;
+  &lt;li&gt;Data Types and Type Conversion&lt;/li&gt;
+  &lt;li&gt;Built-in Functions and Help&lt;/li&gt;
+  &lt;li&gt;Libraries&lt;/li&gt;
+  &lt;li&gt;Reading Tabular Data into DataFrames&lt;/li&gt;
+  &lt;li&gt;Pandas DataFrames&lt;/li&gt;
+  &lt;li&gt;Plotting&lt;/li&gt;
+  &lt;li&gt;Lists&lt;/li&gt;
+  &lt;li&gt;For Loops&lt;/li&gt;
+  &lt;li&gt;Looping Over Data Sets&lt;/li&gt;
+  &lt;li&gt;Writing Functions&lt;/li&gt;
+  &lt;li&gt;Variable Scope&lt;/li&gt;
+  &lt;li&gt;Conditionals&lt;/li&gt;
+  &lt;li&gt;Programming Style&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;intermediate&quot;&gt;Intermediate&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;The Data Science Handbook&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;By Jake VanderPlas, this handbook outlines everything you need to know with cool Examples and Applications, on how to get started in Data Science with Python.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jakevdp.github.io/PythonDataScienceHandbook/&quot;&gt;Book&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Python intro and data sciencey tools - go through in order or skip around&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Python for Data Science and Intro to Jupyter Notebooks and on Jupyter Notebooks on Azure (Time:  ~15 hrs; Format - written tutorial and exercises)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://notebooks.azure.com/rheartpython/libraries/PythonDS101&quot;&gt;Jupyter Notebooks&lt;/a&gt; - Note, solutions to exercises are in the last notebook.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Basics&lt;/li&gt;
+  &lt;li&gt;Data Structures&lt;/li&gt;
+  &lt;li&gt;Functional Programming&lt;/li&gt;
+  &lt;li&gt;Sorting and Pattern Matching&lt;/li&gt;
+  &lt;li&gt;Object Oriented Programming&lt;/li&gt;
+  &lt;li&gt;Basic Difference from 2 to 3&lt;/li&gt;
+  &lt;li&gt;Numerical Computing&lt;/li&gt;
+  &lt;li&gt;Data Analysis with pandas I&lt;/li&gt;
+  &lt;li&gt;Data Analysis with pandas II&lt;/li&gt;
+  &lt;li&gt;Machine Learning I - ML Basics and Data Exploration&lt;/li&gt;
+  &lt;li&gt;Machine Learning II - Supervised and Unsupervised Learning&lt;/li&gt;
+  &lt;li&gt;Machine Learning III - Parameter Tuning and Model Evaluation&lt;/li&gt;
+  &lt;li&gt;Visualization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;A different take on Python and data science (either of these should cover your Python needs)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For a more in-depth Python course, this is a good one on edX out of UC San Diego:  &lt;a href=&quot;https://www.edx.org/course/python-data-science-uc-san-diegox-dse200x&quot;&gt;Python for Data Science from edX&lt;/a&gt;.  (Time:  10 weeks/8-10 hours per week)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Basic process of data science&lt;/li&gt;
+  &lt;li&gt;Python and Jupyter notebooks&lt;/li&gt;
+  &lt;li&gt;An applied understanding of how to manipulate and analyze uncurated datasets&lt;/li&gt;
+  &lt;li&gt;Basic statistical analysis and machine learning methods&lt;/li&gt;
+  &lt;li&gt;How to effectively visualize results&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Numerical Python, a.k.a. using the &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; package, is essential for the data scientist&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;See my &lt;a href=&quot;python/numpy&quot;&gt;python/numpy.html&lt;/a&gt; article for a detailed list of &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; resources.&lt;/p&gt;
+
+&lt;h2 id=&quot;advanced&quot;&gt;Advanced&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Some books really worth checking out&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For a great dive into Python in the context of ML check out this book by Sebastian Raschka (you’ll get to write algorithms from scratch in pure Python!): &lt;a href=&quot;https://github.com/rasbt/python-machine-learning-book-2nd-edition&quot;&gt;Python Machine Learning (2nd Ed.)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Not sure if this book is out yet, but Sebastian Raschka is writing a sequel with more deep learning in Python with TensorFlow: &lt;a href=&quot;https://leanpub.com/ann-and-deeplearning&quot;&gt;Introduction to Artificial Neural Networks and Deep Learning&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;“This book is concerned with the nuts and bolts of manipulating, processing, cleaning, and crunching data in Python. My goal is to offer a guide to the parts of the Python programming language and its data-oriented library ecosystem and tools that will equip you to become an effective data analyst. While ‘data analysis’ is in the title of the book, the focus is specifically on Python programming, libraries, and tools as opposed to data analysis methodology. This is the Python programming you need for data analysis.”  &lt;a href=&quot;https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662/&quot;&gt;Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython by Wes McKinney&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;“Perhaps you would like to give your homemade robot a brain of its own? Make it recognize faces? Or learn to walk around? Or maybe your company has tons of data (user logs, financial data, production data, machine sensor data, hotline stats, HR reports, etc.), and more than likely you could unearth some hidden gems if you just knew where to look.” &lt;a href=&quot;https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1491962291&quot;&gt;Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems by Aurélien Géron&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 01 Nov 2018 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/navigating-ml/learning-python/</link>
+        <guid isPermaLink="true">http://localhost:4000/navigating-ml/learning-python/</guid>
         
         
         <category>ds</category>

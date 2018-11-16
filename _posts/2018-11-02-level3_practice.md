@@ -6,6 +6,8 @@ img: ninth.jpg
 categories: [ds, ml]
 ---
 
+# Advanced Deep Learning with PyTorch
+
 In this advanced Challenge, the instructions will be a little more vague and you'll need to go figure find out much on your own, part of the learning and challenge.
 
 > This problem set is adapted from a Custom ML Resources document written by a colleague.
@@ -23,7 +25,7 @@ _Why do this task_:  Usually, beginner tutorials around ML and neural networks 
 
     1. Start with the Hymenoptera insect raw data
         1. Get Data from here: [click to download](https://download.pytorch.org/tutorial/hymenoptera_data.zip)
-        2. Use transforms modules and other libraries to:
+        2. Use `transforms` modules from `torchvision` and other libraries to:
             * Try out some data augmentation - (random vertical flip and blur the images)
         3. Make sure you also create an example for [inference](https://en.wikipedia.org/wiki/Statistical_inference).
         2. Use Scikit-learns’s confusion matrix and classification_report to generate metrics.
