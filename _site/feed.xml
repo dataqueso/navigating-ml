@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Nov 2018 17:55:49 -0800</pubDate>
-    <lastBuildDate>Fri, 16 Nov 2018 17:55:49 -0800</lastBuildDate>
+    <pubDate>Fri, 16 Nov 2018 18:22:54 -0800</pubDate>
+    <lastBuildDate>Fri, 16 Nov 2018 18:22:54 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -426,18 +426,24 @@
 
 &lt;h3 id=&quot;hardware&quot;&gt;Hardware&lt;/h3&gt;
 
-&lt;p&gt;A recent study states the following regarding GPUs:&lt;/p&gt;
+&lt;p&gt;A decade ago a study was done using molecular dynamics simulations where, even then, they saw significant speed-ups by using an NVIDIA GPU (Graphics Processing Unit), speed-ups of up to 25x programming in the CUDA (compute unified device architecture) language:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;em&gt;Their computational power exceeds that of the CPU by orders of magnitude:
 while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA GeForce
 8800 Ultra reaches theoretically 500 Gigaflops.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p align=&quot;right&quot;&gt;J.A. van Meel et al. arXiv. Published:  November 8, 2018&lt;/p&gt;
+&lt;p align=&quot;right&quot;&gt;J.A. van Meel et al. arXiv. 20 Sept. 2007&lt;/p&gt;
 &lt;p align=&quot;right&quot;&gt;https://arxiv.org/PS_cache/arxiv/pdf/0709/0709.3225v1.pdf&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Thus accepted options for training deep learning models are GPU(s) or TPU(s).  Other hardware options include &lt;a href=&quot;https://en.wikipedia.org/wiki/Application-specific_integrated_circuit&quot;&gt;ASIC chips&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nowadays, a standard choice is the NVIDIA GTX 1080 for deep learning as well as bitcoin mining, processing at speeds as high as 8,873 GFLOPS.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://images.techhive.com/images/article/2016/05/geforce_gtx_1080_front_pcb_1463236682-100661319-orig.png&quot; alt=&quot;nvidia gtx 1080 image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another advantage of GPUs is that they use a fraction of the power that their CPU counterparts use.&lt;/p&gt;
+
+&lt;p&gt;Thus accepted options for training deep learning models (in Python even!) are GPU(s) or TPU(s).  Other hardware options include &lt;a href=&quot;https://en.wikipedia.org/wiki/Application-specific_integrated_circuit&quot;&gt;ASIC chips&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;computer-laptop&quot;&gt;Computer-Laptop&lt;/h4&gt;
 

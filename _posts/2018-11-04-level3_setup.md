@@ -14,16 +14,22 @@ These are some highly rated suggestions.  A CPU machine can not perform matrix a
 
 ### Hardware
 
-A recent study states the following regarding GPUs:
+A decade ago a study was done using molecular dynamics simulations where, even then, they saw significant speed-ups by using an NVIDIA GPU (Graphics Processing Unit), speed-ups of up to 25x programming in the CUDA (compute unified device architecture) language:
 
 > _Their computational power exceeds that of the CPU by orders of magnitude:
 while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA GeForce
 8800 Ultra reaches theoretically 500 Gigaflops._
-<p align="right">J.A. van Meel et al. arXiv. Published:  November 8, 2018</p>
+<p align="right">J.A. van Meel et al. arXiv. 20 Sept. 2007</p>
 <p align="right">https://arxiv.org/PS_cache/arxiv/pdf/0709/0709.3225v1.pdf</p>
 <br>
 
-Thus accepted options for training deep learning models are GPU(s) or TPU(s).  Other hardware options include [ASIC chips](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit).
+Nowadays, a standard choice is the NVIDIA GTX 1080 for deep learning as well as bitcoin mining, processing at speeds as high as 8,873 GFLOPS.
+
+![nvidia gtx 1080 image](https://images.techhive.com/images/article/2016/05/geforce_gtx_1080_front_pcb_1463236682-100661319-orig.png)
+
+Another advantage of GPUs is that they use a fraction of the power that their CPU counterparts use.
+
+Thus accepted options for training deep learning models (in Python even!) are GPU(s) or TPU(s).  Other hardware options include [ASIC chips](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit).
 
 #### Computer-Laptop
 
