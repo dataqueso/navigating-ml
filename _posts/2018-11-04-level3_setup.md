@@ -8,13 +8,22 @@ categories: [ds, ml]
 
 # Setup with GPU
 
-You'll be doing most things locally in this Advanced Challenge.
+These are some highly rated suggestions.  A CPU machine can not perform matrix addition and multiplication as quickly, a central theme in deep learning, thus is not a viable option for training a complex neural network like ResNet, from scratch. 
 
 ## Getting your Environment Set Up
 
 ### Hardware
 
-These are some highly rated suggestions.  You may of course try out the Practice section on a CPU machine.  There's a cloud option below as well.
+A recent study states the following regarding GPUs:
+
+> _Their computational power exceeds that of the CPU by orders of magnitude:
+while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA GeForce
+8800 Ultra reaches theoretically 500 Gigaflops._
+<p align="right">J.A. van Meel et al. arXiv. Published:  November 8, 2018</p>
+<p align="right">https://arxiv.org/PS_cache/arxiv/pdf/0709/0709.3225v1.pdf</p>
+<br>
+
+Thus accepted options for training deep learning models are GPU(s) or TPU(s).  Other hardware options include [ASIC chips](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit).
 
 #### Computer-Laptop
 
@@ -34,11 +43,11 @@ Any gaming desktop with a min GTX 1080. 
 
 Use Azure and set up a jupyter notebook.  This takes more learning and understanding but is the cheapest getting started option.
 
-It's suggested to provision a new NC-6 (or NC12) DSVM on Ubuntu, updating everything, installing the packages, adding a 1TB data disk and kicking off a password protected Jupyter Notebook in a tmux session.  DO NOT put sensitive data on this.  It has open ports, admin rights to the system, is password protected only and it's not believed to use SSL unless you set up a certificate.  There are other more secure options, though they are more advanced and not covered in this getting started.
+It's suggested to provision a new NC-6 (or NC12) (v3) DSVM on Ubuntu, updating everything, installing the packages, adding a 1TB HDD data disk ([add disk to the DSVM](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal)) and kicking off a password protected Jupyter Notebook in a tmux session.  DO NOT put sensitive data on this.  It has open ports, admin rights to the system, is password protected only and it's not believed to use SSL unless you set up a certificate.  There are other more secure options, though they are more advanced and not covered in this getting started.
 
 #### IoT-Test_Device
 
-Raspberry Pi v3, Nvidia TX-1 or Nvidia TX-2.  If you are feeling adventurous get a few arduinos as well.
+Raspberry Pi v3, Nvidia TX-1, Nvidia TX-2 or Xavier if you can spend some cash.  If you are feeling adventurous get a few arduinos as well.
 
 ### Software
 
@@ -48,7 +57,7 @@ Raspberry Pi v3, Nvidia TX-1 or Nvidia TX-2.  If you are feeling adventurous ge
      1. Go to [Cuda Downloads](https://developer.nvidia.com/cuda-downloads)
 	 2. Join Nvidia Developer program
 	 3. Update your GPU drivers
-	 4. Install Cuda & Cudnn
+	 4. Install CUDA & cuDNN
   4. Install your packages
 
 Good Idea:
