@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Nov 2018 18:22:54 -0800</pubDate>
-    <lastBuildDate>Fri, 16 Nov 2018 18:22:54 -0800</lastBuildDate>
+    <pubDate>Sat, 17 Nov 2018 11:46:54 -0800</pubDate>
+    <lastBuildDate>Sat, 17 Nov 2018 11:46:54 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -239,41 +239,82 @@
     
       <item>
         <title>2. Level 2 Setup</title>
-        <description>&lt;h1 id=&quot;basic-setup-for-deep-learning&quot;&gt;Basic Setup for Deep Learning&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;gpu-setup-for-deep-learning&quot;&gt;GPU Setup for Deep Learning&lt;/h1&gt;
 
-&lt;h2 id=&quot;cloud&quot;&gt;Cloud&lt;/h2&gt;
+&lt;p&gt;These are some highly rated suggestions.  A CPU machine can not perform matrix addition and multiplication as quickly, a central theme in deep learning, thus is not a viable option for training a complex neural network like ResNet, from scratch.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;(Deploy when ready if you don’t have it yet) &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm&quot;&gt;Linux (Ubuntu) Deep Learning Virtual Machine&lt;/a&gt; Standard NC6&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&quot;getting-your-environment-set-up&quot;&gt;Getting your Environment Set Up&lt;/h2&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Tip: place everything for this set of challenges in the same resource group to tear down together at the end.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;hardware&quot;&gt;Hardware&lt;/h3&gt;
+
+&lt;p&gt;A decade ago a study was done using molecular dynamics simulations where, even then, they saw significant speed-ups by using an NVIDIA GPU (Graphics Processing Unit), speed-ups of up to 25x programming in the CUDA (compute unified device architecture) language:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;TensorFlow and PyTorch can be found on all Linux and Windows Data Science Virtual Machines and Deep Learning Virtual Machines along with a long list of common data science tools - see &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/overview&quot;&gt;Docs&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;Their computational power exceeds that of the CPU by orders of magnitude:
+while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA GeForce
+8800 Ultra reaches theoretically 500 Gigaflops.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p align=&quot;right&quot;&gt;J.A. van Meel et al. arXiv. 20 Sept. 2007&lt;/p&gt;
+&lt;p align=&quot;right&quot;&gt;https://arxiv.org/PS_cache/arxiv/pdf/0709/0709.3225v1.pdf&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Ensure Jupyter notebooks are working.
-    &lt;ul&gt;
-      &lt;li&gt;“access the Jupyter notebook server from any host. Just navigate in the browser to &lt;code class=&quot;highlighter-rouge&quot;&gt;https://&amp;lt;VM DNS name or IP Address&amp;gt;:8000/&lt;/code&gt;” (&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/dsvm-ubuntu-intro#tools-installed-on-the-data-science-virtual-machine-for-linux&quot;&gt;Doc&lt;/a&gt; - check out “Jupyter notebook” for more)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Nowadays, a standard choice is the NVIDIA GTX 1080 for deep learning as well as bitcoin mining, processing at speeds as high as 8,873 GFLOPS.&lt;/p&gt;
 
-&lt;h2 id=&quot;local-via-docker&quot;&gt;Local via Docker&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.techhive.com/images/article/2016/05/geforce_gtx_1080_front_pcb_1463236682-100661319-orig.png&quot; alt=&quot;nvidia gtx 1080 image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Here are the instructions for a generic scientific and deep learning custom Linux VM with Jupyterhub (Running Locally):&lt;/p&gt;
+&lt;p&gt;Another advantage of GPUs is that they use a fraction of the power that their CPU counterparts use.&lt;/p&gt;
+
+&lt;p&gt;Thus accepted options for training deep learning models (in Python even!) are GPU(s) or TPU(s).  Other hardware options include &lt;a href=&quot;https://en.wikipedia.org/wiki/Application-specific_integrated_circuit&quot;&gt;ASIC chips&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;computer-laptop&quot;&gt;Computer-Laptop&lt;/h4&gt;
+
+&lt;p&gt;Anything with a NVIDIA GTX 1060 (GPU) is good if you travel a lot or cannot necessarily depend on wifi.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;GitHub project - &lt;a href=&quot;https://github.com/michhar/custom-jupyterhub-linux-vm&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;E.g.:  https://www.razerzone.com/gaming-systems/razer-blade-pro - plan to get a 1060 w/ 256ssd + 2tb spinner&lt;/li&gt;
+  &lt;li&gt;GTX 1080 (extra $2k; only get if this is your primary machine and you travel a lot/have spotty wifi).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;local-non-docker&quot;&gt;Local Non-Docker&lt;/h2&gt;
+&lt;h4 id=&quot;computer-desktop&quot;&gt;Computer-Desktop&lt;/h4&gt;
 
-&lt;p&gt;Here, it’s assumed you know what you are doing and can set up the scientific stack.&lt;/p&gt;
+&lt;p&gt;Any gaming desktop with a min GTX 1080. &lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Alt 1: Custom built.  If you go this route -&amp;gt; Add up your GPU RAM, multiply by 2 for your min RAM.  Get a CPU w/ 48 lanes (so you can go 2 GPUs later).&lt;/li&gt;
+  &lt;li&gt;Alt 2: &lt;a href=&quot;https://lambdal.com/products/quad&quot;&gt;https://lambdal.com/products/quad&lt;/a&gt; (this is probably over kill honestly, and your electricity bill might double.  Will make a great space heater)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;computer-remote&quot;&gt;Computer-Remote&lt;/h4&gt;
+
+&lt;p&gt;Use Azure and set up a Jupyter notebook.  This takes more learning and understanding, but is the cheapest getting started option.&lt;/p&gt;
+
+&lt;p&gt;It’s suggested to provision a new NC-6 (or NC12) (v3) &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm&quot;&gt;Linux (Ubuntu) Deep Learning Virtual Machine&lt;/a&gt;, updating everything, installing the packages, adding a 1TB HDD data disk (&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal&quot;&gt;add disk to the DSVM&lt;/a&gt;) and kicking off a password protected Jupyter Notebook in a tmux session.  DO NOT put sensitive data on this.  It has open ports, admin rights to the system, is password protected only and it’s not believed to use SSL unless you set up a certificate.  There are other more secure options, though they are more advanced and not covered in this getting started.&lt;/p&gt;
+
+&lt;h4 id=&quot;iot-test_device-for-inference&quot;&gt;IoT-Test_Device (For Inference)&lt;/h4&gt;
+
+&lt;p&gt;Raspberry Pi v3, Nvidia TX-1, Nvidia TX-2 or Xavier if you have the funds.  If you are feeling adventurous get a few arduinos as well.&lt;/p&gt;
+
+&lt;h3 id=&quot;software&quot;&gt;Software&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Docker for Mac or Docker for Windows (avoid Toolbox)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.anaconda.com/download/&quot;&gt;Anaconda&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;If you have a GPU
+    &lt;ol&gt;
+      &lt;li&gt;Go to &lt;a href=&quot;https://developer.nvidia.com/cuda-downloads&quot;&gt;CUDA Downloads&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Join Nvidia Developer program&lt;/li&gt;
+      &lt;li&gt;Update your GPU drivers&lt;/li&gt;
+      &lt;li&gt;Install CUDA &amp;amp; cuDNN&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Install your packages&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Good Idea:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;StackOverflow account&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;Important additional libraries:&lt;/p&gt;
 
@@ -305,6 +346,8 @@
     &lt;ol&gt;
       &lt;li&gt;List the differences between a Convolutional (ConvNet/CNN) and regular Dense Neural Network (e.g Multilayer Perceptron) - two good resources:  &lt;a href=&quot;https://towardsdatascience.com/multi-layer-neural-networks-with-sigmoid-function-deep-learning-for-rookies-2-bf464f09eb7f&quot;&gt;MLP&lt;/a&gt; and &lt;a href=&quot;http://colah.github.io/posts/2014-07-Understanding-Convolutions/&quot;&gt;Convolutions - what are they&lt;/a&gt; and &lt;a href=&quot;http://colah.github.io/posts/2014-07-Conv-Nets-Modular/&quot;&gt;CNNs&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;List and give examples of the tunable hyperparameters one can find in a ConvNet.&lt;/li&gt;
+      &lt;li&gt;How can transfer learning speed up training?&lt;/li&gt;
+      &lt;li&gt;If a network is already built, is it possible to modify it for a different output number of classes?&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;Gain familiarity with PyTorch
@@ -336,9 +379,9 @@
         <title>3. Level 2 Practice</title>
         <description>&lt;h1 id=&quot;intermediate-practice-with-deep-learning&quot;&gt;Intermediate Practice with Deep Learning&lt;/h1&gt;
 
-&lt;p&gt;In this intermediate Challenge, you’ll apply what you’ve learned in the Level 2 Preparation section.  You’ll start exploring the CIFAR-10 dataset along with other datsets in PyTorch and TensorFlow as extra credit.&lt;/p&gt;
+&lt;p&gt;In this intermediate set of problems, you’ll apply what you’ve learned in the Level 2 Preparation section.  You’ll start exploring the CIFAR-10 dataset with an MLP and CNN along with other datsets in PyTorch and TensorFlow as extra credit.&lt;/p&gt;
 
-&lt;h2 id=&quot;adapt-deep-learning-code&quot;&gt;Adapt Deep Learning Code&lt;/h2&gt;
+&lt;h2 id=&quot;adapt-a-multilayer-perceptron&quot;&gt;Adapt a Multilayer Perceptron&lt;/h2&gt;
 
 &lt;h3 id=&quot;image-classification&quot;&gt;Image Classification&lt;/h3&gt;
 
@@ -356,13 +399,8 @@
       - What is the resulting average test error?  Why is this value so different from the MNIST result?  What hyperparameters can you modify to fix this?&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;extra-credit&quot;&gt;Extra Credit&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Go online and find 5 png’s of cats and dogs.  Reshape them and pad them to be 32x32 pixels using the Python Pillow library (see &lt;a href=&quot;http://pillow.readthedocs.io/en/3.1.x/reference/ImageOps.html&quot;&gt;ImageOps&lt;/a&gt;). Test the network with these, following the guidelines and lessons you learned thus far.  Now find an image of a coconut or lime and test the network with this.  What is wrong with using a food image?&lt;/li&gt;
-  &lt;li&gt;Create a new label called “food” and add this &lt;a href=&quot;http://www.vicos.si/Downloads/FIDS30&quot;&gt;fruit dataset&lt;/a&gt;, leaving some out of training for testing.  Try your coconut image again.  What if now you tested with a hot dog image?&lt;/li&gt;
+  &lt;li&gt;Go online and find 5 png’s of cats and dogs.  Reshape them and pad them to be 32x32 pixels using the Python Pillow library (see &lt;a href=&quot;http://pillow.readthedocs.io/en/3.1.x/reference/ImageOps.html&quot;&gt;ImageOps&lt;/a&gt;). Test the network with these, following the guidelines and lessons you learned thus far.  Now find an image of an apple and test the network with this.  What is wrong with using a food image?&lt;/li&gt;
+  &lt;li&gt;Create a new label called “apple” and add the apple images from the &lt;a href=&quot;http://www.vicos.si/Downloads/FIDS30&quot;&gt;fruit dataset&lt;/a&gt;, splitting into train/test and adding to previous data.  What are your findings after testing with the same apple image?&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;transfer-learning-with-pytorch&quot;&gt;Transfer Learning with PyTorch&lt;/h2&gt;
@@ -374,7 +412,7 @@
   &lt;li&gt;Using the CIFAR-10 dataset from PyTorch &lt;code class=&quot;highlighter-rouge&quot;&gt;datasets&lt;/code&gt;, train an Inception v3 model to classify trucks and automobiles (just a two-class classifier from the 10 classes in CIFAR).&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;tensorflow-extra-credit&quot;&gt;TensorFlow (Extra Credit)&lt;/h2&gt;
+&lt;h2 id=&quot;cnns-with-tensorflow&quot;&gt;CNNs with TensorFlow&lt;/h2&gt;
 
 &lt;p&gt;Easy:  Run this TensorFlow script to classify a new image (this uses a pretrained Inception V3 model):&lt;/p&gt;
 
@@ -418,82 +456,12 @@
     
       <item>
         <title>1. Level 3 Setup</title>
-        <description>&lt;h1 id=&quot;setup-with-gpu&quot;&gt;Setup with GPU&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;advanced-gpu-setup-for-deep-learning&quot;&gt;Advanced GPU Setup for Deep Learning&lt;/h1&gt;
 
-&lt;p&gt;These are some highly rated suggestions.  A CPU machine can not perform matrix addition and multiplication as quickly, a central theme in deep learning, thus is not a viable option for training a complex neural network like ResNet, from scratch.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&quot;/navigating-ml/level2_setup/&quot;&gt;Level 2 Setup&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;getting-your-environment-set-up&quot;&gt;Getting your Environment Set Up&lt;/h2&gt;
+&lt;h3 id=&quot;additional-software&quot;&gt;Additional Software&lt;/h3&gt;
 
-&lt;h3 id=&quot;hardware&quot;&gt;Hardware&lt;/h3&gt;
-
-&lt;p&gt;A decade ago a study was done using molecular dynamics simulations where, even then, they saw significant speed-ups by using an NVIDIA GPU (Graphics Processing Unit), speed-ups of up to 25x programming in the CUDA (compute unified device architecture) language:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;Their computational power exceeds that of the CPU by orders of magnitude:
-while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA GeForce
-8800 Ultra reaches theoretically 500 Gigaflops.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p align=&quot;right&quot;&gt;J.A. van Meel et al. arXiv. 20 Sept. 2007&lt;/p&gt;
-&lt;p align=&quot;right&quot;&gt;https://arxiv.org/PS_cache/arxiv/pdf/0709/0709.3225v1.pdf&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nowadays, a standard choice is the NVIDIA GTX 1080 for deep learning as well as bitcoin mining, processing at speeds as high as 8,873 GFLOPS.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.techhive.com/images/article/2016/05/geforce_gtx_1080_front_pcb_1463236682-100661319-orig.png&quot; alt=&quot;nvidia gtx 1080 image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Another advantage of GPUs is that they use a fraction of the power that their CPU counterparts use.&lt;/p&gt;
-
-&lt;p&gt;Thus accepted options for training deep learning models (in Python even!) are GPU(s) or TPU(s).  Other hardware options include &lt;a href=&quot;https://en.wikipedia.org/wiki/Application-specific_integrated_circuit&quot;&gt;ASIC chips&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;computer-laptop&quot;&gt;Computer-Laptop&lt;/h4&gt;
-
-&lt;p&gt;Anything with a NVIDIA GTX 1060 (GPU) is good if you travel a lot or cannot necessarily depend on wifi.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;E.g.:  https://www.razerzone.com/gaming-systems/razer-blade-pro - plan to get a 1060 w/ 256ssd + 2tb spinner&lt;/li&gt;
-  &lt;li&gt;GTX 1080 (extra $2k; only get if this is your primary machine and you travel a lot/have spotty wifi).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;computer-desktop&quot;&gt;Computer-Desktop&lt;/h4&gt;
-
-&lt;p&gt;Any gaming desktop with a min GTX 1080. &lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Alt 1: Custom built.  If you go this route -&amp;gt; Add up your GPU ram, multiply by 2 for your min RAM.  Get a CPU w/ 48 lanes (so you can go 2 GPUs later).&lt;/li&gt;
-  &lt;li&gt;Alt 2: &lt;a href=&quot;https://lambdal.com/products/quad&quot;&gt;https://lambdal.com/products/quad&lt;/a&gt; (this is probably over kill honestly, and your electricity bill might double.  Will make a great space heater)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;computer-remote&quot;&gt;Computer-Remote&lt;/h4&gt;
-
-&lt;p&gt;Use Azure and set up a jupyter notebook.  This takes more learning and understanding but is the cheapest getting started option.&lt;/p&gt;
-
-&lt;p&gt;It’s suggested to provision a new NC-6 (or NC12) (v3) DSVM on Ubuntu, updating everything, installing the packages, adding a 1TB HDD data disk (&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal&quot;&gt;add disk to the DSVM&lt;/a&gt;) and kicking off a password protected Jupyter Notebook in a tmux session.  DO NOT put sensitive data on this.  It has open ports, admin rights to the system, is password protected only and it’s not believed to use SSL unless you set up a certificate.  There are other more secure options, though they are more advanced and not covered in this getting started.&lt;/p&gt;
-
-&lt;h4 id=&quot;iot-test_device&quot;&gt;IoT-Test_Device&lt;/h4&gt;
-
-&lt;p&gt;Raspberry Pi v3, Nvidia TX-1, Nvidia TX-2 or Xavier if you can spend some cash.  If you are feeling adventurous get a few arduinos as well.&lt;/p&gt;
-
-&lt;h3 id=&quot;software&quot;&gt;Software&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Docker for Mac or Docker for Windows (avoid Toolbox)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.anaconda.com/download/&quot;&gt;Anaconda&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;If you have a GPU
-    &lt;ol&gt;
-      &lt;li&gt;Go to &lt;a href=&quot;https://developer.nvidia.com/cuda-downloads&quot;&gt;Cuda Downloads&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;Join Nvidia Developer program&lt;/li&gt;
-      &lt;li&gt;Update your GPU drivers&lt;/li&gt;
-      &lt;li&gt;Install CUDA &amp;amp; cuDNN&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Install your packages&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Good Idea:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;StackOverflow account&lt;/li&gt;
-&lt;/ol&gt;
 </description>
         <pubDate>Sun, 04 Nov 2018 00:00:00 -0700</pubDate>
         <link>http://localhost:4000/navigating-ml/level3_setup/</link>

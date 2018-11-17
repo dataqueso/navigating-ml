@@ -6,28 +6,69 @@ img: fourth.jpg
 categories: [ds, ml]
 ---
 
-# Basic Setup for Deep Learning
+# GPU Setup for Deep Learning
 
-## Cloud
+These are some highly rated suggestions.  A CPU machine can not perform matrix addition and multiplication as quickly, a central theme in deep learning, thus is not a viable option for training a complex neural network like ResNet, from scratch. 
 
-1. (Deploy when ready if you don't have it yet) [Linux (Ubuntu) Deep Learning Virtual Machine](https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm) Standard NC6
+## Getting your Environment Set Up
 
-> Tip: place everything for this set of challenges in the same resource group to tear down together at the end.
+### Hardware
 
- > TensorFlow and PyTorch can be found on all Linux and Windows Data Science Virtual Machines and Deep Learning Virtual Machines along with a long list of common data science tools - see [Docs](https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/overview)
+A decade ago a study was done using molecular dynamics simulations where, even then, they saw significant speed-ups by using an NVIDIA GPU (Graphics Processing Unit), speed-ups of up to 25x programming in the CUDA (compute unified device architecture) language:
 
-2. Ensure Jupyter notebooks are working.
-    - "access the Jupyter notebook server from any host. Just navigate in the browser to `https://<VM DNS name or IP Address>:8000/`" ([Doc](https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/dsvm-ubuntu-intro#tools-installed-on-the-data-science-virtual-machine-for-linux) - check out "Jupyter notebook" for more)
- 
-## Local via Docker
+> _Their computational power exceeds that of the CPU by orders of magnitude:
+while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA GeForce
+8800 Ultra reaches theoretically 500 Gigaflops._
+<p align="right">J.A. van Meel et al. arXiv. 20 Sept. 2007</p>
+<p align="right">https://arxiv.org/PS_cache/arxiv/pdf/0709/0709.3225v1.pdf</p>
+<br>
 
-Here are the instructions for a generic scientific and deep learning custom Linux VM with Jupyterhub (Running Locally):
+Nowadays, a standard choice is the NVIDIA GTX 1080 for deep learning as well as bitcoin mining, processing at speeds as high as 8,873 GFLOPS.
 
-* GitHub project - [Ref](https://github.com/michhar/custom-jupyterhub-linux-vm)
+![nvidia gtx 1080 image](https://images.techhive.com/images/article/2016/05/geforce_gtx_1080_front_pcb_1463236682-100661319-orig.png)
 
-## Local Non-Docker
+Another advantage of GPUs is that they use a fraction of the power that their CPU counterparts use.
 
-Here, it's assumed you know what you are doing and can set up the scientific stack.
+Thus accepted options for training deep learning models (in Python even!) are GPU(s) or TPU(s).  Other hardware options include [ASIC chips](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit).
+
+#### Computer-Laptop
+
+Anything with a NVIDIA GTX 1060 (GPU) is good if you travel a lot or cannot necessarily depend on wifi.
+
+  * E.g.:  https://www.razerzone.com/gaming-systems/razer-blade-pro - plan to get a 1060 w/ 256ssd + 2tb spinner
+  * GTX 1080 (extra $2k; only get if this is your primary machine and you travel a lot/have spotty wifi).
+
+#### Computer-Desktop
+
+Any gaming desktop with a min GTX 1080. 
+
+1. Alt 1: Custom built.  If you go this route -> Add up your GPU RAM, multiply by 2 for your min RAM.  Get a CPU w/ 48 lanes (so you can go 2 GPUs later).
+2. Alt 2: [https://lambdal.com/products/quad](https://lambdal.com/products/quad) (this is probably over kill honestly, and your electricity bill might double.  Will make a great space heater)
+
+#### Computer-Remote
+
+Use Azure and set up a Jupyter notebook.  This takes more learning and understanding, but is the cheapest getting started option.
+
+It's suggested to provision a new NC-6 (or NC12) (v3) [Linux (Ubuntu) Deep Learning Virtual Machine](https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm), updating everything, installing the packages, adding a 1TB HDD data disk ([add disk to the DSVM](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal)) and kicking off a password protected Jupyter Notebook in a tmux session.  DO NOT put sensitive data on this.  It has open ports, admin rights to the system, is password protected only and it's not believed to use SSL unless you set up a certificate.  There are other more secure options, though they are more advanced and not covered in this getting started.
+
+#### IoT-Test_Device (For Inference)
+
+Raspberry Pi v3, Nvidia TX-1, Nvidia TX-2 or Xavier if you have the funds.  If you are feeling adventurous get a few arduinos as well.
+
+### Software
+
+  1. Docker for Mac or Docker for Windows (avoid Toolbox)
+  2. [Anaconda](https://www.anaconda.com/download/)
+  3. If you have a GPU
+     1. Go to [CUDA Downloads](https://developer.nvidia.com/cuda-downloads)
+	 2. Join Nvidia Developer program
+	 3. Update your GPU drivers
+	 4. Install CUDA & cuDNN
+  4. Install your packages
+
+Good Idea:
+
+1. StackOverflow account
 
 Important additional libraries:
 
