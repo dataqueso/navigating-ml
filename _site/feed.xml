@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Nov 2018 23:08:19 -0800</pubDate>
-    <lastBuildDate>Sat, 17 Nov 2018 23:08:19 -0800</lastBuildDate>
+    <pubDate>Sun, 18 Nov 2018 12:15:35 -0800</pubDate>
+    <lastBuildDate>Sun, 18 Nov 2018 12:15:35 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -95,7 +95,19 @@ while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA
 
 &lt;ul&gt;
   &lt;li&gt;Jupyter - &lt;a href=&quot;https://jupyter-notebook.readthedocs.io/en/stable/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;PyTorch - &lt;a href=&quot;https://pytorch.org/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;PyTorch - &lt;a href=&quot;https://pytorch.org/&quot;&gt;Ref&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Packages:
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter
+scikit-learn
+scikit-image
+seaborn
+torch==0.4.1
+matplotlib
+numpy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -132,6 +144,9 @@ while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA
 
 &lt;h3 id=&quot;neural-networks&quot;&gt;Neural Networks&lt;/h3&gt;
 
+&lt;p&gt;&lt;img src=&quot;http://sebastianraschka.com/images/blog/2015/singlelayer_neural_networks_files/perceptron_schematic.png&quot; alt=&quot;perceptron schematic&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;right&quot;&gt;Attributed to Sebastian Raschka&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Read through &lt;a href=&quot;http://sebastianraschka.com/Articles/2015_singlelayer_neurons.html&quot;&gt;this&lt;/a&gt; excellent explanation of a single-layer neural network.  This information will lay the foundation for these sets of challenges and help you get started from the ground-up, quickly with key concepts and Python code snippets.&lt;/li&gt;
 &lt;/ul&gt;
@@ -150,8 +165,6 @@ while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;&lt;a href=&quot;&quot;&gt;A Learning Path is under dev to cover the above topics in linear fashion&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;additional-resources&quot;&gt;Additional Resources&lt;/h2&gt;
 
@@ -181,19 +194,46 @@ while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA
 
 &lt;p&gt;In this first set of practice problems you’ll learn about basic ML and neural networks, hands-on, with Jupyter notebooks and Python.  You’ll be introduced to scikit-learn, PyTorch, and TensorFlow as Python packages commonly used in data manipulation and data science.&lt;/p&gt;
 
-&lt;p&gt;Here and throughout these practice exercises you’ll work with the following image datasets: the fruit FIDS30, Fashion MNIST, the Hymenoptera insect and the CIFAR-10 (tiny images) datasets.&lt;/p&gt;
+&lt;p&gt;Here and throughout these practice exercises you’ll work with the following image datasets: COCO, Fashion MNIST, the Hymenoptera insect and the CIFAR-10 (tiny images) datasets.&lt;/p&gt;
 
 &lt;h2 id=&quot;custom-vision-free-from-microsoft&quot;&gt;Custom Vision (free from Microsoft)&lt;/h2&gt;
 
-&lt;p&gt;Download the &lt;a href=&quot;http://www.vicos.si/Downloads/FIDS30&quot;&gt;fruit dataset&lt;/a&gt; and build a fruit image classifier with two fruit classes using this service: &lt;a href=&quot;https://customvision.ai/&quot;&gt;https://customvision.ai/&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;After you have done some training above, create a Python script to “pixel-normalize” the images prior to training the model and retrain to see your new Precision and Recall.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Download the COCO 2017 Val dataset (1 GB) &lt;a href=&quot;http://cocodataset.org/#download&quot;&gt;here&lt;/a&gt; to get a set of real-life images (click on “2017 Val images [5K/1GB]”).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pick 50-100 images to upload, some with people and some without (may simply choose randomly as there’s a good mix).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Build a person/no-person image classifier using  &lt;a href=&quot;https://customvision.ai/&quot;&gt;https://customvision.ai/&lt;/a&gt; (choose “multiclass” classification using the “general” domain) - directions on the &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier&quot;&gt;Docs&lt;/a&gt; page.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Observe performace metrics under the “Performance” tab.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://nlpforhackers.io/wp-content/uploads/2017/01/Precision-Recall.png&quot; alt=&quot;Precision and recall&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Some defintions.  &lt;strong&gt;Precision&lt;/strong&gt;:  if a tag is precicted by your classifier, how likely is it that it is right?  &lt;strong&gt;Recall&lt;/strong&gt;:  out of the tags that should be classified as right, what percentage did your classifier correctly find?&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Square-pad all of the images and build a new classifier under a new project in Custom Vision.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Original:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/coco_sample.jpg&quot; width=&quot;50%&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Square-padded by expanding:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/coco_sample__pad.jpg&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How do the performance metrics change?  Did they get worse or better and why do you think that?&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;first-custom-ml-open-source-tools&quot;&gt;First Custom ML (Open Source Tools)&lt;/h2&gt;
 
@@ -203,61 +243,103 @@ while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA
   &lt;p&gt;TIPS:  Place all imports at the top of the notebook.  Call the training data something consistent thoughout all of your work (X_train -&amp;gt; training data, y_train -&amp;gt; labels, X_test -&amp;gt; test data…).&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;image-classification&quot;&gt;Image Classification&lt;/h3&gt;
+&lt;h3 id=&quot;image-classification-for-fashion&quot;&gt;Image Classification for Fashion&lt;/h3&gt;
 
-&lt;p&gt;Create a Python program to classify images from Fashion MNIST Dataset (get &lt;a href=&quot;https://www.kaggle.com/zalando-research/fashionmnist/data&quot;&gt;here&lt;/a&gt;) leveraging code samples from the Python Data Science Handbook - &lt;a href=&quot;https://jakevdp.github.io/PythonDataScienceHandbook/05.02-introducing-scikit-learn.html#Application:-Exploring-Hand-written-Digits&quot;&gt;Ref&lt;/a&gt;.  Refer to Chapter 2 and 3 of this Handbook for information on data manipulation in Python if not already familiar.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/fashion_sample.png&quot; alt=&quot;fashion dataset sample&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Do this in a Jupyter notebook (any service or locally) - recall you learned about this tool the &lt;a href=&quot;level1_setup&quot;&gt;Setup Section&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Create a Python program to classify images from Fashion MNIST Dataset (get &lt;a href=&quot;https://github.com/zalandoresearch/fashion-mnist&quot;&gt;here&lt;/a&gt;) leveraging code samples from the Python Data Science Handbook - &lt;a href=&quot;https://jakevdp.github.io/PythonDataScienceHandbook/05.02-introducing-scikit-learn.html#Application:-Exploring-Hand-written-Digits&quot;&gt;Ref&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;It might help to examine the existing data format for &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn.datasets.load_digits&lt;/code&gt; so that you can convert into that format to utilize the algorithms in &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt; (scikit-learn).&lt;/p&gt;
+&lt;p&gt;Refer to Chapter 2 and 3 of the Python Data Science Handbook for information on data manipulation in Python if not already familiar.&lt;/p&gt;
+
+&lt;p&gt;Do this in a Jupyter notebook (any service or locally) - recall you learned about this tool in the &lt;a href=&quot;/navigating-ml/setup&quot;&gt;Setup&lt;/a&gt; section.&lt;/p&gt;
+
+&lt;p&gt;Steps:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;What did you find?  Which fashion item has the best accuracy, which the worst?  Why do you think that is?  Is there a way you could imagine improving this model?&lt;/li&gt;
-  &lt;li&gt;Try a different model&lt;/li&gt;
-  &lt;li&gt;Scale the images (in &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt;) and check the accuracy of the model again.  Did it improve or worsen?&lt;/li&gt;
+  &lt;li&gt;Visualize a sample of 50-100 images with labels&lt;/li&gt;
+  &lt;li&gt;Try fitting a Gaussian naive Bayes model.  How does it compare results found in the Handbook for the MNIST Digits datset (a black and white 8x8 pixel dataset of handwritten digits)?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;object-detection&quot;&gt;Object Detection&lt;/h3&gt;
+&lt;p&gt;Additionally:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Which fashion item has the best accuracy, which the worst?  Use a confusion matrix.  Why do you think that is?  Is there a way you could imagine improving this model?&lt;/li&gt;
+  &lt;li&gt;Normalize the images (in &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt;) and check the accuracy of the model(s) again.  Did it improve or worsen?&lt;/li&gt;
+  &lt;li&gt;Try a different model - SVM or Random Forest&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;object-detection-with-scikit-learn&quot;&gt;Object Detection with Scikit-Learn&lt;/h3&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;em&gt;In the real world, data is rarely so uniform and simple pixels will not be suitable: this has led to a large literature on feature extraction methods for image data.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Create a Python program to detect cats in 2D images by leveraging code samples from the Python Data Science Handbook - &lt;a href=&quot;https://jakevdp.github.io/PythonDataScienceHandbook/05.14-image-features.html&quot;&gt;Ref&lt;/a&gt;.  Refer to Chapter 2 and 3 of this Handbook for information on data manipulation in Python if not already familiar.&lt;/p&gt;
+&lt;p&gt;Create a Python program to detect bear faces (perhaps you’re builing a bear watch app for safety in the woods) by leveraging code samples from this &lt;a href=&quot;https://jakevdp.github.io/PythonDataScienceHandbook/05.14-image-features.html&quot; target=&quot;_blank&quot;&gt;Python Data Science Handbook notebook&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Do this in a Jupyter notebook (any service or locally) - recall you learned about this tool the &lt;a href=&quot;level1_setup&quot;&gt;Setup Section&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It might help to examine the existing data format for &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn.datasets.fetch_lfw_people&lt;/code&gt; so that you can convert into that format to utilize the algorithms in &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt; (scikit-learn) to create this detector.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/bear_face_hog.png&quot; alt=&quot;bear face with hog&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;Collect 50-100 images of bear faces from the web and square-pad them as done for the COCO images above.  In addition, resize them to the same shape (228x228 for example).  Observe, that in the code sample, the shape of the final image data for training will be (100, 228, 228) if 100 samples are collected.  These constitute the “positive” training samples.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An example of the image pre-processing (padding is up to you):&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;data_array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Get image files
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;img_files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;glob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;glob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'../../data/bears_pad/*.*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img_files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;im&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Resize to uniform size
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;im&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;im&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;228&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;228&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Convert to only grayscale in case of an alpha channel
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;im&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;im&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'L'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;im&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;asarray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;im&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;data_array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;im&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Convert collection to numpy array
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;positive_patches&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;asarray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;positive_patches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The rest of the steps are outlined as follows in the Handbook section&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Obtain a set of image thumbnails of non-faces to constitute “negative” training samples.&lt;/li&gt;
+  &lt;li&gt;Extract HOG features from these training samples.&lt;/li&gt;
+  &lt;li&gt;Train a linear SVM classifier on these samples.&lt;/li&gt;
+  &lt;li&gt;For an “unknown” image, pass a sliding window across the image, using the model to evaluate whether that window contains a face or not.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If detections overlap, combine them into a single window.&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;What other confounding factors are there for images other than illumination, you think?&lt;/li&gt;
   &lt;li&gt;Plot the original image along with the &lt;code class=&quot;highlighter-rouge&quot;&gt;skimage.rgb2gray&lt;/code&gt; version and the HOG representation.  See how this works in &lt;code class=&quot;highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt;.  What does &lt;code class=&quot;highlighter-rouge&quot;&gt;skimage.rgb2gray&lt;/code&gt; actually do?&lt;/li&gt;
-  &lt;li&gt;Can you scale the new image of the astronaut with the &lt;code class=&quot;highlighter-rouge&quot;&gt;PIL&lt;/code&gt; module instead?  This module is very powerful and good to know about (as well as &lt;code class=&quot;highlighter-rouge&quot;&gt;opencv&lt;/code&gt;)?&lt;/li&gt;
-  &lt;li&gt;Try out the model on the entire test image instead.  What do you find out?&lt;/li&gt;
+  &lt;li&gt;Try out the model on the entire test image.  What do you find out?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A cursory result might be:
+&lt;img src=&quot;../images/bear_with_bboxes.png&quot; alt=&quot;model prediction&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
   &lt;li&gt;Try using sliding windows with a variety of sizes (aspect ratios).  What do you find out?&lt;/li&gt;
   &lt;li&gt;Read in a new image that contains a face and on one that does not and try your model on that.&lt;/li&gt;
   &lt;li&gt;Augment the data to expand the training and test datasets (e.g. use a library like &lt;code class=&quot;highlighter-rouge&quot;&gt;imgaug&lt;/code&gt;) and retrain and test.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Extra credit&lt;/strong&gt;:  Implement Non-Maximum Suppression in Python to find the single best bounding box of a group of bounding boxes as are found above.  Apply this to the astronaut image.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Extra credit&lt;/strong&gt;:  Implement Non-Maximum Suppression in Python to find the single best bounding box of a group of bounding boxes as are found above.  Apply this to the test image.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;basic-neural-nets&quot;&gt;Basic Neural Nets&lt;/h2&gt;
 
-&lt;p&gt;The purpose of the Basic Neural Nets exercises are to familiarize you with how a simple artificial neuron works and then set of a few neurons to form a network (artificial neural network) - all from the ground-up - this knowledge will serve you well.  It will really get to the core of neural nets and give you a perfect “from scratch” introduction (the code template already exists around the infamous iris dataset, you’ll just make it work with some fashionable images).  If we want to get to know deep neural nets, why not dive in deep to start!&lt;/p&gt;
+&lt;p&gt;The purpose of the Basic Neural Nets exercises are to familiarize you with how a simple artificial neuron works and then set of a few neurons to form a network (artificial neural network) - all from the ground-up - this knowledge will serve you well.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Use &lt;a href=&quot;https://notebooks.azure.com&quot;&gt;Azure Notebooks&lt;/a&gt; for this tutorial.  Fire up a blank Python 3.5 Jupyter notebook for this.&lt;/li&gt;
-  &lt;li&gt;Get the following sample image dataset loaded in your Jupyter notebook: &lt;a href=&quot;https://www.kaggle.com/zalando-research/fashionmnist/data&quot;&gt;train and test Fashion MNIST Dataset (Source: Kaggle)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Adapt a from-scratch Perceptron as in this &lt;a href=&quot;https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch02/ch02.ipynb&quot;&gt;Jupyter notebook&lt;/a&gt; to train and test on the image dataset.
+  &lt;li&gt;Adapt a from-scratch Perceptron as in this &lt;a href=&quot;https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch02/ch02.ipynb&quot;&gt;Jupyter notebook&lt;/a&gt; to train and test on the Fashion MNIST dataset.
     &lt;ul&gt;
-      &lt;li&gt;Use the URL option when opening up a new notebook in Azure Notebooks&lt;/li&gt;
-      &lt;li&gt;Or, download by right clicking on “Raw” and “Save link as…”&lt;/li&gt;
       &lt;li&gt;Re-implement the Perceptron with &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt; (scikit-learn)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Adapt a from-scratch Multilayer Perceptron (MLP) as in this &lt;a href=&quot;https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch12/ch12.ipynb&quot;&gt;Jupyter notebook&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;Use the URL option when opening up a new notebook in Azure Notebooks&lt;/li&gt;
-      &lt;li&gt;Or, download by right clicking on “Raw” and “Save link as…”&lt;/li&gt;
       &lt;li&gt;Re-implement the MLP with &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -430,13 +512,13 @@ while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA
 &lt;ul&gt;
   &lt;li&gt;It will force you to read and learn from scratch.  You will learn the different label file formats, deserializers and how things compute. &lt;/li&gt;
   &lt;li&gt;For for example, in energy/manufacturing you will get .png or .jpg or .tiff files and not stuff already in the perfect format. &lt;/li&gt;
-  &lt;li&gt;Learning this will hopefully help you understand the concept of “Data Packing”. &lt;/li&gt;
+  &lt;li&gt;Learning this will help you understand the concept of “Data Packing”. &lt;/li&gt;
   &lt;li&gt;This is not the simplest way, but it forces greater learning.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;working-with-pytorch-locally-or-on-a-dsvmvm&quot;&gt;Working with PyTorch (locally or on a DSVM/VM)&lt;/h2&gt;
 
-&lt;p&gt;See &lt;a href=&quot;/navigating-ml/level2_setup&quot;&gt;Level 2 Setup&lt;/a&gt; for more instructions on how to set up an environment for this problem set.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&quot;/navigating-ml/setup&quot;&gt;Setup&lt;/a&gt; for more instructions on how to set up an environment for this problem set.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -467,7 +549,7 @@ while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA
 &lt;h2 id=&quot;want-more&quot;&gt;Want More?&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Do the same exact exercise with CoCo: http://cocodataset.org/#home
+  &lt;li&gt;Do the same exact exercise with COCO: http://cocodataset.org/#home
     &lt;ol&gt;
       &lt;li&gt;Why do you think you get bad results?
 &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
@@ -475,22 +557,16 @@ while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA
   &lt;/li&gt;
   &lt;li&gt;Object Detection
     &lt;ol&gt;
-      &lt;li&gt;Use the Out of Box Faster-RCNN or YOLOv3 solution to identify new objects in images based on a model trained on CoCo&lt;/li&gt;
+      &lt;li&gt;Use the Out of Box Faster-RCNN or YOLOv3 solution to identify new objects in images based on a model trained on COCO&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h2 id=&quot;tensorflow&quot;&gt;TensorFlow&lt;/h2&gt;
-
-&lt;p&gt;Train a CNN on the CIFAR-10 dataset as in this &lt;a href=&quot;https://www.tensorflow.org/tutorials/deep_cnn&quot;&gt;Tutorial&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;key-learnings&quot;&gt;Key Learnings&lt;/h2&gt;
 
 &lt;h2 id=&quot;additional-help&quot;&gt;Additional Help&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;PyTorch forums - &lt;a href=&quot;https://discuss.pytorch.org/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;StackOverflow with &lt;code class=&quot;highlighter-rouge&quot;&gt;pytorch&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;tensorflow&lt;/code&gt; tag&lt;/li&gt;
+  &lt;li&gt;StackOverflow with &lt;code class=&quot;highlighter-rouge&quot;&gt;pytorch&lt;/code&gt; tag&lt;/li&gt;
   &lt;li&gt;If using CNTK, you may send your questions to cntkhelp@microsoft.com&lt;/li&gt;
 &lt;/ul&gt;
 </description>

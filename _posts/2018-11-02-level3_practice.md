@@ -14,12 +14,12 @@ _Why do this task_:  Usually, beginner tutorials around ML and neural networks 
 
   * It will force you to read and learn from scratch.  You will learn the different label file formats, deserializers and how things compute. 
   * For for example, in energy/manufacturing you will get .png or .jpg or .tiff files and not stuff already in the perfect format. 
-  * Learning this will hopefully help you understand the concept of “Data Packing”. 
+  * Learning this will help you understand the concept of “Data Packing”. 
   * This is not the simplest way, but it forces greater learning.
 
 ## Working with PyTorch (locally or on a DSVM/VM)
 
-See [Level 2 Setup](/navigating-ml/level2_setup) for more instructions on how to set up an environment for this problem set.
+See [Setup](/navigating-ml/setup) for more instructions on how to set up an environment for this problem set.
 
 1. Image Classification
 
@@ -34,20 +34,14 @@ See [Level 2 Setup](/navigating-ml/level2_setup) for more instructions on how to
 
 ## Want More?
 
-4. Do the same exact exercise with CoCo: http://cocodataset.org/#home
+4. Do the same exact exercise with COCO: http://cocodataset.org/#home
     1. Why do you think you get bad results?
 <br><br>
 1.  Object Detection
-    1. Use the Out of Box Faster-RCNN or YOLOv3 solution to identify new objects in images based on a model trained on CoCo
-
-## TensorFlow
-
-Train a CNN on the CIFAR-10 dataset as in this [Tutorial](https://www.tensorflow.org/tutorials/deep_cnn).
-
-## Key Learnings
+    1. Use the Out of Box Faster-RCNN or YOLOv3 solution to identify new objects in images based on a model trained on COCO
 
 ## Additional Help
 
 * PyTorch forums - [Ref](https://discuss.pytorch.org/)
-* StackOverflow with `pytorch` or `tensorflow` tag
+* StackOverflow with `pytorch` tag
 * If using CNTK, you may send your questions to cntkhelp@microsoft.com

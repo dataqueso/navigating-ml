@@ -10,18 +10,34 @@ It is recommended that you have completed the [Level 1 Preparation](/navigating-
 
 In this first set of practice problems you'll learn about basic ML and neural networks, hands-on, with Jupyter notebooks and Python.  You'll be introduced to scikit-learn, PyTorch, and TensorFlow as Python packages commonly used in data manipulation and data science.  
 
-Here and throughout these practice exercises you'll work with the following image datasets: the fruit FIDS30, Fashion MNIST, the Hymenoptera insect and the CIFAR-10 (tiny images) datasets.
+Here and throughout these practice exercises you'll work with the following image datasets: COCO, Fashion MNIST, the Hymenoptera insect and the CIFAR-10 (tiny images) datasets.
 
 ## Custom Vision (free from Microsoft)
 
-Download the [fruit dataset](http://www.vicos.si/Downloads/FIDS30) and build a fruit image classifier with two fruit classes using this service: [https://customvision.ai/](https://customvision.ai/).
+1. Download the COCO 2017 Val dataset (1 GB) [here](http://cocodataset.org/#download) to get a set of real-life images (click on "2017 Val images [5K/1GB]").
 
-After you have done some training above, create a Python script to "pixel-normalize" the images prior to training the model and retrain to see your new Precision and Recall.
+2. Pick 50-100 images to upload, some with people and some without (may simply choose randomly as there's a good mix).
+
+2. Build a person/no-person image classifier using  [https://customvision.ai/](https://customvision.ai/) (choose "multiclass" classification using the "general" domain) - directions on the [Docs](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier) page.
+
+2. Observe performace metrics under the "Performance" tab.
 
 ![Precision and recall](http://nlpforhackers.io/wp-content/uploads/2017/01/Precision-Recall.png)
 
 > Some defintions.  **Precision**:  if a tag is precicted by your classifier, how likely is it that it is right?  **Recall**:  out of the tags that should be classified as right, what percentage did your classifier correctly find?
 
+3. Square-pad all of the images and build a new classifier under a new project in Custom Vision.
+
+Original:
+
+<img src="../images/coco_sample.jpg" width="50%"><br>
+
+Square-padded by expanding:
+
+<img src="../images/coco_sample__pad.jpg" width="50%">
+
+
+* How do the performance metrics change?  Did they get worse or better and why do you think that?
 
 ## First Custom ML (Open Source Tools)
 
@@ -29,51 +45,87 @@ For these two problems, it is recommended to go through the code from the origin
 
 > TIPS:  Place all imports at the top of the notebook.  Call the training data something consistent thoughout all of your work (X_train -> training data, y_train -> labels, X_test -> test data...).
 
-### Image Classification
+### Image Classification for Fashion
 
-Create a Python program to classify images from Fashion MNIST Dataset (get [here](https://www.kaggle.com/zalando-research/fashionmnist/data)) leveraging code samples from the Python Data Science Handbook - [Ref](https://jakevdp.github.io/PythonDataScienceHandbook/05.02-introducing-scikit-learn.html#Application:-Exploring-Hand-written-Digits).  Refer to Chapter 2 and 3 of this Handbook for information on data manipulation in Python if not already familiar.
+![fashion dataset sample](../images/fashion_sample.png)
 
-Do this in a Jupyter notebook (any service or locally) - recall you learned about this tool the [Setup Section](level1_setup).  
+Create a Python program to classify images from Fashion MNIST Dataset (get [here](https://github.com/zalandoresearch/fashion-mnist)) leveraging code samples from the Python Data Science Handbook - [Ref](https://jakevdp.github.io/PythonDataScienceHandbook/05.02-introducing-scikit-learn.html#Application:-Exploring-Hand-written-Digits).  
 
-It might help to examine the existing data format for `sklearn.datasets.load_digits` so that you can convert into that format to utilize the algorithms in `sklearn` (scikit-learn).  
+Refer to Chapter 2 and 3 of the Python Data Science Handbook for information on data manipulation in Python if not already familiar.
 
-- What did you find?  Which fashion item has the best accuracy, which the worst?  Why do you think that is?  Is there a way you could imagine improving this model?
-- Try a different model
-- Scale the images (in `sklearn`) and check the accuracy of the model again.  Did it improve or worsen?
+Do this in a Jupyter notebook (any service or locally) - recall you learned about this tool in the [Setup](/navigating-ml/setup) section.
 
-### Object Detection
+Steps:
+
+- Visualize a sample of 50-100 images with labels
+- Try fitting a Gaussian naive Bayes model.  How does it compare results found in the Handbook for the MNIST Digits datset (a black and white 8x8 pixel dataset of handwritten digits)?
+
+Additionally:
+
+- Which fashion item has the best accuracy, which the worst?  Use a confusion matrix.  Why do you think that is?  Is there a way you could imagine improving this model?
+- Normalize the images (in `sklearn`) and check the accuracy of the model(s) again.  Did it improve or worsen?
+- Try a different model - SVM or Random Forest
+
+### Object Detection with Scikit-Learn
 
 > _In the real world, data is rarely so uniform and simple pixels will not be suitable: this has led to a large literature on feature extraction methods for image data._
 
-Create a Python program to detect cats in 2D images by leveraging code samples from the Python Data Science Handbook - [Ref](https://jakevdp.github.io/PythonDataScienceHandbook/05.14-image-features.html).  Refer to Chapter 2 and 3 of this Handbook for information on data manipulation in Python if not already familiar.
+Create a Python program to detect bear faces (perhaps you're builing a bear watch app for safety in the woods) by leveraging code samples from this <a href="https://jakevdp.github.io/PythonDataScienceHandbook/05.14-image-features.html" target="_blank">Python Data Science Handbook notebook</a>.  
 
-Do this in a Jupyter notebook (any service or locally) - recall you learned about this tool the [Setup Section](level1_setup).  
+![bear face with hog](../images/bear_face_hog.png)
 
-It might help to examine the existing data format for `sklearn.datasets.fetch_lfw_people` so that you can convert into that format to utilize the algorithms in `sklearn` (scikit-learn) to create this detector.  
+*  Collect 50-100 images of bear faces from the web and square-pad them as done for the COCO images above.  In addition, resize them to the same shape (228x228 for example).  Observe, that in the code sample, the shape of the final image data for training will be (100, 228, 228) if 100 samples are collected.  These constitute the "positive" training samples.
+
+An example of the image pre-processing (padding is up to you):
+
+```python
+data_array = []
+
+# Get image files
+img_files = glob.glob('../../data/bears_pad/*.*')
+
+for img in img_files:
+    im = Image.open(img)
+    # Resize to uniform size
+    im = im.resize((228, 228))
+    # Convert to only grayscale in case of an alpha channel
+    im = im.convert('L')
+    im = np.asarray(im)
+    data_array.append(im)
+
+# Convert collection to numpy array
+positive_patches = np.asarray(data_array)
+positive_patches.shape
+```
+
+The rest of the steps are outlined as follows in the Handbook section
+
+- Obtain a set of image thumbnails of non-faces to constitute "negative" training samples.
+- Extract HOG features from these training samples.
+- Train a linear SVM classifier on these samples.
+- For an "unknown" image, pass a sliding window across the image, using the model to evaluate whether that window contains a face or not.
+- If detections overlap, combine them into a single window. 
 
 - What other confounding factors are there for images other than illumination, you think?
 - Plot the original image along with the `skimage.rgb2gray` version and the HOG representation.  See how this works in `matplotlib`.  What does `skimage.rgb2gray` actually do?
-- Can you scale the new image of the astronaut with the `PIL` module instead?  This module is very powerful and good to know about (as well as `opencv`)?
-- Try out the model on the entire test image instead.  What do you find out?
+- Try out the model on the entire test image.  What do you find out?
+
+A cursory result might be:
+![model prediction](../images/bear_with_bboxes.png)
+
 - Try using sliding windows with a variety of sizes (aspect ratios).  What do you find out?
 - Read in a new image that contains a face and on one that does not and try your model on that.
 - Augment the data to expand the training and test datasets (e.g. use a library like `imgaug`) and retrain and test.
-- **Extra credit**:  Implement Non-Maximum Suppression in Python to find the single best bounding box of a group of bounding boxes as are found above.  Apply this to the astronaut image.
+- **Extra credit**:  Implement Non-Maximum Suppression in Python to find the single best bounding box of a group of bounding boxes as are found above.  Apply this to the test image.
 
 
 ## Basic Neural Nets
 
-The purpose of the Basic Neural Nets exercises are to familiarize you with how a simple artificial neuron works and then set of a few neurons to form a network (artificial neural network) - all from the ground-up - this knowledge will serve you well.  It will really get to the core of neural nets and give you a perfect "from scratch" introduction (the code template already exists around the infamous iris dataset, you'll just make it work with some fashionable images).  If we want to get to know deep neural nets, why not dive in deep to start!
+The purpose of the Basic Neural Nets exercises are to familiarize you with how a simple artificial neuron works and then set of a few neurons to form a network (artificial neural network) - all from the ground-up - this knowledge will serve you well.
 
-1.  Use [Azure Notebooks](https://notebooks.azure.com) for this tutorial.  Fire up a blank Python 3.5 Jupyter notebook for this.
-2. Get the following sample image dataset loaded in your Jupyter notebook: [train and test Fashion MNIST Dataset (Source: Kaggle)](https://www.kaggle.com/zalando-research/fashionmnist/data)
-3. Adapt a from-scratch Perceptron as in this [Jupyter notebook](https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch02/ch02.ipynb) to train and test on the image dataset.
-    - Use the URL option when opening up a new notebook in Azure Notebooks
-    - Or, download by right clicking on "Raw" and "Save link as..."
+3. Adapt a from-scratch Perceptron as in this [Jupyter notebook](https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch02/ch02.ipynb) to train and test on the Fashion MNIST dataset.
     - Re-implement the Perceptron with `sklearn` (scikit-learn)
 4. Adapt a from-scratch Multilayer Perceptron (MLP) as in this [Jupyter notebook](https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch12/ch12.ipynb)
-    - Use the URL option when opening up a new notebook in Azure Notebooks
-    - Or, download by right clicking on "Raw" and "Save link as..."
     - Re-implement the MLP with `sklearn`
 
 ## Additional Help
