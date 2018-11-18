@@ -1,12 +1,14 @@
 ---
 layout: post
-title:  "3. Level 2 Practice"
+title:  "Level 2 Practice"
 categories: ml data-science tools
 img: sixth.jpg
 categories: [ds, ml]
 ---
 
 # Intermediate Practice with Deep Learning
+
+It is recommended that you have completed the [Level 2 Preparation](/navigating-ml/level2_prep).
 
 In this intermediate set of problems, you'll apply what you've learned in the Level 2 Preparation section.  You'll start exploring the CIFAR-10 dataset with an MLP and CNN along with other datsets in PyTorch and TensorFlow as extra credit.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "3. Level 3 Practice"
+title:  "Level 3 Practice"
 categories: ml data-science tools
 img: ninth.jpg
 categories: [ds, ml]

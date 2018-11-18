@@ -6,58 +6,102 @@
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Nov 2018 11:46:54 -0800</pubDate>
-    <lastBuildDate>Sat, 17 Nov 2018 11:46:54 -0800</lastBuildDate>
+    <pubDate>Sat, 17 Nov 2018 23:08:19 -0800</pubDate>
+    <lastBuildDate>Sat, 17 Nov 2018 23:08:19 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>1. Level 1 Setup</title>
-        <description>&lt;h1 id=&quot;basic-setup-for-getting-started&quot;&gt;Basic Setup for Getting Started&lt;/h1&gt;
+        <title>Data Science Setup</title>
+        <description>&lt;h1 id=&quot;gpu-setup-for-deep-learning&quot;&gt;GPU Setup for Deep Learning&lt;/h1&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Anaconda3 Python (Recommended versions:  Anaconda3 4.1.1 for Python 3.5.2 recommended, Anaconda3 4.3.1 for Python 3.6 ok, too)
-    &lt;ul&gt;
-      &lt;li&gt;This will allow you to create &lt;code class=&quot;highlighter-rouge&quot;&gt;conda&lt;/code&gt; environments to “contain” your projects and Python versions.  In fact you can use your current Anaconda or Miniconda Python to install other Python versions from the command line &lt;a href=&quot;https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Jupyter notebook with Python and ML ecosystem (local, service or cloud)&lt;/p&gt;
+&lt;p&gt;The following are some highly rated suggestions.  If using a CPU, these exercises may be done with a smaller number of epochs and a reduced dataset.&lt;/p&gt;
 
-    &lt;ul&gt;
-      &lt;li&gt;For the first part of the Beginner Challenge, you can use &lt;a href=&quot;https://notebooks.azure.com&quot;&gt;Azure Notebooks&lt;/a&gt; service as your Python environment as it’s a Jupyter notebook system and free.  Or you can set up Jupyter notebooks locally with the ML ecosystem (&lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;scikit-learn&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;opencv-python&lt;/code&gt; etc.).&lt;/li&gt;
-      &lt;li&gt;More on Jupyter from their &lt;a href=&quot;https://jupyter.readthedocs.io/en/latest/index.html&quot;&gt;Docs&lt;/a&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&quot;getting-your-environment-set-up&quot;&gt;Getting your Environment Set Up&lt;/h2&gt;
+
+&lt;h3 id=&quot;hardware&quot;&gt;Hardware&lt;/h3&gt;
+
+&lt;p&gt;A decade ago a study was done using molecular dynamics simulations where, even then, they saw significant speed-ups by using an NVIDIA GPU (Graphics Processing Unit), speed-ups of up to 25x programming in the CUDA (compute unified device architecture) language:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;This is a good chance to build up some Data Science tools locally - nice (from experience) when you have spotty wifi.&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;Their computational power exceeds that of the CPU by orders of magnitude:
+while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA GeForce
+8800 Ultra reaches theoretically 500 Gigaflops.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p align=&quot;right&quot;&gt;J.A. van Meel et al. arXiv. 20 Sept. 2007&lt;/p&gt;
+&lt;p align=&quot;right&quot;&gt;https://arxiv.org/PS_cache/arxiv/pdf/0709/0709.3225v1.pdf&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nowadays, a standard choice is the NVIDIA GTX 1080 for deep learning as well as bitcoin mining, processing at speeds as high as 8,873 GFLOPS.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://images.techhive.com/images/article/2016/05/geforce_gtx_1080_front_pcb_1463236682-100661319-orig.png&quot; alt=&quot;nvidia gtx 1080 image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another advantage of GPUs is that they use a fraction of the power that their CPU counterparts use.&lt;/p&gt;
+
+&lt;p&gt;Thus accepted options for training deep learning models (in Python even!) are GPU(s) or TPU(s).  Other hardware options include &lt;a href=&quot;https://en.wikipedia.org/wiki/Application-specific_integrated_circuit&quot;&gt;ASIC chips&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;computer-laptop&quot;&gt;Computer-Laptop&lt;/h4&gt;
+
+&lt;p&gt;Anything with a NVIDIA GTX 1060 (GPU) is good if you travel a lot or cannot necessarily depend on wifi.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;E.g.:  https://www.razerzone.com/gaming-systems/razer-blade-pro - plan to get a 1060 w/ 256ssd + 2tb spinner&lt;/li&gt;
+  &lt;li&gt;GTX 1080 (extra $2k; only get if this is your primary machine and you travel a lot/have spotty wifi).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;computer-desktop&quot;&gt;Computer-Desktop&lt;/h4&gt;
+
+&lt;p&gt;Any gaming desktop with a min GTX 1080. &lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Docker for Mac or Docker for Windows (avoid Toolbox)
-    &lt;ul&gt;
-      &lt;li&gt;This is to aid in creating reproducible setups so you can share with others so they can do it, too!&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;Alt 1: Custom built.  If you go this route -&amp;gt; Add up your GPU RAM, multiply by 2 for your min RAM.  Get a CPU w/ 48 lanes (so you can go 2 GPUs later).&lt;/li&gt;
+  &lt;li&gt;Alt 2: &lt;a href=&quot;https://lambdal.com/products/quad&quot;&gt;https://lambdal.com/products/quad&lt;/a&gt; (this is probably over kill honestly, and your electricity bill might double.  Will make a great space heater)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;good-idea&quot;&gt;Good Idea:&lt;/h3&gt;
+&lt;h4 id=&quot;computer-remote&quot;&gt;Computer-Remote&lt;/h4&gt;
+
+&lt;p&gt;Use Azure and set up a Jupyter notebook.  This takes more learning and understanding, but is the cheapest getting started option.&lt;/p&gt;
+
+&lt;p&gt;It’s suggested to provision a new NC-6 (or NC12) (v3) &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm&quot;&gt;Linux (Ubuntu) Deep Learning Virtual Machine&lt;/a&gt;, updating everything, installing the packages, adding a 1TB HDD data disk (&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal&quot;&gt;add disk to the DSVM&lt;/a&gt;) and kicking off a password protected Jupyter Notebook in a tmux session.  DO NOT put sensitive data on this.  It has open ports, admin rights to the system, is password protected only and it’s not believed to use SSL unless you set up a certificate.  There are other more secure options, though they are more advanced and not covered in this getting started.&lt;/p&gt;
+
+&lt;h4 id=&quot;iot-test_device-for-inference&quot;&gt;IoT-Test_Device (For Inference)&lt;/h4&gt;
+
+&lt;p&gt;Raspberry Pi v3, Nvidia TX-1, Nvidia TX-2 or Xavier if you have the funds.  If you are feeling adventurous get a few arduinos as well.&lt;/p&gt;
+
+&lt;h3 id=&quot;software&quot;&gt;Software&lt;/h3&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;StackOverflow account&lt;/li&gt;
+  &lt;li&gt;Docker for Mac or Docker for Windows (avoid Toolbox)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.anaconda.com/download/&quot;&gt;Anaconda&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;If you have a GPU
+    &lt;ol&gt;
+      &lt;li&gt;Go to &lt;a href=&quot;https://developer.nvidia.com/cuda-downloads&quot;&gt;CUDA Downloads&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Join Nvidia Developer program&lt;/li&gt;
+      &lt;li&gt;Update your GPU drivers&lt;/li&gt;
+      &lt;li&gt;Install CUDA &amp;amp; cuDNN&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Install your packages&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;additional-resources&quot;&gt;Additional Resources&lt;/h2&gt;
 
 &lt;ol&gt;
+  &lt;li&gt;StackOverflow account&lt;/li&gt;
   &lt;li&gt;The Stats/ML StackExchange is a useful place to pose questions about ML and stats &lt;a href=&quot;https://stats.stackexchange.com/&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.novatte.com/our-blog/197-how-to-calculate-peak-theoretical-performance-of-a-cpu-based-hpc-system&quot;&gt;How to calculate peak theoretical performance of a CPU-based HPC system&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;Important additional libraries:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jupyter - &lt;a href=&quot;https://jupyter-notebook.readthedocs.io/en/stable/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;PyTorch - &lt;a href=&quot;https://pytorch.org/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         <pubDate>Sat, 10 Nov 2018 00:00:00 -0800</pubDate>
-        <link>http://localhost:4000/navigating-ml/level1_setup/</link>
-        <guid isPermaLink="true">http://localhost:4000/navigating-ml/level1_setup/</guid>
+        <link>http://localhost:4000/navigating-ml/setup/</link>
+        <guid isPermaLink="true">http://localhost:4000/navigating-ml/setup/</guid>
         
         
         <category>ds</category>
@@ -67,13 +111,13 @@
       </item>
     
       <item>
-        <title>2. Level 1 Preparation</title>
+        <title>Level 1 Preparation</title>
         <description>&lt;h1 id=&quot;introductory-data-and-neural-network-concepts&quot;&gt;Introductory Data and Neural Network Concepts&lt;/h1&gt;
 
 &lt;p&gt;To begin at this level you should have:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Familiarity with Python 3 for general purpose programming.  See the &lt;a href=&quot;../python&quot;&gt;Python&lt;/a&gt; section for more.&lt;/li&gt;
+  &lt;li&gt;Familiarity with Python 3 for general purpose programming.  See the &lt;a href=&quot;/navigating-ml/learning-python&quot;&gt;Python&lt;/a&gt; section for more.&lt;/li&gt;
   &lt;li&gt;Working knowledge of traditional ML (when to use what)&lt;/li&gt;
   &lt;li&gt;Basic data mining skills&lt;/li&gt;
 &lt;/ul&gt;
@@ -130,18 +174,18 @@
       </item>
     
       <item>
-        <title>3. Level 1 Practice</title>
+        <title>Level 1 Practice</title>
         <description>&lt;h1 id=&quot;going-from-prebuilt-ml-tools-to-first-custom-ml&quot;&gt;Going from Prebuilt ML Tools to First Custom ML&lt;/h1&gt;
 
-&lt;p&gt;It is recommended that you have completed the &lt;a href=&quot;level1_prep&quot;&gt;Leve 1 Preparation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It is recommended that you have completed the &lt;a href=&quot;/navigating-ml/level1_prep&quot;&gt;Level 1 Preparation&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;In this Beginner Challenge you’ll learn about basic ML and neural networks hands-on with Jupyter notebooks and Python.  You’ll be introduced to scikit-learn, CNTK, and TensorFlow as Python packages commonly used in data manipulation and data science.&lt;/p&gt;
+&lt;p&gt;In this first set of practice problems you’ll learn about basic ML and neural networks, hands-on, with Jupyter notebooks and Python.  You’ll be introduced to scikit-learn, PyTorch, and TensorFlow as Python packages commonly used in data manipulation and data science.&lt;/p&gt;
 
-&lt;p&gt;Here and throughout these practice exercises you’ll work with the following image datasets: the fruit FIDS30 dataset, the Kaggle Fashion MNIST dataset and the CIFAR-10 (tiny images) dataset.&lt;/p&gt;
+&lt;p&gt;Here and throughout these practice exercises you’ll work with the following image datasets: the fruit FIDS30, Fashion MNIST, the Hymenoptera insect and the CIFAR-10 (tiny images) datasets.&lt;/p&gt;
 
 &lt;h2 id=&quot;custom-vision-free-from-microsoft&quot;&gt;Custom Vision (free from Microsoft)&lt;/h2&gt;
 
-&lt;p&gt;Download the &lt;a href=&quot;http://www.vicos.si/Downloads/FIDS30&quot;&gt;fruit dataset&lt;/a&gt; and build a fruit image classifier with two fruit classes using &lt;a href=&quot;https://customvision.ai/&quot;&gt;https://customvision.ai/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Download the &lt;a href=&quot;http://www.vicos.si/Downloads/FIDS30&quot;&gt;fruit dataset&lt;/a&gt; and build a fruit image classifier with two fruit classes using this service: &lt;a href=&quot;https://customvision.ai/&quot;&gt;https://customvision.ai/&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;After you have done some training above, create a Python script to “pixel-normalize” the images prior to training the model and retrain to see your new Precision and Recall.&lt;/p&gt;
 
@@ -219,10 +263,6 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;moving-on&quot;&gt;Moving On&lt;/h2&gt;
-
-&lt;p&gt;Now it is time to move on to Level 2 Preparation.&lt;/p&gt;
-
 &lt;h2 id=&quot;additional-help&quot;&gt;Additional Help&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -238,105 +278,7 @@
       </item>
     
       <item>
-        <title>2. Level 2 Setup</title>
-        <description>&lt;h1 id=&quot;gpu-setup-for-deep-learning&quot;&gt;GPU Setup for Deep Learning&lt;/h1&gt;
-
-&lt;p&gt;These are some highly rated suggestions.  A CPU machine can not perform matrix addition and multiplication as quickly, a central theme in deep learning, thus is not a viable option for training a complex neural network like ResNet, from scratch.&lt;/p&gt;
-
-&lt;h2 id=&quot;getting-your-environment-set-up&quot;&gt;Getting your Environment Set Up&lt;/h2&gt;
-
-&lt;h3 id=&quot;hardware&quot;&gt;Hardware&lt;/h3&gt;
-
-&lt;p&gt;A decade ago a study was done using molecular dynamics simulations where, even then, they saw significant speed-ups by using an NVIDIA GPU (Graphics Processing Unit), speed-ups of up to 25x programming in the CUDA (compute unified device architecture) language:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;Their computational power exceeds that of the CPU by orders of magnitude:
-while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA GeForce
-8800 Ultra reaches theoretically 500 Gigaflops.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p align=&quot;right&quot;&gt;J.A. van Meel et al. arXiv. 20 Sept. 2007&lt;/p&gt;
-&lt;p align=&quot;right&quot;&gt;https://arxiv.org/PS_cache/arxiv/pdf/0709/0709.3225v1.pdf&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nowadays, a standard choice is the NVIDIA GTX 1080 for deep learning as well as bitcoin mining, processing at speeds as high as 8,873 GFLOPS.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.techhive.com/images/article/2016/05/geforce_gtx_1080_front_pcb_1463236682-100661319-orig.png&quot; alt=&quot;nvidia gtx 1080 image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Another advantage of GPUs is that they use a fraction of the power that their CPU counterparts use.&lt;/p&gt;
-
-&lt;p&gt;Thus accepted options for training deep learning models (in Python even!) are GPU(s) or TPU(s).  Other hardware options include &lt;a href=&quot;https://en.wikipedia.org/wiki/Application-specific_integrated_circuit&quot;&gt;ASIC chips&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;computer-laptop&quot;&gt;Computer-Laptop&lt;/h4&gt;
-
-&lt;p&gt;Anything with a NVIDIA GTX 1060 (GPU) is good if you travel a lot or cannot necessarily depend on wifi.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;E.g.:  https://www.razerzone.com/gaming-systems/razer-blade-pro - plan to get a 1060 w/ 256ssd + 2tb spinner&lt;/li&gt;
-  &lt;li&gt;GTX 1080 (extra $2k; only get if this is your primary machine and you travel a lot/have spotty wifi).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;computer-desktop&quot;&gt;Computer-Desktop&lt;/h4&gt;
-
-&lt;p&gt;Any gaming desktop with a min GTX 1080. &lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Alt 1: Custom built.  If you go this route -&amp;gt; Add up your GPU RAM, multiply by 2 for your min RAM.  Get a CPU w/ 48 lanes (so you can go 2 GPUs later).&lt;/li&gt;
-  &lt;li&gt;Alt 2: &lt;a href=&quot;https://lambdal.com/products/quad&quot;&gt;https://lambdal.com/products/quad&lt;/a&gt; (this is probably over kill honestly, and your electricity bill might double.  Will make a great space heater)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;computer-remote&quot;&gt;Computer-Remote&lt;/h4&gt;
-
-&lt;p&gt;Use Azure and set up a Jupyter notebook.  This takes more learning and understanding, but is the cheapest getting started option.&lt;/p&gt;
-
-&lt;p&gt;It’s suggested to provision a new NC-6 (or NC12) (v3) &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm&quot;&gt;Linux (Ubuntu) Deep Learning Virtual Machine&lt;/a&gt;, updating everything, installing the packages, adding a 1TB HDD data disk (&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal&quot;&gt;add disk to the DSVM&lt;/a&gt;) and kicking off a password protected Jupyter Notebook in a tmux session.  DO NOT put sensitive data on this.  It has open ports, admin rights to the system, is password protected only and it’s not believed to use SSL unless you set up a certificate.  There are other more secure options, though they are more advanced and not covered in this getting started.&lt;/p&gt;
-
-&lt;h4 id=&quot;iot-test_device-for-inference&quot;&gt;IoT-Test_Device (For Inference)&lt;/h4&gt;
-
-&lt;p&gt;Raspberry Pi v3, Nvidia TX-1, Nvidia TX-2 or Xavier if you have the funds.  If you are feeling adventurous get a few arduinos as well.&lt;/p&gt;
-
-&lt;h3 id=&quot;software&quot;&gt;Software&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Docker for Mac or Docker for Windows (avoid Toolbox)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.anaconda.com/download/&quot;&gt;Anaconda&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;If you have a GPU
-    &lt;ol&gt;
-      &lt;li&gt;Go to &lt;a href=&quot;https://developer.nvidia.com/cuda-downloads&quot;&gt;CUDA Downloads&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;Join Nvidia Developer program&lt;/li&gt;
-      &lt;li&gt;Update your GPU drivers&lt;/li&gt;
-      &lt;li&gt;Install CUDA &amp;amp; cuDNN&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Install your packages&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Good Idea:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;StackOverflow account&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Important additional libraries:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Jupyter - &lt;a href=&quot;https://jupyter-notebook.readthedocs.io/en/stable/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;PyTorch - &lt;a href=&quot;https://pytorch.org/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 07 Nov 2018 00:00:00 -0800</pubDate>
-        <link>http://localhost:4000/navigating-ml/level2_setup/</link>
-        <guid isPermaLink="true">http://localhost:4000/navigating-ml/level2_setup/</guid>
-        
-        
-        <category>ds</category>
-        
-        <category>ml</category>
-        
-      </item>
-    
-      <item>
-        <title>2. Level 2 Preparation</title>
+        <title>Level 2 Preparation</title>
         <description>&lt;h1 id=&quot;neural-network-concepts-and-classification&quot;&gt;Neural Network Concepts and Classification&lt;/h1&gt;
 
 &lt;p&gt;Now it’s time to really learn about PyTorch and classifiers such as logistic regression, multilayer perceptron, and convolutional network (CNN/ConvNet) classifiers.  The MNIST hand-written digits dataset is used in the following course to classify grey-scale images of digits.  We’ll use this code in our Challenge section so go ahead and get familiar with it now by taking this course.&lt;/p&gt;
@@ -376,8 +318,10 @@ while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA
       </item>
     
       <item>
-        <title>3. Level 2 Practice</title>
+        <title>Level 2 Practice</title>
         <description>&lt;h1 id=&quot;intermediate-practice-with-deep-learning&quot;&gt;Intermediate Practice with Deep Learning&lt;/h1&gt;
+
+&lt;p&gt;It is recommended that you have completed the &lt;a href=&quot;/navigating-ml/level2_prep&quot;&gt;Level 2 Preparation&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;In this intermediate set of problems, you’ll apply what you’ve learned in the Level 2 Preparation section.  You’ll start exploring the CIFAR-10 dataset with an MLP and CNN along with other datsets in PyTorch and TensorFlow as extra credit.&lt;/p&gt;
 
@@ -455,27 +399,7 @@ while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA
       </item>
     
       <item>
-        <title>1. Level 3 Setup</title>
-        <description>&lt;h1 id=&quot;advanced-gpu-setup-for-deep-learning&quot;&gt;Advanced GPU Setup for Deep Learning&lt;/h1&gt;
-
-&lt;p&gt;See &lt;a href=&quot;/navigating-ml/level2_setup/&quot;&gt;Level 2 Setup&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;additional-software&quot;&gt;Additional Software&lt;/h3&gt;
-
-</description>
-        <pubDate>Sun, 04 Nov 2018 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/navigating-ml/level3_setup/</link>
-        <guid isPermaLink="true">http://localhost:4000/navigating-ml/level3_setup/</guid>
-        
-        
-        <category>ds</category>
-        
-        <category>ml</category>
-        
-      </item>
-    
-      <item>
-        <title>2. Level 3 Preparation</title>
+        <title>Level 3 Preparation</title>
         <description>&lt;h1 id=&quot;advanced-preparation&quot;&gt;Advanced Preparation&lt;/h1&gt;
 
 &lt;p&gt;You might find &lt;a href=&quot;https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&quot;&gt;these videos&lt;/a&gt; from &lt;a href=&quot;http://cs231n.stanford.edu/&quot;&gt;this&lt;/a&gt; CNN course out of Stanford useful.&lt;/p&gt;
@@ -496,7 +420,7 @@ while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA
       </item>
     
       <item>
-        <title>3. Level 3 Practice</title>
+        <title>Level 3 Practice</title>
         <description>&lt;h1 id=&quot;advanced-deep-learning-with-pytorch&quot;&gt;Advanced Deep Learning with PyTorch&lt;/h1&gt;
 
 &lt;p&gt;In this advanced Challenge, the instructions will be a little more vague and you’ll need to go figure find out much on your own, part of the learning and challenge.&lt;/p&gt;
@@ -720,6 +644,58 @@ while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA
         <pubDate>Thu, 01 Nov 2018 00:00:00 -0700</pubDate>
         <link>http://localhost:4000/navigating-ml/learning-python/</link>
         <guid isPermaLink="true">http://localhost:4000/navigating-ml/learning-python/</guid>
+        
+        
+        <category>ds</category>
+        
+        <category>ml</category>
+        
+      </item>
+    
+      <item>
+        <title>Introduction to Numpy</title>
+        <description>&lt;h1 id=&quot;a-list-of-numpy-resources&quot;&gt;A List of &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; resources&lt;/h1&gt;
+
+&lt;p&gt;NumPy stands for Numerical Python.  It’s widely used in Linear Algebra applications and has become a &lt;em&gt;de facto&lt;/em&gt; library for use in Machine Learning.  It uses memory efficiently and is mostly implemented in C, thus is a very efficient option for numerical calculations (see more in Reference #3 by Sebastian Raschka).  I’ve made a list of resources for the &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; library to help someone new or someone in need of a good reference later on.  It was created by Travis Oliphant in 2005 (also the creator of SciPy).  The package lives on GitHub (&lt;a href=&quot;https://github.com/numpy/numpy&quot;&gt;Link&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;listing--in-no-special-order&quot;&gt;Listing.  In no special order.&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Quickstart tutorial.  From the &lt;code class=&quot;highlighter-rouge&quot;&gt;scipy&lt;/code&gt; docs.  Short, but good starting point. &lt;a href=&quot;https://docs.scipy.org/doc/numpy-dev/user/quickstart.html&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to NumPy.  A nice whole chapter on &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; by Jake VanderPlas. &lt;a href=&quot;https://jakevdp.github.io/PythonDataScienceHandbook/02.00-introduction-to-numpy.html&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Numpy.  A really nice quick tour as an appendix to a deep learning book by Sebastian Raschka &lt;a href=&quot;https://sebastianraschka.com/pdf/books/dlb/appendix_f_numpy-intro.pdf&quot;&gt;Ref&lt;/a&gt; and as a &lt;a href=&quot;https://github.com/rasbt/deep-learning-book/blob/master/code/appendix_f_numpy-intro/appendix_f_numpy-intro.ipynb&quot;&gt;Notebook&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Numerical Scientific Computing.  Quick tour with exercises by Micheleen Harris.  &lt;a href=&quot;https://notebooks.azure.com/rheartpython/libraries/PythonDS101/html/07.NumericalScientificComputing.ipynb&quot;&gt;Notebook&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;NumPy Practice.  With some nice notes on Linear Algebra operations in &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; by Tirthajyoti Sarkar.  &lt;a href=&quot;https://github.com/tirthajyoti/PythonMachineLearning/blob/master/Pandas%20and%20Numpy/Numpy%20practice.ipynb&quot;&gt;Notebook&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;a-listing-of-linear-algebra-resources-to-go-along-with-this&quot;&gt;A listing of Linear Algebra resources to go along with this&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Stanford comprehensive Linear Algebra review document by Zico Kolter.  &lt;a href=&quot;http://web.stanford.edu/class/cs224n/readings/cs229-linalg.pdf&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Linear Algebra Review (Andrew Ng).&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Matrices and Vectors. &lt;a href=&quot;https://www.youtube.com/watch?v=Dft1cqjwlXE&quot;&gt;Video&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Addition And Scalar Multiplication. &lt;a href=&quot;https://www.youtube.com/watch?v=4WP6jVGIn7M&quot;&gt;Video&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Matrix Vector Multiplication.  &lt;a href=&quot;https://www.youtube.com/watch?v=gPegoVYp64w&quot;&gt;Video&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Matrix-Matrix Multiplication.  &lt;a href=&quot;https://www.youtube.com/watch?v=_lrHXJRukMw&quot;&gt;Video&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Matrix Multiplication Properties.  &lt;a href=&quot;https://www.youtube.com/watch?v=c7GhnL2N--I&quot;&gt;Video&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Inverse And Transpose.  &lt;a href=&quot;https://www.youtube.com/watch?v=7snro4M6ukk&quot;&gt;Video&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Linear Algebra youtube channel by Khan Academy &lt;a href=&quot;https://www.youtube.com/channel/UCGYSKl6e3HM0PP7QR35Crug&quot;&gt;Videos&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Coding the Matrix.  &lt;a href=&quot;http://codingthematrix.com/&quot;&gt;Book&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Exercise:  Follow along with these courses by doing things concurrently in &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are likely many more great resources out there so feel free to create an issue on this &lt;a href=&quot;https://github.com/michhar/navigating-ml/issues&quot;&gt;GitHub repo&lt;/a&gt; letting me know about yours or others.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 31 Oct 2018 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/navigating-ml/numpy_intro/</link>
+        <guid isPermaLink="true">http://localhost:4000/navigating-ml/numpy_intro/</guid>
         
         
         <category>ds</category>

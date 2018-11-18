@@ -1,20 +1,20 @@
 ---
 layout: post
-title: 3. Level 1 Practice
+title: Level 1 Practice
 img: third.jpg
 ---
 
 # Going from Prebuilt ML Tools to First Custom ML
 
-It is recommended that you have completed the [Leve 1 Preparation](level1_prep).
+It is recommended that you have completed the [Level 1 Preparation](/navigating-ml/level1_prep).
 
-In this Beginner Challenge you'll learn about basic ML and neural networks hands-on with Jupyter notebooks and Python.  You'll be introduced to scikit-learn, CNTK, and TensorFlow as Python packages commonly used in data manipulation and data science.  
+In this first set of practice problems you'll learn about basic ML and neural networks, hands-on, with Jupyter notebooks and Python.  You'll be introduced to scikit-learn, PyTorch, and TensorFlow as Python packages commonly used in data manipulation and data science.  
 
-Here and throughout these practice exercises you'll work with the following image datasets: the fruit FIDS30 dataset, the Kaggle Fashion MNIST dataset and the CIFAR-10 (tiny images) dataset.
+Here and throughout these practice exercises you'll work with the following image datasets: the fruit FIDS30, Fashion MNIST, the Hymenoptera insect and the CIFAR-10 (tiny images) datasets.
 
 ## Custom Vision (free from Microsoft)
 
-Download the [fruit dataset](http://www.vicos.si/Downloads/FIDS30) and build a fruit image classifier with two fruit classes using [https://customvision.ai/](https://customvision.ai/).
+Download the [fruit dataset](http://www.vicos.si/Downloads/FIDS30) and build a fruit image classifier with two fruit classes using this service: [https://customvision.ai/](https://customvision.ai/).
 
 After you have done some training above, create a Python script to "pixel-normalize" the images prior to training the model and retrain to see your new Precision and Recall.
 
@@ -40,8 +40,6 @@ It might help to examine the existing data format for `sklearn.datasets.load_dig
 - What did you find?  Which fashion item has the best accuracy, which the worst?  Why do you think that is?  Is there a way you could imagine improving this model?
 - Try a different model
 - Scale the images (in `sklearn`) and check the accuracy of the model again.  Did it improve or worsen?
-
-
 
 ### Object Detection
 
@@ -77,10 +75,6 @@ The purpose of the Basic Neural Nets exercises are to familiarize you with how a
     - Use the URL option when opening up a new notebook in Azure Notebooks
     - Or, download by right clicking on "Raw" and "Save link as..."
     - Re-implement the MLP with `sklearn`
-
-## Moving On
-
-Now it is time to move on to Level 2 Preparation.
 
 ## Additional Help
 
