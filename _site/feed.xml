@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Nov 2018 09:34:08 -0800</pubDate>
-    <lastBuildDate>Mon, 19 Nov 2018 09:34:08 -0800</lastBuildDate>
+    <pubDate>Mon, 19 Nov 2018 11:31:03 -0800</pubDate>
+    <lastBuildDate>Mon, 19 Nov 2018 11:31:03 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -683,7 +683,11 @@ test on the Fashion MNIST dataset.&lt;/p&gt;
 
 &lt;h2 id=&quot;convolutional-neural-networks&quot;&gt;Convolutional Neural Networks&lt;/h2&gt;
 
-&lt;p&gt;Read or watch the following for an in-depth introduction to convolutional neural networks (ConvNets/CNNs):&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;ConvNet architectures make the explicit assumption that the inputs are images, which allows us to encode certain properties into the architecture. These then make the forward function more efficient to implement and vastly reduce the amount of parameters in the network.&lt;/em&gt; –CS231n Course&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Read or watch the following Stanford CS231n Lecture for an in-depth introduction to convolutional neural networks (ConvNets/CNNs).  At the end of this 1-hr investment of time, you will have a thorough conceptual and practical understanding of CNNs and a good foundation to set forth proper applications of this type of NN architecture to images and other types of inputs (yes, CNNs have been used for music, speech and more):&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://cs231n.github.io/convolutional-networks/&quot; target=&quot;_blank&quot;&gt;Lecture Notes&lt;/a&gt; or &lt;a href=&quot;https://www.youtube.com/watch?v=bNb2fEVKeEo&amp;amp;index=6&amp;amp;t=0s&amp;amp;list=PLzUTmXVwsnXod6WNdg57Yc3zFx_f-RYsq&quot; target=&quot;_blank&quot;&gt;Video&lt;/a&gt;&lt;/li&gt;
@@ -705,7 +709,7 @@ test on the Fashion MNIST dataset.&lt;/p&gt;
   &lt;li&gt;How can transfer learning speed up training?  If a network is already built, is it possible to modify it for a different number of output classes?&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Gain familiarity with PyTorch:&lt;/p&gt;
+&lt;p&gt;Gain familiarity with the PyTorch deep learning framework as it will be used in the Practice section so we can escape the use of CPU-bound &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; tensors for everything:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;PyTorch tensor vs. numpy array (see the PyTorch &lt;a href=&quot;https://pytorch.org/tutorials/beginner/pytorch_with_examples.html&quot;&gt;Docs&lt;/a&gt;)&lt;/li&gt;
