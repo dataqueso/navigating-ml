@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 18 Nov 2018 12:15:35 -0800</pubDate>
-    <lastBuildDate>Sun, 18 Nov 2018 12:15:35 -0800</lastBuildDate>
+    <pubDate>Sun, 18 Nov 2018 16:32:01 -0800</pubDate>
+    <lastBuildDate>Sun, 18 Nov 2018 16:32:01 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -98,17 +98,19 @@ while a conventional CPU has a peak performance of around 20 Gigaflops, a NVIDIA
   &lt;li&gt;
     &lt;p&gt;PyTorch - &lt;a href=&quot;https://pytorch.org/&quot;&gt;Ref&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Packages:
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter
+  &lt;li&gt;Packages (place in a &lt;code class=&quot;highlighter-rouge&quot;&gt;requirements.txt&lt;/code&gt; file in your working conda environment and install all at once with: &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install -r requirements.txt&lt;/code&gt;):&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter
 scikit-learn
 scikit-image
 seaborn
 torch==0.4.1
 matplotlib
 numpy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+Pillow
+opencv-python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
         <pubDate>Sat, 10 Nov 2018 00:00:00 -0800</pubDate>
@@ -128,13 +130,21 @@ numpy
 
 &lt;p&gt;To begin at this level you should have:&lt;/p&gt;
 
-&lt;ul&gt;
+&lt;ol&gt;
   &lt;li&gt;Familiarity with Python 3 for general purpose programming.  See the &lt;a href=&quot;/navigating-ml/learning-python&quot;&gt;Python&lt;/a&gt; section for more.&lt;/li&gt;
   &lt;li&gt;Working knowledge of traditional ML (when to use what)&lt;/li&gt;
-  &lt;li&gt;Basic data mining skills&lt;/li&gt;
-&lt;/ul&gt;
+  &lt;li&gt;Jupyter notebook skills. &lt;a href=&quot;https://jakevdp.github.io/PythonDataScienceHandbook/&quot;&gt;Chapter 1 Python Data Science Handbook&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Get a good grasp of Python for data-related tasks:
+    &lt;ol&gt;
+      &lt;li&gt;How to read data (&lt;code class=&quot;highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt;, Pillow/&lt;code class=&quot;highlighter-rouge&quot;&gt;PIL&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;opencv-python&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;How to manipulate data (&lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;scikit-learn&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;How to plot data (&lt;code class=&quot;highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;seaborn&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;Traditional ML (&lt;code class=&quot;highlighter-rouge&quot;&gt;scikit-learn&lt;/code&gt;)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h2 id=&quot;concepts&quot;&gt;Concepts&lt;/h2&gt;
+&lt;h2 id=&quot;concepts-and-resources&quot;&gt;Concepts and Resources&lt;/h2&gt;
 
 &lt;h3 id=&quot;dealing-with-image-data&quot;&gt;Dealing with Image Data&lt;/h3&gt;
 
@@ -142,28 +152,35 @@ numpy
   &lt;li&gt;Read through this excellent first taste of Image Classification from this Stanford CS231n course &lt;a href=&quot;http://cs231n.github.io/classification/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h3 id=&quot;traditional-ml-for-image-analysis&quot;&gt;Traditional ML for Image Analysis&lt;/h3&gt;
+
+&lt;p&gt;Read through &lt;a href=&quot;http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_hog.html&quot;&gt;this&lt;/a&gt; article on Histogram of Oriented Gradients, an older technique, not often used anymore, but still a quick and easy way to detect objects.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://scikit-image.org/docs/dev/_images/sphx_glr_plot_hog_001.png&quot; alt=&quot;astronaut with hog&quot; /&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;neural-networks&quot;&gt;Neural Networks&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://sebastianraschka.com/images/blog/2015/singlelayer_neural_networks_files/perceptron_schematic.png&quot; alt=&quot;perceptron schematic&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Read through &lt;a href=&quot;http://sebastianraschka.com/Articles/2015_singlelayer_neurons.html&quot;&gt;this&lt;/a&gt; excellent explanation of a single-layer neural network.  This information will lay the foundation for these sets of challenges and help you get started from the ground-up, quickly with key concepts and Python code snippets.&lt;/p&gt;
+
+&lt;p&gt;You should now understand the single-layer network, a perceptron, that uses a threshold activation function to perform binary classification:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/rasbt/python-machine-learning-book-2nd-edition/master/code/ch02/images/02_04.png&quot; alt=&quot;perceptron schematic&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;right&quot;&gt;Attributed to Sebastian Raschka&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Read through &lt;a href=&quot;http://sebastianraschka.com/Articles/2015_singlelayer_neurons.html&quot;&gt;this&lt;/a&gt; excellent explanation of a single-layer neural network.  This information will lay the foundation for these sets of challenges and help you get started from the ground-up, quickly with key concepts and Python code snippets.&lt;/li&gt;
+  &lt;li&gt;IMPORTANT:  The perceptron is not capable of performing well on non-linearly separable inputs.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;A multi-layer network, such as the mutli-layer perceptron (MLP), can address the problem of non-linearly separable data.  An MLP, a fully-connected set of perceptrons organized into layers, can also have arbitrary activation functions making it more verstatile for classification and regression problems.  These sorts of networks are also known as dense neural networks and the layers as fully-connected.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/rasbt/python-machine-learning-book-2nd-edition/master/code/ch12/images/12_02.png&quot; alt=&quot;multi-layer network&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Read &lt;a href=&quot;https://en.wikipedia.org/wiki/Multilayer_perceptron&quot;&gt;this article&lt;/a&gt; for  additional information.&lt;/p&gt;
 
 &lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Git and GitHub for version control.&lt;/li&gt;
-  &lt;li&gt;Jupyter notebook skills. &lt;a href=&quot;https://jakevdp.github.io/PythonDataScienceHandbook/&quot;&gt;Chapter 1 Python Data Science Handbook&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Get a good grasp of Python for data tasks:
-    &lt;ol&gt;
-      &lt;li&gt;How to read data (matplotlib, Pillow/PIL, opencv)&lt;/li&gt;
-      &lt;li&gt;How to manipulate data (numpy, pandas, scikit-learn)&lt;/li&gt;
-      &lt;li&gt;How to plot data (matplotlib, plotly)&lt;/li&gt;
-      &lt;li&gt;Traditional ML (scikit-learn)&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;additional-resources&quot;&gt;Additional Resources&lt;/h2&gt;
@@ -213,7 +230,7 @@ numpy
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://nlpforhackers.io/wp-content/uploads/2017/01/Precision-Recall.png&quot; alt=&quot;Precision and recall&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://nlpforhackers.io/wp-content/uploads/2017/01/Precision-Recall.png&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Some defintions.  &lt;strong&gt;Precision&lt;/strong&gt;:  if a tag is precicted by your classifier, how likely is it that it is right?  &lt;strong&gt;Recall&lt;/strong&gt;:  out of the tags that should be classified as right, what percentage did your classifier correctly find?&lt;/p&gt;
@@ -243,7 +260,7 @@ numpy
   &lt;p&gt;TIPS:  Place all imports at the top of the notebook.  Call the training data something consistent thoughout all of your work (X_train -&amp;gt; training data, y_train -&amp;gt; labels, X_test -&amp;gt; test data…).&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;image-classification-for-fashion&quot;&gt;Image Classification for Fashion&lt;/h3&gt;
+&lt;h3 id=&quot;image-classification-with-classical-ml&quot;&gt;Image Classification with Classical ML&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;../images/fashion_sample.png&quot; alt=&quot;fashion dataset sample&quot; /&gt;&lt;/p&gt;
 
@@ -268,11 +285,34 @@ numpy
   &lt;li&gt;Try a different model - SVM or Random Forest&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;object-detection-with-scikit-learn&quot;&gt;Object Detection with Scikit-Learn&lt;/h3&gt;
-
 &lt;blockquote&gt;
   &lt;p&gt;&lt;em&gt;In the real world, data is rarely so uniform and simple pixels will not be suitable: this has led to a large literature on feature extraction methods for image data.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;h3 id=&quot;image-classification-with-basic-neural-nets&quot;&gt;Image Classification with Basic Neural Nets&lt;/h3&gt;
+
+&lt;p&gt;The purpose of the Basic Neural Nets exercises are to familiarize you with how a simple artificial neuron works all from the ground-up - this knowledge will serve you well.  See &lt;a href=&quot;/navigating-ml/level1_prep&quot;&gt;Level 1 Preparation&lt;/a&gt; for more information.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adapt a from-scratch Perceptron as in this &lt;a href=&quot;https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch02/ch02.ipynb&quot;&gt;Jupyter notebook&lt;/a&gt; to train and 
+test on the Fashion MNIST dataset.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Does the model converge or not (plot the training and validation error)?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adapt a from-scratch Multilayer Perceptron (MLP) as in this &lt;a href=&quot;https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch12/ch12.ipynb&quot;&gt;Jupyter notebook&lt;/a&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Try it again with the &lt;code class=&quot;highlighter-rouge&quot;&gt;scikit-learn&lt;/code&gt; MLP class.&lt;/li&gt;
+      &lt;li&gt;Does the model converge now?  What accuracy does the model achieve?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;object-detection-with-histogram-of-oriented-gradients&quot;&gt;Object Detection with Histogram of Oriented Gradients&lt;/h3&gt;
 
 &lt;p&gt;Create a Python program to detect bear faces (perhaps you’re builing a bear watch app for safety in the woods) by leveraging code samples from this &lt;a href=&quot;https://jakevdp.github.io/PythonDataScienceHandbook/05.14-image-features.html&quot; target=&quot;_blank&quot;&gt;Python Data Science Handbook notebook&lt;/a&gt;.&lt;/p&gt;
 
@@ -303,47 +343,32 @@ numpy
 &lt;span class=&quot;n&quot;&gt;positive_patches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The rest of the steps are outlined as follows in the Handbook section&lt;/p&gt;
+&lt;p&gt;The rest of the steps are outlined as follows (as described in the Handbook):&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Obtain a set of image thumbnails of non-faces to constitute “negative” training samples.&lt;/li&gt;
   &lt;li&gt;Extract HOG features from these training samples.&lt;/li&gt;
   &lt;li&gt;Train a linear SVM classifier on these samples.&lt;/li&gt;
   &lt;li&gt;For an “unknown” image, pass a sliding window across the image, using the model to evaluate whether that window contains a face or not.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;If detections overlap, combine them into a single window.&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;If detections overlap, combine them into a single window.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additionally:&lt;/p&gt;
+
+&lt;ul&gt;
   &lt;li&gt;What other confounding factors are there for images other than illumination, you think?&lt;/li&gt;
   &lt;li&gt;Plot the original image along with the &lt;code class=&quot;highlighter-rouge&quot;&gt;skimage.rgb2gray&lt;/code&gt; version and the HOG representation.  See how this works in &lt;code class=&quot;highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt;.  What does &lt;code class=&quot;highlighter-rouge&quot;&gt;skimage.rgb2gray&lt;/code&gt; actually do?&lt;/li&gt;
   &lt;li&gt;Try out the model on the entire test image.  What do you find out?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;A cursory result might be:
-&lt;img src=&quot;../images/bear_with_bboxes.png&quot; alt=&quot;model prediction&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;A cursory result might be (after varying window sizes):
+&lt;img src=&quot;../images/bear_with_bboxes2.png&quot; alt=&quot;model prediction&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Try using sliding windows with a variety of sizes (aspect ratios).  What do you find out?&lt;/li&gt;
-  &lt;li&gt;Read in a new image that contains a face and on one that does not and try your model on that.&lt;/li&gt;
-  &lt;li&gt;Augment the data to expand the training and test datasets (e.g. use a library like &lt;code class=&quot;highlighter-rouge&quot;&gt;imgaug&lt;/code&gt;) and retrain and test.&lt;/li&gt;
+  &lt;li&gt;Try using sliding windows with a variety of sizes (and aspect ratios).  What do you find out?&lt;/li&gt;
+  &lt;li&gt;Augment the data to expand the training and test datasets (e.g. use a library like &lt;code class=&quot;highlighter-rouge&quot;&gt;imgaug&lt;/code&gt; to left-right flip, blur, contrast normalize, etc.) and retrain and test.  How does the performance change and why is that?&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Extra credit&lt;/strong&gt;:  Implement Non-Maximum Suppression in Python to find the single best bounding box of a group of bounding boxes as are found above.  Apply this to the test image.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&quot;basic-neural-nets&quot;&gt;Basic Neural Nets&lt;/h2&gt;
-
-&lt;p&gt;The purpose of the Basic Neural Nets exercises are to familiarize you with how a simple artificial neuron works and then set of a few neurons to form a network (artificial neural network) - all from the ground-up - this knowledge will serve you well.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Adapt a from-scratch Perceptron as in this &lt;a href=&quot;https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch02/ch02.ipynb&quot;&gt;Jupyter notebook&lt;/a&gt; to train and test on the Fashion MNIST dataset.
-    &lt;ul&gt;
-      &lt;li&gt;Re-implement the Perceptron with &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt; (scikit-learn)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Adapt a from-scratch Multilayer Perceptron (MLP) as in this &lt;a href=&quot;https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch12/ch12.ipynb&quot;&gt;Jupyter notebook&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Re-implement the MLP with &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
 
 &lt;h2 id=&quot;additional-help&quot;&gt;Additional Help&lt;/h2&gt;
 

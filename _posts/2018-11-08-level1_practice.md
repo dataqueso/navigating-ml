@@ -22,7 +22,7 @@ Here and throughout these practice exercises you'll work with the following imag
 
 2. Observe performace metrics under the "Performance" tab.
 
-![Precision and recall](http://nlpforhackers.io/wp-content/uploads/2017/01/Precision-Recall.png)
+<img src="http://nlpforhackers.io/wp-content/uploads/2017/01/Precision-Recall.png" width="50%">
 
 > Some defintions.  **Precision**:  if a tag is precicted by your classifier, how likely is it that it is right?  **Recall**:  out of the tags that should be classified as right, what percentage did your classifier correctly find?
 
@@ -45,7 +45,7 @@ For these two problems, it is recommended to go through the code from the origin
 
 > TIPS:  Place all imports at the top of the notebook.  Call the training data something consistent thoughout all of your work (X_train -> training data, y_train -> labels, X_test -> test data...).
 
-### Image Classification for Fashion
+### Image Classification with Classical ML
 
 ![fashion dataset sample](../images/fashion_sample.png)
 
@@ -66,9 +66,23 @@ Additionally:
 - Normalize the images (in `sklearn`) and check the accuracy of the model(s) again.  Did it improve or worsen?
 - Try a different model - SVM or Random Forest
 
-### Object Detection with Scikit-Learn
-
 > _In the real world, data is rarely so uniform and simple pixels will not be suitable: this has led to a large literature on feature extraction methods for image data._
+
+### Image Classification with Basic Neural Nets
+
+The purpose of the Basic Neural Nets exercises are to familiarize you with how a simple artificial neuron works all from the ground-up - this knowledge will serve you well.  See [Level 1 Preparation](/navigating-ml/level1_prep) for more information.
+
+3. Adapt a from-scratch Perceptron as in this [Jupyter notebook](https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch02/ch02.ipynb) to train and 
+test on the Fashion MNIST dataset.
+
+    * Does the model converge or not (plot the training and validation error)?
+
+4. Adapt a from-scratch Multilayer Perceptron (MLP) as in this <a href="https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch12/ch12.ipynb">Jupyter notebook</a>
+
+    * Try it again with the `scikit-learn` MLP class.
+    * Does the model converge now?  What accuracy does the model achieve?
+
+### Object Detection with Histogram of Oriented Gradients
 
 Create a Python program to detect bear faces (perhaps you're builing a bear watch app for safety in the woods) by leveraging code samples from this <a href="https://jakevdp.github.io/PythonDataScienceHandbook/05.14-image-features.html" target="_blank">Python Data Science Handbook notebook</a>.  
 
@@ -98,7 +112,7 @@ positive_patches = np.asarray(data_array)
 positive_patches.shape
 ```
 
-The rest of the steps are outlined as follows in the Handbook section
+The rest of the steps are outlined as follows (as described in the Handbook):
 
 - Obtain a set of image thumbnails of non-faces to constitute "negative" training samples.
 - Extract HOG features from these training samples.
@@ -106,27 +120,19 @@ The rest of the steps are outlined as follows in the Handbook section
 - For an "unknown" image, pass a sliding window across the image, using the model to evaluate whether that window contains a face or not.
 - If detections overlap, combine them into a single window. 
 
+Additionally:
+
 - What other confounding factors are there for images other than illumination, you think?
 - Plot the original image along with the `skimage.rgb2gray` version and the HOG representation.  See how this works in `matplotlib`.  What does `skimage.rgb2gray` actually do?
 - Try out the model on the entire test image.  What do you find out?
 
-A cursory result might be:
-![model prediction](../images/bear_with_bboxes.png)
+A cursory result might be (after varying window sizes):
+![model prediction](../images/bear_with_bboxes2.png)
 
-- Try using sliding windows with a variety of sizes (aspect ratios).  What do you find out?
-- Read in a new image that contains a face and on one that does not and try your model on that.
-- Augment the data to expand the training and test datasets (e.g. use a library like `imgaug`) and retrain and test.
+- Try using sliding windows with a variety of sizes (and aspect ratios).  What do you find out?
+- Augment the data to expand the training and test datasets (e.g. use a library like `imgaug` to left-right flip, blur, contrast normalize, etc.) and retrain and test.  How does the performance change and why is that?
 - **Extra credit**:  Implement Non-Maximum Suppression in Python to find the single best bounding box of a group of bounding boxes as are found above.  Apply this to the test image.
 
-
-## Basic Neural Nets
-
-The purpose of the Basic Neural Nets exercises are to familiarize you with how a simple artificial neuron works and then set of a few neurons to form a network (artificial neural network) - all from the ground-up - this knowledge will serve you well.
-
-3. Adapt a from-scratch Perceptron as in this [Jupyter notebook](https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch02/ch02.ipynb) to train and test on the Fashion MNIST dataset.
-    - Re-implement the Perceptron with `sklearn` (scikit-learn)
-4. Adapt a from-scratch Multilayer Perceptron (MLP) as in this [Jupyter notebook](https://github.com/rasbt/python-machine-learning-book-2nd-edition/blob/master/code/ch12/ch12.ipynb)
-    - Re-implement the MLP with `sklearn`
 
 ## Additional Help
 
