@@ -10,7 +10,7 @@ categories: [ds, ml]
 
 It is recommended that you have completed the [Level 2 Preparation](/navigating-ml/level2_prep).
 
-In this intermediate set of problems, you'll apply what you've learned in the Level 2 Preparation section.  You'll start exploring the CIFAR-10 dataset with an MLP and CNN along with other datsets in PyTorch and TensorFlow as extra credit.
+In this intermediate set of problems, you'll apply what you've learned in the Level 2 Preparation section.  You'll start exploring the CIFAR-10 dataset with an MLP and CNN along with other datsets in PyTorch.
 
 ## Adapt a Multilayer Perceptron
 
@@ -18,7 +18,7 @@ In this intermediate set of problems, you'll apply what you've learned in the Le
 
 Instructions to practice image classification with PyTorch
 
-2. Let's dive into some code.  Open a Jupyter session or log into the Jupyter system (on your DSVM or locally)
+2. Let's dive into some code.  Open a Jupyter session or log into the Jupyter system
   - In a code cell `! git clone https://github.com/rasbt/deep-learning-book.git`
   - Open this notebook:  `/code/model_zoo/pytorch_ipynb/multilayer-perceptron.ipynb`
   - Modify the notebook to work with the CIFAR-10 dataset
