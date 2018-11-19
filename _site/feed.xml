@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 18 Nov 2018 16:32:01 -0800</pubDate>
-    <lastBuildDate>Sun, 18 Nov 2018 16:32:01 -0800</lastBuildDate>
+    <pubDate>Sun, 18 Nov 2018 17:31:51 -0800</pubDate>
+    <lastBuildDate>Sun, 18 Nov 2018 17:31:51 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -213,7 +213,7 @@ opencv-python
 
 &lt;p&gt;Here and throughout these practice exercises you’ll work with the following image datasets: COCO, Fashion MNIST, the Hymenoptera insect and the CIFAR-10 (tiny images) datasets.&lt;/p&gt;
 
-&lt;h2 id=&quot;custom-vision-free-from-microsoft&quot;&gt;Custom Vision (free from Microsoft)&lt;/h2&gt;
+&lt;h2 id=&quot;first-ml-with-custom-vision-service&quot;&gt;First ML with Custom Vision Service&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -223,7 +223,7 @@ opencv-python
     &lt;p&gt;Pick 50-100 images to upload, some with people and some without (may simply choose randomly as there’s a good mix).&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Build a person/no-person image classifier using  &lt;a href=&quot;https://customvision.ai/&quot;&gt;https://customvision.ai/&lt;/a&gt; (choose “multiclass” classification using the “general” domain) - directions on the &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier&quot;&gt;Docs&lt;/a&gt; page.&lt;/p&gt;
+    &lt;p&gt;Build a person/no-person image classifier using Microsoft’s &lt;a href=&quot;https://customvision.ai/&quot;&gt;https://customvision.ai/&lt;/a&gt; (choose “multiclass” classification using the “general” domain) - directions on the &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier&quot;&gt;Docs&lt;/a&gt; page.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Observe performace metrics under the “Performance” tab.&lt;/p&gt;
@@ -388,7 +388,7 @@ test on the Fashion MNIST dataset.&lt;/p&gt;
         <title>Level 2 Preparation</title>
         <description>&lt;h1 id=&quot;neural-network-concepts-and-classification&quot;&gt;Neural Network Concepts and Classification&lt;/h1&gt;
 
-&lt;p&gt;Now it’s time to really learn about PyTorch and classifiers such as logistic regression, multilayer perceptron, and convolutional network (CNN/ConvNet) classifiers.  The MNIST hand-written digits dataset is used in the following course to classify grey-scale images of digits.  We’ll use this code in our Challenge section so go ahead and get familiar with it now by taking this course.&lt;/p&gt;
+&lt;p&gt;Read through this excellent first taste of Image Classification from this Stanford CS231n course - &lt;a href=&quot;http://cs231n.github.io/classification/&quot;&gt;Ref&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Learn concepts around neural networks for image applications and be able to answer these questions.
@@ -396,7 +396,7 @@ test on the Fashion MNIST dataset.&lt;/p&gt;
       &lt;li&gt;List the differences between a Convolutional (ConvNet/CNN) and regular Dense Neural Network (e.g Multilayer Perceptron) - two good resources:  &lt;a href=&quot;https://towardsdatascience.com/multi-layer-neural-networks-with-sigmoid-function-deep-learning-for-rookies-2-bf464f09eb7f&quot;&gt;MLP&lt;/a&gt; and &lt;a href=&quot;http://colah.github.io/posts/2014-07-Understanding-Convolutions/&quot;&gt;Convolutions - what are they&lt;/a&gt; and &lt;a href=&quot;http://colah.github.io/posts/2014-07-Conv-Nets-Modular/&quot;&gt;CNNs&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;List and give examples of the tunable hyperparameters one can find in a ConvNet.&lt;/li&gt;
       &lt;li&gt;How can transfer learning speed up training?&lt;/li&gt;
-      &lt;li&gt;If a network is already built, is it possible to modify it for a different output number of classes?&lt;/li&gt;
+      &lt;li&gt;If a network is already built, is it possible to modify it for a different number of output classes?&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;Gain familiarity with PyTorch

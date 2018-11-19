@@ -12,13 +12,13 @@ In this first set of practice problems you'll learn about basic ML and neural ne
 
 Here and throughout these practice exercises you'll work with the following image datasets: COCO, Fashion MNIST, the Hymenoptera insect and the CIFAR-10 (tiny images) datasets.
 
-## Custom Vision (free from Microsoft)
+## First ML with Custom Vision Service
 
 1. Download the COCO 2017 Val dataset (1 GB) [here](http://cocodataset.org/#download) to get a set of real-life images (click on "2017 Val images [5K/1GB]").
 
 2. Pick 50-100 images to upload, some with people and some without (may simply choose randomly as there's a good mix).
 
-2. Build a person/no-person image classifier using  [https://customvision.ai/](https://customvision.ai/) (choose "multiclass" classification using the "general" domain) - directions on the [Docs](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier) page.
+2. Build a person/no-person image classifier using Microsoft's [https://customvision.ai/](https://customvision.ai/) (choose "multiclass" classification using the "general" domain) - directions on the [Docs](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier) page.
 
 2. Observe performace metrics under the "Performance" tab.
 
