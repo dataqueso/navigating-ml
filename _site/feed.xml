@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Nov 2018 11:58:38 -0800</pubDate>
-    <lastBuildDate>Mon, 19 Nov 2018 11:58:38 -0800</lastBuildDate>
+    <pubDate>Mon, 19 Nov 2018 16:20:07 -0800</pubDate>
+    <lastBuildDate>Mon, 19 Nov 2018 16:20:07 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -756,68 +756,111 @@ model_ft.fc = nn.Linear(num_ftrs, 2)
 
 &lt;p&gt;It is recommended that you have completed the &lt;a href=&quot;/navigating-ml/level2_prep&quot;&gt;Level 2 Preparation&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;In this intermediate set of problems, you’ll apply what you’ve learned in the Level 2 Preparation section.  You’ll start exploring the CIFAR-10 dataset with an MLP and CNN along with other datsets in PyTorch.&lt;/p&gt;
+&lt;p&gt;In this intermediate set of problems, you’ll apply what you’ve learned in the Level 2 Preparation section.  You’ll utilize your bear and COCO dataset with an MLP and CNN in PyTorch, including and introduction to transfer learning.&lt;/p&gt;
 
-&lt;h2 id=&quot;adapt-a-multilayer-perceptron&quot;&gt;Adapt a Multilayer Perceptron&lt;/h2&gt;
+&lt;h2 id=&quot;adapt-a-multilayer-perceptron-and-cnn&quot;&gt;Adapt a Multilayer Perceptron and CNN&lt;/h2&gt;
 
 &lt;h3 id=&quot;image-classification&quot;&gt;Image Classification&lt;/h3&gt;
 
 &lt;p&gt;Instructions to practice image classification with PyTorch&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Let’s dive into some code.  Open a Jupyter session or log into the Jupyter system
-    &lt;ul&gt;
-      &lt;li&gt;In a code cell &lt;code class=&quot;highlighter-rouge&quot;&gt;! git clone https://github.com/rasbt/deep-learning-book.git&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Open this notebook:  &lt;code class=&quot;highlighter-rouge&quot;&gt;/code/model_zoo/pytorch_ipynb/multilayer-perceptron.ipynb&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Modify the notebook to work with the CIFAR-10 dataset&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Remember you’re working with RGB images instead of grayscale
-      - What is the resulting average test error?  Why is this value so different from the MNIST result?  What hyperparameters can you modify to fix this?&lt;/li&gt;
-    &lt;/ul&gt;
+&lt;h4 id=&quot;setup&quot;&gt;Setup&lt;/h4&gt;
+
+&lt;p&gt;Let’s dive into some data and code.  Open a Jupyter session or log into the Jupyter system&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;In a code cell &lt;code class=&quot;highlighter-rouge&quot;&gt;! git clone https://github.com/rasbt/deep-learning-book.git&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Navigate to this directory:  &lt;code class=&quot;highlighter-rouge&quot;&gt;/code/model_zoo/pytorch_ipynb&lt;/code&gt; where we will operate.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;data&quot;&gt;Data&lt;/h4&gt;
+
+&lt;p&gt;We will work with your square-padded bears dataset from Level 1 (if you do not have these, go to Level 1 and set up the datasets) and a similar number of the square-padded COCO images (ones that are not images of a bear, of course - remove any that are here because there are some sneaky bears in COCO).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Set up the following data folder structure where the notebooks live:
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  data/train/bear
+  data/train/not_bear
+  data/test/bear
+  data/test/not_bear
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Go online and find 5 png’s of cats and dogs.  Reshape them and pad them to be 32x32 pixels using the Python Pillow library (see &lt;a href=&quot;http://pillow.readthedocs.io/en/3.1.x/reference/ImageOps.html&quot;&gt;ImageOps&lt;/a&gt;). Test the network with these, following the guidelines and lessons you learned thus far.  Now find an image of an apple and test the network with this.  What is wrong with using a food image?&lt;/li&gt;
-  &lt;li&gt;Create a new label called “apple” and add the apple images from the &lt;a href=&quot;http://www.vicos.si/Downloads/FIDS30&quot;&gt;fruit dataset&lt;/a&gt;, splitting into train/test and adding to previous data.  What are your findings after testing with the same apple image?&lt;/li&gt;
-&lt;/ol&gt;
+  &lt;li&gt;Place all, but 5 of the square-padded images of bears, into &lt;code class=&quot;highlighter-rouge&quot;&gt;data/train/bear&lt;/code&gt;.  Place all but 5 square-padded images of non-bear from a subset of COCO, into &lt;code class=&quot;highlighter-rouge&quot;&gt;data/train/not_bear&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Place the remaining bear images into the &lt;code class=&quot;highlighter-rouge&quot;&gt;data/test/bear&lt;/code&gt; and likewise with the non-bear images, but into &lt;code class=&quot;highlighter-rouge&quot;&gt;data/test/not_bear&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;train-a-multi-layer-perceptron&quot;&gt;Train a Multi-Layer Perceptron&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open the &lt;code class=&quot;highlighter-rouge&quot;&gt;multilayer-perceptron.ipynb&lt;/code&gt; notebook&lt;/li&gt;
+  &lt;li&gt;Modify the notebook in the right places to work with your bear dataset - check out the usage of torchvisions &lt;code class=&quot;highlighter-rouge&quot;&gt;datasets.ImageFolder&lt;/code&gt; (&lt;a href=&quot;https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html#load-data&quot; target=&quot;_blank&quot;&gt;Example&lt;/a&gt;) for easily creating a PyTorch-compatible dataset based on folder structures upon which the data loaders can work (the folder structures serve as the labels!).&lt;/li&gt;
+  &lt;li&gt;Make sure to add &lt;code class=&quot;highlighter-rouge&quot;&gt;transforms&lt;/code&gt; to “Resize” the input.  Try out other transforms as well as you go along to see if there are improvements in the accuracy.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Most deep learning frameworks have their own dataset formats - often several.  PyTorch has many standard readers for data as well as an object oriented guideline to create custom datasets that work with the PyTorch data loaders.  It can thus be very flexible.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Look at the mathematical notations in the notebook in the model definition to figure out the final FC layer size - you will see errors otherwise.&lt;/li&gt;
+  &lt;li&gt;A few other hyperparameters may need to be looked at.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;train-a-cnn-vgg16&quot;&gt;Train a CNN (VGG16)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Do the same as above, but with the &lt;code class=&quot;highlighter-rouge&quot;&gt;convnet-vgg16.ipynb&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;VGG16 has the following architecture (VGGNet was the runner-up of the ILSVRC 2014 competition, a.k.a., the ImageNet challenge).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/0*V1muWIDnPVwZUuEv.png&quot; alt=&quot;vgg16&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Add the following transform to the &lt;code class=&quot;highlighter-rouge&quot;&gt;train&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt; dataset instantiation.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transforms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Compose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transforms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                                                                  &lt;span class=&quot;n&quot;&gt;transforms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ToTensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
+                                                                  &lt;span class=&quot;n&quot;&gt;transforms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Normalize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.485&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.456&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.406&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+                                                                     &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.229&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.224&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.225&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Why are we resizing to 32x32 pixels?&lt;/li&gt;
+  &lt;li&gt;Wny is the test accuracy so low in the above cases?&lt;/li&gt;
+  &lt;li&gt;How would you modify the network in the case of 228x228 3-channel input (say you Resize to 228)?&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;transfer-learning-with-pytorch&quot;&gt;Transfer Learning with PyTorch&lt;/h2&gt;
 
-&lt;p&gt;Here, for ease of use and speed we’ll use Transfer Learning as well.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/tl_bear_not_bear.png&quot; alt=&quot;bear not bear&quot; /&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Take &lt;a href=&quot;https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html&quot;&gt;this&lt;/a&gt; tutorial to work with Inception v3 as the base model (model &lt;a href=&quot;https://pytorch.org/docs/stable/torchvision/models.html&quot;&gt;choices&lt;/a&gt;) - write code to load the model, count the features going in to a fully connected layer (last layer of the CNN) and reset it to a Linear layer to thus unfreeze the layer for transfer learning)&lt;/li&gt;
-  &lt;li&gt;Using the CIFAR-10 dataset from PyTorch &lt;code class=&quot;highlighter-rouge&quot;&gt;datasets&lt;/code&gt;, train an Inception v3 model to classify trucks and automobiles (just a two-class classifier from the 10 classes in CIFAR).&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Transfer learning can address the issue of small datasets by starting with pre-trained weights, weights that get us closer to recognizing objects that we are wishing to classify, instead of starting with random weights on our parameters.&lt;/p&gt;
 
-&lt;h2 id=&quot;cnns-with-tensorflow&quot;&gt;CNNs with TensorFlow&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Note, if your objects differ significantly from the objects upon which the pre-trained network was originally trained (usually ImageNet or COCO), some more data may be needed as well as potentially unfreezing more layers for fine-tuning.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Easy:  Run this TensorFlow script to classify a new image (this uses a pretrained Inception V3 model):&lt;/p&gt;
+&lt;p&gt;Modify &lt;a href=&quot;https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html&quot; target=&quot;_blank&quot;&gt;this&lt;/a&gt; PyTorch tutorial to work with VGG16 and the bear/not_bear dataset you have come to enjoy.  You may need to take a look at the layers of VGG16 found in the following, to decide how to modify the last layer for different output size (i.e. different number of classes).&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.tensorflow.org/tutorials/image_recognition&quot;&gt;https://www.tensorflow.org/tutorials/image_recognition&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Note, the &lt;code class=&quot;highlighter-rouge&quot;&gt;model_object.classifier&lt;/code&gt; is actually a sequential list of fully connected layers (see diagram above).  Also, to see this classifier defined, you can take a look at:&lt;/p&gt;
 
-&lt;p&gt;Intermediate: Perform this TensorFlow CNN Tutorial from Google:&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;model_object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classifier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_modules&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.tensorflow.org/tutorials/deep_cnn&quot;&gt;https://www.tensorflow.org/tutorials/deep_cnn&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Additionally, defining a new layer will have a grad function and gradients enabled by default for backprop.  What must you do to freeze the layers before the last layer so that you are only fine-tuning on that last layer?&lt;/p&gt;
 
-&lt;p&gt;Advanced:  Modify this MNIST CNN TensorFlow tutorial for use with the CIFAR-10 dataset:&lt;/p&gt;
+&lt;p&gt;Once you’ve worked out the updates, train the model on your bear/no bear data.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://adventuresinmachinelearning.com/convolutional-neural-networks-tutorial-tensorflow/&quot;&gt;http://adventuresinmachinelearning.com/convolutional-neural-networks-tutorial-tensorflow/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;How much has the result improved?&lt;/li&gt;
+  &lt;li&gt;If you wished to “unfreeze” more than the last layer, how would you do so?&lt;/li&gt;
+  &lt;li&gt;If you had 3 classes instead of 2, how would you modify the network architecture?&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&quot;want-more&quot;&gt;Want More?&lt;/h2&gt;
-
-&lt;p&gt;Check out Rodrigo Benenson’s &lt;a href=&quot;http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html#43494641522d3130&quot;&gt;blog&lt;/a&gt; to find out the best algorithm for classifying with CIFAR-10 and implement it.  May the force be with you.&lt;/p&gt;
 
 &lt;h2 id=&quot;additional-help&quot;&gt;Additional Help&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;PyTorch forums - &lt;a href=&quot;https://discuss.pytorch.org/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;StackOverflow with &lt;code class=&quot;highlighter-rouge&quot;&gt;pytorch&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;tensorflow&lt;/code&gt; tag&lt;/li&gt;
+  &lt;li&gt;StackOverflow with &lt;code class=&quot;highlighter-rouge&quot;&gt;pytorch&lt;/code&gt; tag&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 05 Nov 2018 00:00:00 -0800</pubDate>
