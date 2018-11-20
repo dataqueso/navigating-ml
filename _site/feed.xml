@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Nov 2018 16:20:07 -0800</pubDate>
-    <lastBuildDate>Mon, 19 Nov 2018 16:20:07 -0800</lastBuildDate>
+    <pubDate>Mon, 19 Nov 2018 16:43:08 -0800</pubDate>
+    <lastBuildDate>Mon, 19 Nov 2018 16:43:08 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -901,67 +901,50 @@ model_ft.fc = nn.Linear(num_ftrs, 2)
 
 &lt;p&gt;In this advanced Challenge, the instructions will be a little more vague and you’ll need to go figure find out much on your own, part of the learning and challenge.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Why do this task&lt;/em&gt;:  Usually, beginner tutorials around ML and neural networks begin with classifying hand-written digits from the MNIST dataset or CIFAR-10.  We are going to begin with something more challenging and much of it will be dealing with data and data formats.  This is to simulate how life will likely be in real life and it’s hoped you will learn how to create machine learning models more effectively and quickly in the real world. The reason to work through the following is:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Why do this task&lt;/em&gt;:  Usually, beginner tutorials around ML and neural networks begin with classifying hand-written digits from the MNIST dataset or CIFAR-10.  We are going to begin with something more challenging and much of it will be dealing with data, labeling and data formats.  This is to simulate how life will likely be in real life and it’s hoped you will learn how to create machine learning models more effectively and quickly in the real world. The reason to work through the following is:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;It will force you to read and learn from scratch.  You will learn the different label file formats, deserializers and how things compute. &lt;/li&gt;
-  &lt;li&gt;For for example, in energy/manufacturing you will get .png or .jpg or .tiff files and not stuff already in the perfect format. &lt;/li&gt;
+  &lt;li&gt;For for example, in energy/manufacturing you will get .png or .jpg or .tiff files and not stuff already in the perfect format.  You may even get video data.&lt;/li&gt;
   &lt;li&gt;Learning this will help you understand the concept of “Data Packing”. &lt;/li&gt;
   &lt;li&gt;This is not the simplest way, but it forces greater learning.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;working-with-pytorch-locally-or-on-a-dsvmvm&quot;&gt;Working with PyTorch (locally or on a DSVM/VM)&lt;/h2&gt;
+&lt;h2 id=&quot;working-with-pytorch-on-more-complex-data&quot;&gt;Working with PyTorch on More Complex Data&lt;/h2&gt;
 
 &lt;p&gt;See &lt;a href=&quot;/navigating-ml/setup&quot;&gt;Setup&lt;/a&gt; for more instructions on how to set up an environment for this problem set.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Image Classification&lt;/p&gt;
+&lt;h3 id=&quot;image-classification&quot;&gt;Image Classification&lt;/h3&gt;
 
+&lt;p&gt;Start with raw video of fish swimming at a video trap in the northern territories of Australia.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Download the video sample from here: https://github.com/Azadehkhojandi/FindingFishwithTensorflowObjectdetectionAPI/blob/master/fish_detection/fishdata/Videos/video1.mp4&lt;/li&gt;
+  &lt;li&gt;Separate the video input into individual frames&lt;/li&gt;
+  &lt;li&gt;Create a classifier to help decide if a frame has a fish or not.  Use transfer learning.&lt;/li&gt;
+  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;transforms&lt;/code&gt; modules from &lt;code class=&quot;highlighter-rouge&quot;&gt;torchvision&lt;/code&gt; and other libraries to:
+    &lt;ul&gt;
+      &lt;li&gt;Try out some data augmentation - (e.g. random vertical flip and blur the images)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Make sure you also create an example for &lt;a href=&quot;https://en.wikipedia.org/wiki/Statistical_inference&quot;&gt;inference&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Use Scikit-learns’s confusion matrix and classification_report to generate metrics.
     &lt;ol&gt;
-      &lt;li&gt;Start with the Hymenoptera insect raw data
-        &lt;ol&gt;
-          &lt;li&gt;Get Data from here: &lt;a href=&quot;https://download.pytorch.org/tutorial/hymenoptera_data.zip&quot;&gt;click to download&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;transforms&lt;/code&gt; modules from &lt;code class=&quot;highlighter-rouge&quot;&gt;torchvision&lt;/code&gt; and other libraries to:
-            &lt;ul&gt;
-              &lt;li&gt;Try out some data augmentation - (random vertical flip and blur the images)&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;Make sure you also create an example for &lt;a href=&quot;https://en.wikipedia.org/wiki/Statistical_inference&quot;&gt;inference&lt;/a&gt;.&lt;/li&gt;
-          &lt;li&gt;Use Scikit-learns’s confusion matrix and classification_report to generate metrics.
-            &lt;ol&gt;
-              &lt;li&gt;&lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html&quot;&gt;Scikit-learn’s confusion matrix&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html&quot;&gt;Scikit-learn’s classification report&lt;/a&gt;&lt;/li&gt;
-            &lt;/ol&gt;
-          &lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html&quot;&gt;Scikit-learn’s confusion matrix&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html&quot;&gt;Scikit-learn’s classification report&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;want-more&quot;&gt;Want More?&lt;/h2&gt;
+&lt;h3 id=&quot;object-detection&quot;&gt;Object Detection&lt;/h3&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Do the same exact exercise with COCO: http://cocodataset.org/#home
-    &lt;ol&gt;
-      &lt;li&gt;Why do you think you get bad results?
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Object Detection
-    &lt;ol&gt;
-      &lt;li&gt;Use the Out of Box Faster-RCNN or YOLOv3 solution to identify new objects in images based on a model trained on COCO&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Use the Out of Box Faster-RCNN or YOLOv3 solution to identify fish in frames (you will need to label with bounding boxes - a good tool is VoTT or the VGG Image Annotator)&lt;/p&gt;
 
 &lt;h2 id=&quot;additional-help&quot;&gt;Additional Help&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;PyTorch forums - &lt;a href=&quot;https://discuss.pytorch.org/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;StackOverflow with &lt;code class=&quot;highlighter-rouge&quot;&gt;pytorch&lt;/code&gt; tag&lt;/li&gt;
-  &lt;li&gt;If using CNTK, you may send your questions to cntkhelp@microsoft.com&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 02 Nov 2018 00:00:00 -0700</pubDate>
