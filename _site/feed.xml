@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Navigating ML</title>
-    <description>Navigating ML - a take by Micheleen
+    <description>Navigating ML
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Nov 2018 16:53:28 -0800</pubDate>
-    <lastBuildDate>Thu, 22 Nov 2018 16:53:28 -0800</lastBuildDate>
+    <pubDate>Sun, 25 Nov 2018 14:54:37 -0600</pubDate>
+    <lastBuildDate>Sun, 25 Nov 2018 14:54:37 -0600</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -127,7 +127,7 @@ opencv-python
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>Sat, 10 Nov 2018 00:00:00 -0800</pubDate>
+        <pubDate>Sat, 10 Nov 2018 00:00:00 -0600</pubDate>
         <link>http://localhost:4000/navigating-ml/setup/</link>
         <guid isPermaLink="true">http://localhost:4000/navigating-ml/setup/</guid>
         
@@ -210,7 +210,7 @@ opencv-python
 &lt;p&gt;Learn about ML and Python scikit-learn in this &lt;a href=&quot;https://www.youtube.com/playlist?list=PL5-da3qGB5ICeMbQuqbbCOQWcS6OYBr5A&quot;&gt;video series&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Fri, 09 Nov 2018 00:00:00 -0800</pubDate>
+        <pubDate>Fri, 09 Nov 2018 00:00:00 -0600</pubDate>
         <link>http://localhost:4000/navigating-ml/level1_prep/</link>
         <guid isPermaLink="true">http://localhost:4000/navigating-ml/level1_prep/</guid>
         
@@ -391,7 +391,7 @@ test on the Fashion MNIST dataset.&lt;/p&gt;
   &lt;li&gt;For Custom Vision you can email customvisionteam@microsoft.com.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Thu, 08 Nov 2018 00:00:00 -0800</pubDate>
+        <pubDate>Thu, 08 Nov 2018 00:00:00 -0600</pubDate>
         <link>http://localhost:4000/navigating-ml/level1_practice/</link>
         <guid isPermaLink="true">http://localhost:4000/navigating-ml/level1_practice/</guid>
         
@@ -739,7 +739,7 @@ model_ft.fc = nn.Linear(num_ftrs, 2)
   &lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Tue, 06 Nov 2018 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 06 Nov 2018 00:00:00 -0600</pubDate>
         <link>http://localhost:4000/navigating-ml/level2_prep/</link>
         <guid isPermaLink="true">http://localhost:4000/navigating-ml/level2_prep/</guid>
         
@@ -863,7 +863,7 @@ model_ft.fc = nn.Linear(num_ftrs, 2)
   &lt;li&gt;StackOverflow with &lt;code class=&quot;highlighter-rouge&quot;&gt;pytorch&lt;/code&gt; tag&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Mon, 05 Nov 2018 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 05 Nov 2018 00:00:00 -0600</pubDate>
         <link>http://localhost:4000/navigating-ml/level2_practice/</link>
         <guid isPermaLink="true">http://localhost:4000/navigating-ml/level2_practice/</guid>
         
@@ -884,7 +884,7 @@ model_ft.fc = nn.Linear(num_ftrs, 2)
   &lt;li&gt;Data loading in PyTorch:  &lt;a href=&quot;https://pytorch.org/tutorials/beginner/data_loading_tutorial.html&quot;&gt;Tutorial&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Sat, 03 Nov 2018 00:00:00 -0700</pubDate>
+        <pubDate>Sat, 03 Nov 2018 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/navigating-ml/level3_prep/</link>
         <guid isPermaLink="true">http://localhost:4000/navigating-ml/level3_prep/</guid>
         
@@ -899,7 +899,7 @@ model_ft.fc = nn.Linear(num_ftrs, 2)
         <title>Level 3 Practice</title>
         <description>&lt;h1 id=&quot;advanced-deep-learning-with-pytorch&quot;&gt;Advanced Deep Learning with PyTorch&lt;/h1&gt;
 
-&lt;p&gt;In this advanced Challenge, the instructions will be a little more vague and you’ll need to go figure find out much on your own, part of the learning and challenge.&lt;/p&gt;
+&lt;p&gt;In this advanced excercise, the instructions will be a little more vague and you’ll need to go figure find out much on your own, part of the learning and challenge.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Why do this task&lt;/em&gt;:  Usually, beginner tutorials around ML and neural networks begin with classifying hand-written digits from the MNIST dataset or CIFAR-10.  We are going to begin with something more challenging and much of it will be dealing with data, labeling and data formats.  This is to simulate how life will likely be in real life and it’s hoped you will learn how to create machine learning models more effectively and quickly in the real world. The reason to work through the following is:&lt;/p&gt;
 
@@ -918,13 +918,21 @@ model_ft.fc = nn.Linear(num_ftrs, 2)
 
 &lt;p&gt;Start with raw video of fish swimming at a video trap in the northern territories of Australia.&lt;/p&gt;
 
+&lt;p&gt;Sample image:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/fish.jpg&quot; alt=&quot;lutjanus johnii at video trap&quot; /&gt;&lt;/p&gt;
+
 &lt;ol&gt;
   &lt;li&gt;Download the video sample from here: https://github.com/Azadehkhojandi/FindingFishwithTensorflowObjectdetectionAPI/blob/master/fish_detection/fishdata/Videos/video1.mp4&lt;/li&gt;
-  &lt;li&gt;Separate the video input into individual frames&lt;/li&gt;
-  &lt;li&gt;Create a classifier to help decide if a frame has a fish or not.  Use transfer learning.&lt;/li&gt;
+  &lt;li&gt;Separate the video input into individual frames and then separate the frames into a ‘fish’ or ‘no fish’ folder with manual or automated inspection.
+    &lt;blockquote&gt;
+      &lt;p&gt;An automated intial pass could be done with the Microsoft Computer Vision API or, even, Custom Vision.  An exmaple of using the Computer Vision API for this task may be found in &lt;a href=&quot;https://github.com/Azadehkhojandi/computer-vision-fish-frame-proposal/blob/master/classify_and_get_object_frames.py&quot; target=&quot;_blank&quot;&gt;this&lt;/a&gt; script (with good instructions on getting access to the API on the Readme).  This API may not perform well on the raw images, however - can you see why?  How could they be transformed?  Now let’s create our own model.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Create your own classifier in PyTorch to classify frames as fish/no fish using the parsed data, now in proper folders.&lt;/li&gt;
   &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;transforms&lt;/code&gt; modules from &lt;code class=&quot;highlighter-rouge&quot;&gt;torchvision&lt;/code&gt; and other libraries to:
     &lt;ul&gt;
-      &lt;li&gt;Try out some data augmentation - (e.g. random vertical flip and blur the images)&lt;/li&gt;
+      &lt;li&gt;Try out some data augmentation - (e.g. random vertical flip and blur the images) as well as the more standard “good idea” normalization.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Make sure you also create an example for &lt;a href=&quot;https://en.wikipedia.org/wiki/Statistical_inference&quot;&gt;inference&lt;/a&gt;.&lt;/li&gt;
@@ -938,7 +946,7 @@ model_ft.fc = nn.Linear(num_ftrs, 2)
 
 &lt;h3 id=&quot;object-detection&quot;&gt;Object Detection&lt;/h3&gt;
 
-&lt;p&gt;Use the Out of Box Faster-RCNN or YOLOv3 solution to identify fish in frames (you will need to label with bounding boxes - a good tool is VoTT or the VGG Image Annotator)&lt;/p&gt;
+&lt;p&gt;Use the Out of Box Faster-RCNN or YOLOv3 solution to identify fish in frames (you will need to label with bounding boxes - good tools are &lt;a href=&quot;https://github.com/Microsoft/VoTT&quot; target=&quot;_blank&quot;&gt;VoTT&lt;/a&gt; and &lt;a href=&quot;http://www.robots.ox.ac.uk/~vgg/software/via/&quot; target=&quot;_blank&quot;&gt;VGG Image Annotator&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;additional-help&quot;&gt;Additional Help&lt;/h2&gt;
 
@@ -946,8 +954,12 @@ model_ft.fc = nn.Linear(num_ftrs, 2)
   &lt;li&gt;PyTorch forums - &lt;a href=&quot;https://discuss.pytorch.org/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;StackOverflow with &lt;code class=&quot;highlighter-rouge&quot;&gt;pytorch&lt;/code&gt; tag&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;credit&quot;&gt;Credit&lt;/h2&gt;
+
+&lt;p&gt;Thank you to David Crook for providing the initial wording for the excercise intro.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 02 Nov 2018 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 02 Nov 2018 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/navigating-ml/level3_practice/</link>
         <guid isPermaLink="true">http://localhost:4000/navigating-ml/level3_practice/</guid>
         
@@ -1094,7 +1106,7 @@ model_ft.fc = nn.Linear(num_ftrs, 2)
 
 &lt;p&gt;“Perhaps you would like to give your homemade robot a brain of its own? Make it recognize faces? Or learn to walk around? Or maybe your company has tons of data (user logs, financial data, production data, machine sensor data, hotline stats, HR reports, etc.), and more than likely you could unearth some hidden gems if you just knew where to look.” &lt;a href=&quot;https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1491962291&quot;&gt;Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems by Aurélien Géron&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Thu, 01 Nov 2018 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 01 Nov 2018 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/navigating-ml/learning-python/</link>
         <guid isPermaLink="true">http://localhost:4000/navigating-ml/learning-python/</guid>
         
@@ -1146,7 +1158,7 @@ model_ft.fc = nn.Linear(num_ftrs, 2)
 &lt;p&gt;There are likely many more great resources out there so feel free to create an issue on this &lt;a href=&quot;https://github.com/michhar/navigating-ml/issues&quot;&gt;GitHub repo&lt;/a&gt; letting me know about yours or others.&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 31 Oct 2018 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 31 Oct 2018 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/navigating-ml/numpy_intro/</link>
         <guid isPermaLink="true">http://localhost:4000/navigating-ml/numpy_intro/</guid>
         
