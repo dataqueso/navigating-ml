@@ -19,7 +19,9 @@ _Why do this task_:  Usually, beginner tutorials around ML and neural networks 
 
 ## Working with PyTorch on More Complex Data
 
-See [Setup](/navigating-ml/setup) for more instructions on how to set up an environment for this problem set.
+See [Setup](/navigating-ml/setup) for more instructions on how to
+
+> _In the real world, data is rarely so uniform and simple pixels will not be suitable: this has led to a large literature on feature extraction methods for image data._
 
 ### Image Classification
 
@@ -30,8 +32,10 @@ Sample image:
 ![lutjanus johnii at video trap](../images/fish.jpg)
 
 1. Download the video sample from here: https://github.com/Azadehkhojandi/FindingFishwithTensorflowObjectdetectionAPI/blob/master/fish_detection/fishdata/Videos/video1.mp4
-2. Separate the video input into individual frames and then separate the frames into a 'fish' or 'no fish' folder with manual or automated inspection.
-> An automated intial pass could be done with the Microsoft Computer Vision API or, even, Custom Vision.  An exmaple of using the Computer Vision API for this task may be found in <a href="https://github.com/Azadehkhojandi/computer-vision-fish-frame-proposal/blob/master/classify_and_get_object_frames.py" target="_blank">this</a> script (with good instructions on getting access to the API on the Readme).  This API may not perform well on the raw images, however - can you see why?  How could they be transformed?  Now let's create our own model.
+2. Separate the video input into individual frames and then separate the frames into a 'fish' or 'no fish' folder with manual (time consuming) or automated inspection (use pre-built APIs).
+
+> An automated intial pass could be done with the Microsoft Computer Vision API or, even, Custom Vision (w/ free tiers).  An exmaple of using the Computer Vision API for this task may be found in <a href="https://github.com/Azadehkhojandi/computer-vision-fish-frame-proposal/blob/master/classify_and_get_object_frames.py" target="_blank">this script on GitHub</a> (with good instructions on getting access to the API on the Readme). <br><br> 
+This API may not perform well on the raw images, however - can you see why?  How could they be transformed?  Now let's create our own model.
 3. Create your own classifier in PyTorch to classify frames as fish/no fish using the parsed data, now in proper folders.
 4. Use `transforms` modules from `torchvision` and other libraries to:
     * Try out some data augmentation - (e.g. random vertical flip and blur the images) as well as the more standard "good idea" normalization.
@@ -42,7 +46,7 @@ Sample image:
 
 ### Object Detection
 
-Use the Out of Box Faster-RCNN or YOLOv3 solution to identify fish in frames (you will need to label with bounding boxes - good tools are <a href="https://github.com/Microsoft/VoTT" target="_blank">VoTT</a> and <a href="http://www.robots.ox.ac.uk/~vgg/software/via/" target="_blank">VGG Image Annotator</a>
+Use the Out of Box Faster-RCNN or YOLOv3 solution to identify fish in frames and, for this, you will need to label with bounding boxes - good tools are <a href="https://github.com/Microsoft/VoTT" target="_blank">VoTT</a> and <a href="http://www.robots.ox.ac.uk/~vgg/software/via/" target="_blank">VGG Image Annotator</a>
 
 ## Additional Help
 

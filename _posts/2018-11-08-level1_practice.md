@@ -8,15 +8,15 @@ img: third.jpg
 
 It is recommended that you have completed the [Level 1 Preparation](/navigating-ml/level1_prep).
 
-In this first set of practice problems you'll learn about basic ML and neural networks, hands-on, with Jupyter notebooks and Python.  You'll be introduced to scikit-learn, PyTorch, and TensorFlow as Python packages commonly used in data manipulation and data science.  
+In this first set of practice problems you'll learn about basic ML and neural networks, hands-on, with Jupyter notebooks and Python.  You'll be introduced to `scikit-learn` and PyTorch as Python packages commonly used in data manipulation and data science.  
 
-Here and throughout these practice exercises you'll work with the following image datasets: COCO, Fashion MNIST, the Hymenoptera insect and the CIFAR-10 (tiny images) datasets.
+Here and throughout these practice exercises you'll work with the following image datasets: COCO, Fashion MNIST, the Hymenoptera insect and a few custom ones you create.
 
 ## First ML with Custom Vision Service
 
 1. Download the COCO 2017 Val dataset (1 GB) [here](http://cocodataset.org/#download) to get a set of real-life images (click on "2017 Val images [5K/1GB]").
 
-2. Pick 50-100 images to upload, some with people and some without (may simply choose randomly as there's a good mix).
+2. Pick 50-100 images to upload, some with people and some without (create a balanced dataset).
 
 2. Build a person/no-person image classifier using Microsoft's [https://customvision.ai/](https://customvision.ai/) (choose "multiclass" classification using the "general" domain) - directions on the [Docs](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier) page.
 
@@ -37,13 +37,13 @@ Square-padded by expanding:
 <img src="../images/coco_sample__pad.jpg" width="50%">
 
 
-* How do the performance metrics change?  Did they get worse or better and why do you think that?
+* How do the performance metrics change?  Did they get worse or better and why do you think that is?
 
 ## First Custom ML (Open Source Tools)
 
-For these two problems, it is recommended to go through the code from the original source line by line in whatever fashion you see fit so that you really understand what is happening.
+For these two problems, it is recommended to go through the code from the original source line by line in whatever fashion you see fit so that you really understand what is going on.
 
-> TIPS:  Place all imports at the top of the notebook.  Call the training data something consistent thoughout all of your work (X_train -> training data, y_train -> labels, X_test -> test data...).
+TIPS:  Place all imports at the top of the notebook.  Call the training data something consistent thoughout all of your work (X_train -> training data, y_train -> labels, X_test -> test data...).
 
 ### Image Classification with Classical ML
 
@@ -65,8 +65,6 @@ Additionally:
 - Which fashion item has the best accuracy, which the worst?  Use a confusion matrix.  Why do you think that is?  Is there a way you could imagine improving this model?
 - Normalize the images (in `sklearn`) and check the accuracy of the model(s) again.  Did it improve or worsen?
 - Try a different model - SVM or Random Forest
-
-> _In the real world, data is rarely so uniform and simple pixels will not be suitable: this has led to a large literature on feature extraction methods for image data._
 
 ### Image Classification with Basic Neural Nets
 
