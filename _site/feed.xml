@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 27 Nov 2018 08:57:14 -0800</pubDate>
-    <lastBuildDate>Tue, 27 Nov 2018 08:57:14 -0800</lastBuildDate>
+    <pubDate>Mon, 03 Dec 2018 07:06:54 -0800</pubDate>
+    <lastBuildDate>Mon, 03 Dec 2018 07:06:54 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -872,10 +872,16 @@ model_ft.fc = nn.Linear(num_ftrs, 2)
         <title>Level 3 Preparation</title>
         <description>&lt;h1 id=&quot;advanced-preparation&quot;&gt;Advanced Preparation&lt;/h1&gt;
 
-&lt;p&gt;You might find &lt;a href=&quot;https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&quot;&gt;these videos&lt;/a&gt; from &lt;a href=&quot;http://cs231n.stanford.edu/&quot;&gt;this&lt;/a&gt; CNN course out of Stanford useful.&lt;/p&gt;
-
 &lt;ol&gt;
-  &lt;li&gt;Data loading in PyTorch:  &lt;a href=&quot;https://pytorch.org/tutorials/beginner/data_loading_tutorial.html&quot;&gt;Tutorial&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&quot;&gt;Videos&lt;/a&gt; from a CNN &lt;a href=&quot;http://cs231n.stanford.edu/&quot;&gt;Course&lt;/a&gt; out of Stanford&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF&quot;&gt;Videos&lt;/a&gt; by Andrew Ng on Image Tasks&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Data loading in PyTorch:  &lt;a href=&quot;https://pytorch.org/tutorials/beginner/data_loading_tutorial.html&quot;&gt;Tutorial&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Sat, 03 Nov 2018 00:00:00 -0700</pubDate>
