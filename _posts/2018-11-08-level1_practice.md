@@ -4,11 +4,13 @@ title: Level 1 Practice
 img: third.jpg
 ---
 
-# Going from Prebuilt ML Tools to First Custom ML
+# First Custom ML:  Classical and First Neural Net
 
 It is recommended that you have completed the [Level 1 Preparation](/navigating-ml/level1_prep).
 
-In this first set of practice problems you'll learn about basic ML and neural networks, hands-on, with Jupyter notebooks and Python.  You'll be introduced to `scikit-learn` and PyTorch as Python packages commonly used in data manipulation and data science.  
+In this first set of practice problems you'll learn about basic ML and neural networks, hands-on, with Jupyter notebooks and Python for image classification.  You'll be introduced to `scikit-learn` and PyTorch as Python packages commonly used in data manipulation and data science.  
+
+This section will end on simple object detection with classical methods.
 
 Here and throughout these practice exercises you'll work with the following image datasets: COCO, Fashion MNIST, the Hymenoptera insect and a few custom ones you create.
 
@@ -33,7 +35,7 @@ Do this in a Jupyter notebook (any service or locally) - recall you learned abou
 Steps:
 
 - Visualize a sample of 50-100 images with labels
-- Try fitting a Gaussian naive Bayes model.  How does it compare results found in the Handbook for the MNIST Digits datset (a black and white 8x8 pixel dataset of handwritten digits)?
+- Try fitting a Gaussian naive Bayes model.  How does it compare results found in the Handbook for the MNIST Digits dataset (a black and white 8x8 pixel dataset of handwritten digits)?
 
 Additionally:
 
