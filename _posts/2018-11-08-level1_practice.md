@@ -12,32 +12,7 @@ In this first set of practice problems you'll learn about basic ML and neural ne
 
 Here and throughout these practice exercises you'll work with the following image datasets: COCO, Fashion MNIST, the Hymenoptera insect and a few custom ones you create.
 
-## First ML with Custom Vision Service
-
-1. Download the COCO 2017 Val dataset (1 GB) [here](http://cocodataset.org/#download) to get a set of real-life images (click on "2017 Val images [5K/1GB]").
-
-2. Pick 50-100 images to upload, some with people and some without (create a balanced dataset).
-
-2. Build a person/no-person image classifier using Microsoft's [https://customvision.ai/](https://customvision.ai/) (choose "multiclass" classification using the "general" domain) - directions on the [Docs](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier) page.
-
-2. Observe performace metrics under the "Performance" tab.
-
-<img src="http://nlpforhackers.io/wp-content/uploads/2017/01/Precision-Recall.png" width="50%">
-
-> Some defintions.  **Precision**:  if a tag is precicted by your classifier, how likely is it that it is right?  **Recall**:  out of the tags that should be classified as right, what percentage did your classifier correctly find?
-
-3. Square-pad all of the images and build a new classifier under a new project in Custom Vision.
-
-Original:
-
-<img src="../images/coco_sample.jpg" width="50%"><br>
-
-Square-padded by expanding:
-
-<img src="../images/coco_sample__pad.jpg" width="50%">
-
-
-* How do the performance metrics change?  Did they get worse or better and why do you think that is?
+Be sure to observe your metrics in the process (accuracy, precision, recall, etc.).
 
 ## First Custom ML (Open Source Tools)
 
@@ -86,7 +61,7 @@ Create a Python program to detect bear faces (perhaps you're builing a bear watc
 
 ![bear face with hog](../images/bear_face_hog.png)
 
-*  Collect 50-100 images of bear faces from the web and square-pad them as done for the COCO images above.  In addition, resize them to the same shape (228x228 for example).  Observe, that in the code sample, the shape of the final image data for training will be (100, 228, 228) if 100 samples are collected.  These constitute the "positive" training samples.
+*  Collect 50-100 images of bear faces from the web and square-pad them.  In addition, resize them to the same shape (228x228 for example).  Observe, that in the code sample, the shape of the final image data for training will be (100, 228, 228) if 100 samples are collected.  These constitute the "positive" training samples.
 
 An example of the image pre-processing (padding is up to you):
 
