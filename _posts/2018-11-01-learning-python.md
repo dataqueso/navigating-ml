@@ -10,17 +10,6 @@ categories: [ds, ml]
 
 ## Just Starting Out
 
-**Your First Python Video Course**
-
-Intro to Python for Data Science from DataCamp (Time:  ~4 hours; Format - videos and exercises)
-
-[Course](https://www.datacamp.com/courses/intro-to-python-for-data-science)
-
-  * Python basics
-  * Lists
-  * Functions and packages
-  * Numpy
-
 **An Introductory Written Tutorial**
 
 A nice course from Software Carpentry on basics of Python programming with a data analysis twist.
@@ -39,7 +28,7 @@ A nice course from Software Carpentry on basics of Python programming with a dat
 10. Command-Line Programs
 
 
-**Your Second Python Video Course**
+**An Intro Python Video Course**
 
 An entertaining set of videos for the new Python dev with live coding with which to follow along (Time:  ~7hrs; Format - Video/live coding)
 
@@ -81,7 +70,7 @@ Basics with plotting theme throughout and nice exercies from Software Carpentry.
 
 By Jake VanderPlas, this handbook outlines everything you need to know with cool Examples and Applications, on how to get started in Data Science with Python.
 
-[Book](https://jakevdp.github.io/PythonDataScienceHandbook/)
+[Free Online Book](https://jakevdp.github.io/PythonDataScienceHandbook/)
 
 **Python intro and data sciencey tools - go through in order or skip around**
 
