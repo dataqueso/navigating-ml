@@ -10,7 +10,31 @@ categories: [ds, ml]
 
 ## Just Starting Out
 
-**An Introductory Written Tutorial**
+**An Introductory "Python for Everybody" Free E-Book**
+
+For the new Python programmer.
+
+[Python For Everybody](https://www.py4e.com/html3/)
+
+* Variables
+* Conditionals
+* Functions
+* Iterations
+* Strings
+* Files
+* Lists
+* Dictionaries
+* Tuples
+* Regex
+* Networked Programs
+* Python and Web Services
+* Python Objects
+* Python and Databases
+* Data Visualization
+
+Go back [here](https://www.py4e.com/book.php) to choose a language other than English for these tutorials.
+
+**An Introductory Online Tutorial**
 
 A nice course from Software Carpentry on basics of Python programming with a data analysis twist.
 

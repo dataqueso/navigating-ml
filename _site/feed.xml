@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/navigating-ml/</link>
     <atom:link href="http://localhost:4000/navigating-ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 23 May 2020 13:37:13 -0700</pubDate>
-    <lastBuildDate>Sat, 23 May 2020 13:37:13 -0700</lastBuildDate>
+    <pubDate>Sun, 31 May 2020 11:05:10 -0700</pubDate>
+    <lastBuildDate>Sun, 31 May 2020 11:05:10 -0700</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
     
       <item>
@@ -190,6 +190,8 @@ opencv-python
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/rasbt/python-machine-learning-book-2nd-edition/master/code/ch12/images/12_02.png&quot; alt=&quot;multi-layer network&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Read &lt;a href=&quot;https://en.wikipedia.org/wiki/Multilayer_perceptron&quot;&gt;this article&lt;/a&gt; for  additional information.&lt;/p&gt;
+
+&lt;p&gt;In addition, here is an excellent, free &lt;a href=&quot;http://d2l.ai/index.html&quot;&gt;introductory e-Book on Deep Learning&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
 
@@ -948,7 +950,33 @@ This API may not perform well on the raw images, however - can you see why?  How
 
 &lt;h2 id=&quot;just-starting-out&quot;&gt;Just Starting Out&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;An Introductory Written Tutorial&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;An Introductory “Python for Everybody” Free E-Book&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For the new Python programmer.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.py4e.com/html3/&quot;&gt;Python For Everybody&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Variables&lt;/li&gt;
+  &lt;li&gt;Conditionals&lt;/li&gt;
+  &lt;li&gt;Functions&lt;/li&gt;
+  &lt;li&gt;Iterations&lt;/li&gt;
+  &lt;li&gt;Strings&lt;/li&gt;
+  &lt;li&gt;Files&lt;/li&gt;
+  &lt;li&gt;Lists&lt;/li&gt;
+  &lt;li&gt;Dictionaries&lt;/li&gt;
+  &lt;li&gt;Tuples&lt;/li&gt;
+  &lt;li&gt;Regex&lt;/li&gt;
+  &lt;li&gt;Networked Programs&lt;/li&gt;
+  &lt;li&gt;Python and Web Services&lt;/li&gt;
+  &lt;li&gt;Python Objects&lt;/li&gt;
+  &lt;li&gt;Python and Databases&lt;/li&gt;
+  &lt;li&gt;Data Visualization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Go back &lt;a href=&quot;https://www.py4e.com/book.php&quot;&gt;here&lt;/a&gt; to choose a language other than English for these tutorials.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;An Introductory Online Tutorial&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;A nice course from Software Carpentry on basics of Python programming with a data analysis twist.&lt;/p&gt;
 
